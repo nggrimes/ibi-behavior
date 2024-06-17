@@ -52,7 +52,7 @@ execute:
 
 # Moral Hazard Induced Behavior Change in Fisheries Index Insurance
 
-Fishing is a risky business. Environmental fluctuations directly impact fishers of all scales from large industrial vessels to small scale subsistence fishers. Fishing is a vital economic engine to coastal communities and is the primary source of protein for millions of people [@Sumaila2012;@Teh2013;@fao2020]. Supporting these communities requires protection from enormous degrees of environmental risk.
+Fisheries are vulnerable to stochastic weather shocks. Environmental fluctuations directly impact fishers of all scales from large industrial vessels to small scale subsistence fishers. Fishing is a vital economic engine to coastal communities and is the primary source of protein for millions of people [@Sumaila2012;@Teh2013;@fao2020]. Supporting these communities requires protection from enormous degrees of environmental risk.
 
 Environmental variability in factors such as sea surface temperature or wind speeds impact fishery biological and economic productivity. Marine heatwaves increase animal thermal stress diminishing reproductive ability [@Barbeaux2020], stunting growth [@Pandori2019], pushing species outside their usual habitats [@Cavole2016], and may directly increase mortality [@Smith2023]. Expanding fish habitat ranges increase costs when moving beyond the fishing grounds of established ports [@rogers2019]. The variability from marine heatwaves alone impacts 77% of species within economic exclusion zones and reduce maximum catch potential by 6% [@Cheung2021]. Marine heatwaves are often accompanied by harmful algal blooms and diseases leading to additional fishery collapses [@Oken2021]. 
 
