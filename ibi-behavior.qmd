@@ -33,7 +33,7 @@ keywords:
   - Fisheries
   - Conservation
 date: last-modified
-bibliography: lib_5_24.bib
+bibliography: bib-8-8-24.bib
 csl: fish-and-fisheries.csl
 toc: true
 number-sections: true
@@ -50,82 +50,56 @@ execute:
   warning: false
 ---
 
-# Moral Hazard Induced Behavior Change in Fisheries Index Insurance
+# Introduction
 
 Fisheries are vulnerable to stochastic weather shocks. Environmental fluctuations directly impact fishers of all scales from large industrial vessels to small scale subsistence fishers. Fishing is a vital economic engine to coastal communities and is the primary source of protein for millions of people [@Sumaila2012;@Teh2013;@fao2020]. Supporting these communities requires protection from enormous degrees of environmental risk.
 
 Environmental variability in factors such as sea surface temperature or wind speeds impact fishery biological and economic productivity. Marine heatwaves increase animal thermal stress diminishing reproductive ability [@Barbeaux2020], stunting growth [@Pandori2019], pushing species outside their usual habitats [@Cavole2016], and may directly increase mortality [@Smith2023]. Expanding fish habitat ranges increase costs when moving beyond the fishing grounds of established ports [@rogers2019]. The variability from marine heatwaves alone impacts 77% of species within economic exclusion zones and reduce maximum catch potential by 6% [@Cheung2021]. Marine heatwaves are often accompanied by harmful algal blooms and diseases leading to additional fishery collapses [@Oken2021]. 
 
-The devastation of marine heatwaves was made clear in October 2022 when the Alaskan snow crab fishery was shut down after an assessment revealed an 87% decline in population from 2018 [@Zacher2022]. New evidence suggests that the marine heatwave increased caloric demands while tightening the snow crab range leading to a mass starvation event [@Szuwalski2023]. The fishery provided \$132 million from landings and \$174 million from processing in 2020, and the impacts will reverberate throughout the community [@Garber2022]. Recorded marine heatwaves have become more frequent [@Holbrook2019] and climate change may continue to increase heatwave frequency as climate distributions become more variable [@frolicher2018].
+The devastation of marine heatwaves was made clear in October 2022 when the Alaskan snow crab fishery was shut down after an assessment revealed an 87% decline in population from 2018 [@Zacher2022]. New evidence suggests that the marine heatwave increased caloric demands while tightening the snow crab range leading to a mass starvation event [@Szuwalski2023]. The fishery provided \$132 million from landings and \$174 million from processing in 2020, and the impacts from the closure will reverberate throughout the community [@Garber2022]. Recorded marine heatwaves have become more frequent [@Holbrook2019] and climate change may continue to increase heatwave frequency as climate distributions become more variable [@frolicher2018].
 
-Weather can also impact fisher harvesting efficiency beyond influencing the health of the underlying stock. This influence is more salient in fisheries than agriculture. Rolling seas and high wind speeds make it more difficult to harvest [@Alvarez2006] in addition to raising the danger to crew and vessel [@Heck2021]. All together, environmental shocks increase total income variability by changing harvest productivity or costs.
+Weather can also impact fisher harvesting efficiency beyond influencing the health of the underlying stock. Rolling seas and high wind speeds make it more difficult to harvest [@Alvarez2006] in addition to raising the danger to crew and vessel [@Heck2021]. More intense storms threaten coastal infrastructure vital to fishing communities [@Sainsbury2019]. Fishers actively avoid fishing in destructive weather at the expense of lost income [@Pfeiffer2020]. All together, environmental shocks increase total income variability by changing harvest productivity or costs.
 
 Individual choices by fishers and fishery management mitigate environmental risk. However, there is a lack of financial tools available to fishers to address income risk as a result of environmental fluctuations [@Sethi2010;@Kasperski2013]. In the United States, financial relief currently comes from government issued disaster payments to afflicted fishery communities [@Upton2013]. Since 1990, the United States has issued nearly $2 billion dollars to fishing communities after a disaster was declared. Environmental disasters, such as hurricanes, marine heatwaves, and harmful algal blooms, were solely responsible for 56% of the payments and partially responsible for another 27%. This system may be ineffective as there is an average of 2 years between disaster impact and fund relief [@Bellquist2021], and may inequitably distribute funds [@Jardine2020]. New financial tools need to be developed to alleviate financial and income risk for coastal communities [@sumalia2020;@Wabnitz2019].
 
-Insurance may be an ideal financial tool for risk management in fisheries as it is scalable, protects against environmental shocks, and smooths income for fishers. Currently, insurance in fisheries is primarily used to protect assets such as vessel hulls or fishing gear [@fao2022]. Insurance coverage could be expanded to include income variability. Weather fluctuations impact fisher income and their livelihoods. An insurance product covering environmental risk could improve fisher welfare and promote community resilience. 
+Insurance may be an ideal financial tool for risk management in fisheries as it is scalable, protects against environmental shocks, and smooths income for fishers [@Watson2023]. Currently, insurance in fisheries is primarily used to protect assets such as vessel hulls or fishing gear [@fao2022]. Insurance coverage could be expanded to include income variability. Weather fluctuations impact fisher income and their livelihoods. An insurance product covering environmental risk could improve fisher welfare and promote community resilience [@Maltby2023]. 
 
-Policy makers have begun pushing for new fisheries insurance programs modeled after agricultural crop insurance programs [@Murkowski2022]. One research study previously examined the suitability of crop insurance programs for Salmon fisheries in Bristol Bay, Alaska. Ultimately, the fishery was deemed not suitable for insurance due to exorbitant program costs, inability to quantify peril in a fishery setting, and a moral hazard disincentiving fishers to exit the fishery [@Herrmann2004]. However, new innovative insurance products and greater fishing data availability have reduced barriers for fisheries insurance reinvigorating investigations into the viability of new products.
+Policy makers have begun pushing for new fisheries insurance programs modeled after agricultural crop insurance programs [@Murkowski2022]. Index insurance is one such product touted by practitioners as a prime candidate for fisheries productivity insurance [@Watson2023]. Index insurance gained traction in agriculture as an effective alternative to traditional crop insurance in developing countries because it had lower administrative cost, minimized moral hazards, and does not require claim verification [@Carter2017;@Collier2009]. Whereas crop insurance requires an assessment of loss to an individual farm, index insurance uses an independent measure as the basis for issuing payouts to all policyholders. For example, a pilot program through the Caribbean Oceans and Aqauculture Sustainability Facility (COAST) uses index insurance to payout a set amount to fishers when indices of wave height, wind speed, and storm surge indicate a hurricane [@Sainsbury2019]. Triggers are the index values that initiate a payout. Contract design revolve around establishing suitable triggers to cover environmental loss. Interest is growing in expanding index insurance to cover other environmental shocks to more fisheries.
 
-Index insurance is one such product touted by practitioners as a prime candidate for fisheries productivity insurance. Index insurance gained traction in agriculture as an effective alternative to traditional crop insurance in developing countries because it had lower administrative cost, minimized moral hazards, and does not require claim verification [@Carter2017;@Collier2009]. Whereas crop insurance requires an assessment of loss to an individual farm, index insurance uses an independent measure as the basis for issuing payouts to all policyholders. For example, a pilot program through the Caribbean Oceans and Aqauculture Sustainability Facility (COAST) uses index insurance to payout a set amount to fishers when indices of wave height, wind speed, and storm surge indicate a hurricane [@Sainsbury2019]. Triggers are the index values that initiate a payout. Contract design revolve around establishing suitable triggers to cover environmental loss. Interest is growing in expanding index insurance to cover other environmental shocks to more fisheries.
+One crucial area that remains unaddressed is the potential influence of insurance on fishers behavior. Moral hazards are decisions by insured agents that they would not otherwise take if they were uninsured [@Wu2020]. Owning insurance contracts will change fisher harvesting decisions through moral hazards. An early fishery insurance program in Bristol Bay, Alaska suggested insurance would disincentivize exit from the fishery exacerbating overfishing concerns [@Herrmann2004]. However, the authors provided no empirical or theoretical justification. Fisheries are highly dynamic systems because of year to year variation in biological growth and reproduction stemming from environmental variables. Overfishing impacts are exacerbated through ecological dynamics as lower fish abundances carry over to the next year. With 35.6% of global fisheries overfished and 57.3% at maximum sustainable yield [@fao2022], ensuring new index insurance programs do not push more fisheries toward overfishing is a crucial first assessment. 
 
-Index insurance seems particularly well suited for fisheries because it does not require individuals' catch histories, which can be problematic even in the most well regulated fisheries. This allows index insurance to pay out much faster than traditional indemnity insurance. Policyholders can receive compensation as quickly as a day after a trigger is initiated and rarely have to wait longer than two weeks. Also, index insurance by design integrates correlated risks into its payout structures so that when one individual receives a payout others do as well. 
+Currently, the assumption appears to be that index insurance would completely avoid any moral hazards in fisheries [@Watson2023]. Yet, there are two components to insurance moral hazard: "chasing the trigger" and "risk reduction".  "Chasing the trigger" is the directed behavior of policyholders to increase the likelihood of a payout. For example, a fisher actively choosing to fish less to receive an indenmified harvest insurance payment. Index insurance completely eliminates this moral hazard through the independent and uninfluenced index (fishers cannot affect sea surface temperature). "Risk reduction" occurs through possessing an insurance contract that protects policyholders from risk. Policyholders may reoptimize their decisions once protected from risk. Index insurance remains susceptible to this element of moral hazard that could manifest in maladaptive behaviors. A simple example would be choosing to not wear a helmet while riding a bike because you have health insurance. All preliminary analyses of fisheries index insurance are missing rigorous assessment of moral hazards. Moral hazards could enable behavior changes that lead to conservation of fish stocks or spiral delicate systems towards destruction.
 
-One crucial area that remains unaddressed is the potential influence of insurance on fishers behavior. Moral hazards are decisions by insured agents that they would not otherwise take if they were uninsured [@Wu2020]. Owning insurance contracts will change fisher harvesting decisions through moral hazards. Because fisheries are ecologically sensitive to changes in harvest due to their dynamic nature, care must be taken to prevent adverse incentives that increase fishing pressures.  The proposed moral hazard in the Bristol Bay context is the decision that fishers would choose to stay in the fishery if they were insured from losses, when the fishers would otherwise have left the fishery with no insurance. The authors provided no theoretical nor empirical evidence to support their claim.  However, moral hazards may not be completely detrimental from a conservation perspective.  Instead, the insured agent's decision could reduce an environmentally damaging behavior because of the new incentive structure of the insurance [@Mishra2005;@Norton2016]. Insurance will change the behavior surrounding fisher decisions that will impact any fishery. We provide the first theoretical application of index insurance on fisher behavior change in order to predict if index insurance will incentivize overfishing or conservation. 
+Agricultural economists have grappled with insurance moral hazards for decades. While identifying insurance effects on inputs is an excruciatingly difficult task [@Biram2024], there are numerous ways insurance has changed farmer's decisions. Farmers use more water [@Deryugina2017] and acreage with insurance coverage [@Claassen2017;@Goodwin2004;@Cai2016]. The direction chemical input use varies with some studies indicating increased fertilizer use [@horowitz1993], while others indicate less fertilizer use [@Babcock1996;@Smith1996]. @Mishra2005 were the first to connect the external environmental benefit of insurance through reduced fertilizer use. Suggesting that moral ahzards could be good for the environemnt.
 
-Agricultural economists have grappled with insurance moral hazards for decades. Key lessons can be imported into the fishery landscape to mold more accurate predictions of moral hazard impacts. One crucial insight originates from the notion of risk effects. Risk effects are the changes in production volatility from a change in an input [@Just1979]. Insurance interacts with risk effects by changing the perception of risk surrounding additional input use [@Ramaswami1993]. Through theoretical and empirical work in agriculture, it is known that insurance will increase risk increasing input use while decrease risk decreasing input use [@Mahul2001;@Smith1996;@horowitz1993]. However, risk effects are an under explored phenomena in fisheries and the complexity of fishery production requires further examination.
-
-This paper explores how fishers could change their behavior if offered viable index insurance contracts. @sec-risk provides a literature review of moral hazards from insurance in agriculture. @sec-common builds a model to prove that index insurance in common pool settings can lead to conservation improvements depending on the risk effects of inputs.  @sec-multi expands the index insurance model to include multiple inputs crucial in fisheries production.  Numerical results in @sec-sim estimate potential biomass loss or recovery with an index insurance program. Implications for the suitability of fishery index insurance are discussed in @sec-disc.  Fishery index insurance ultimately has ambiguous effects on conservation. Before widespread adoption, careful consideration must be given to how insurance will incentivize or disincentivize overfishing. 
+Index insurance increased agricultural capital investments in Kenyan maize, Burkina Faso cotton, and Mali cotton farmers [@Elabed2016;@Sibiko2020;@stoeffler2022]. Index insurance also encouraged farmers in India to plant higher yield, but riskier crops (@Cole2017). In all instances, farmers took on riskier positions with the protection offered by insurance. A clear demonstration of the "risk reduction" element in index insurance moral hazards.
 
 
-#  Input Risk {#sec-risk}
+Increased investments through insurance can also harm communities, particularly in common pool resources such as livestock grazing. Kenyan index insurance for livestock discentivized preemptively selling animals after negative shocks, leading to larger herds in aggregate [@Janzen2018]. Though no empirical work has been done on the long term effects, two theoretical studies suggest insurance increases the stocking levels of grazing animals in pastures. Higher stocking densities diminish the pastures long-term health reducing overall utility gains of insurance [@muller2011;@Bulte2021]. Caution must be demonstrated when dealing with complex bio-economic systems, otherwise maladaptive outcomes can lead to greater harm [@muller2017]. The race to fish mentality that leads to overexploitation is a defining characteristic of fisheries. If index insurance always leads to increased input use in common pool resources, then implementing index insurance in fisheries could lead to maladaptive outcomes.
+
+This paper explores how fishers could change their behavior if offered viable index insurance contracts. We start in @sec-common with the canonical Gordon-Schaefer fisher production model to show that one to one applications of index insurance in fisheries will always decrease fish stocks leading to loss in abundance. If we adopt more flexible production models from agriculture the affects of index insurance becomes ambiguous, and may lead to healthier fish stocks. We parameterize a model to demonstrate the potential impacts of index insurance. However, the empirical setting uses multiple inputs. Therefore, we extend the theoretical model to account for multiple inputs in @sec-multi to develop clearer insights with possible input interactions.  Numerical results in @sec-sim estimate potential biomass loss or recovery with an index insurance program. Implications for the suitability of fishery index insurance are discussed in @sec-disc.  Fishery index insurance ultimately has ambiguous effects on conservation. Before widespread adoption, careful consideration must be given to how insurance will incentivize or disincentivize overfishing. 
+
+# Index insurance with standard fishery models {#sec-common}
 
 
-## Risk effects in agriculture
+The Gordon-Schaefer production model continues to be one of the most used models in fishery modelling and management [@Memarzadeh2019]. Its simplicity captures a wide range of fishery dynamics and is easily extendable to more complex models such as age-structured [@Tahvonen2018]. The model finds steady state bioeconomic equilibrium that balances fish growth with fish harvest. Management targets such as maximum sustainable and economic yield (MSY and MEY) are easily derived from Gordon-Schaefer. Other popular surplus production models such as the Fox and Pella-Tomlinson models, can reduce down to the Gordon-Schaefer model through parameter choices. Given its ubiquity, it would be prudent to start with the Gordon-Schaefer model to understand how index insurance impacts fisheries.
 
-Environmental moral hazards have been studied in indemnity crop insurance, and observed in index insurance policies. The interaction between risk and production inputs drives the impact insurance has on harvest. Production inputs in their broadest classification are the capital and labor inputs firms use to produce outputs. For farmers this includes the tractors, chemicals, and technology used to plant, grow, and harvest crops. Farmers expect a set amount of harvest at the end of the year using all combined inputs. However, nature through rain and temperature is the final input for growing corps. Weather is volatile and leads to random variation in harvest. Certain inputs farmers use, such as irrigation or frost covers, can change volatility in harvest due to weather. The changes in volatility from a change in an input are called "risk effects" [@Just1979]. If the variance of production increases with more of an input it is risk-increasing. Likewise, inputs that lower production variance are risk-decreasing.
+Gordon-Schaefer captures biomass dynamics important to fisheries through the steady state equilibrium biomass. Additionally, it allows us to focus on a class of fisheries where behavior is unconstrained. Thus we can isolate the effects of insurance more clearly. 
 
-After implementation of US federal crop insurance in the 1980s, agricultural economists became interested in how moral hazards would impact both the provision of insurance and the effect on farm production. Moral hazards can be broken down into two components. The first is "chasing the trigger" where policyholders intentionally conduct actions that lead to higher probabilities of payouts. Farmers purposely lowering crop yields to get a payout illustrates "chasing the trigger". This is the moral hazard most insurance companies seek to reduce and index insurance completely eliminates through use of an independent-verifiable index. The second component is "risk reduction". Possessing an insurance contract protects policyholders from risk. Policyholders may reoptimize their decisions once protected from risk. Risk effects play a dramatic role in moral hazard behavior changes through "risk reduction". 
-
-@Ramaswami1993 presented a theoretical model to investigate how insurance interacts with risk effects and leads to changes in optimal inputs. He found that insurance always reduces risk decreasing input use, while insurance will lead to greater risk increasing input use if the variance elasticity of production is less than the mean elasticity of production. His work was under an indemnity insurance framework hence why there is a tension on risk increasing inputs. Insurance protection from smaller variance changes outweigh the ability to "chase the trigger" to elicit payouts. In an index insurance setting, this tension evaporates given the inability to change the probability of payouts so that insurance always lead to greater risk increasing input use [@Mahul2001].
-
-Empirical studies further solidified the importance of insurance on risk increasing and risk decreasing input use. However, the direction for specific inputs remains ambiguous. @horowitz1993 showed farmers with insurance use more fertilizers than farmers without insurance. @Smith1996 aggregated fertilizer and pesticide use as total chemical input and found insurance lowered input use. @Babcock1996 added theoretical and experimental evidence that insurance impacts application of fertilizers. They focused more on the conditional distributions of yield as a function of input use. Then they used experimental farms at Iowa State to show that fertilizer use decreases the probability of low yields and acts as a risk-decreasing input. They simulate their results on US crop insurance to indicate how much insurance lowers fertilizer use. Recently, @Biram2024 used multiple identification strategies to show insurance has no effect on pesticide use for a variety of crops in the United States. They argue the inherent endogeneity of the decision to insure and apply pesticide makes answering this question a near impossible challenge.
-
-@Mishra2005 were the first to connect the potential of insurance reducing fertilizer use for environmental benefits. Accounting for environmental conditions of the field, such as soil erosion and surface runoff, insurance leads to significantly lower fertilizer use, but no change in pesticide use. The authors did not extrapolate further in connecting fertilizer runoff reductions to surrounding fields or the environment as a whole. @Claassen2017 expanded the impacts of insurance on environmental quality to include extensive decisions such as crop selection and acreage. Overall, insurance leads to statistically significant changes in pollution levels, but are proportionally rather small drivers of agricultural pollution [@Claassen2017].
-
-Insurance changes input use beyond chemical application. @Deryugina2017 use the 1994 Farm Bill as an instrument to show groundwater use increased with greater insurance coverage. The authors suggest the transition to more water intense crops such as cotton was the primary driver. Thus, extensive input decisions change with insurance decisions. Other studies have identified small but significant changes in total acreage as a result of insurance coverage [@Goodwin2004;@Cai2016]. 
-
-Empirically, index insurance stimulates changes in farm production in developing countries. Though the effects on intensive and extensive inputs remains similar, the interpretation can be quite different. Agricultural index insurance is primarily used in developing countries to reach small-scale farmers as opposed to capital rich industrial farms where indemnity insurance is prevalent. For example, increasing capital and chemical investments in developing countries agriculture is a key development goal. Index insurance stimulated investment in inputs and other agricultural capital in Kenyan maize, Burkina Faso cotton, and Mali cotton farmers [@Sibiko2020;@stoeffler2022;@Elabed2016]. Index insurance also encouraged farmers in India to plant higher yield, but riskier crops [@Cole2017].
-
-Increased investments can also harm communities, particularly in common pool resources such as livestock grazing. Kenyan index insurance for livestock discentivized preemptively selling animals after negative shocks, leading to larger herds in aggregate [@Janzen2018]. Though no empirical work has been done on the long term effects, two theoretical studies suggest insurance increases the stocking levels of grazing animals in pastures. Higher stocking densities diminish the pastures long-term health reducing overall utility gains of insurance [@muller2011;@Bulte2021]. Caution must be demonstrated when dealing with complex bio-economic systems, otherwise maladaptive outcomes can lead to greater harm [@muller2017].
-
-However, both theoretical studies implicitly assume that stocking is a risk increasing variable. The structure of their production functions may be valid in their settings, but their results are be driven by the unidirectional nature of the risk effects. This begs the question, do changes in input use through index insurance still hold in common pool resources?  
-
-The race to fish mentality that leads to overexploitation is a defining characteristic of fisheries. If index insurance always leads to increased input use in common pool resources, then implementing index insurance in fisheries will lead to maladaptive outcomes.
-
-
-# Index insurance in common-pool resources {#sec-common}
-
-Fisheries are highly dynamic systems because of year to year variation in biological growth and reproduction stemming from environmental variables. Overfishing impacts are exacerbated through ecological dynamics as lower fish abundances carry over to the next year. With 35.6% of global fisheries overfished and 57.3% at maximum sustainable yield [@fao2022], ensuring new index insurance programs do not push more fisheries toward overfishing is a crucial first assessment.
-
-Input changes in fisheries lead to more harvest and pressure on the biological system. Common pool settings remain prevalent in fisheries management. Entry limits through vessel or permits are popular strategies to limit access to fishing resources. Small scale cooperative management can exclude non-community participants, but are still common pool resources. Therefore it is valuable to examine fisheries index insurance in a common pool setting before tying in additional complexities such as management. 
-
-
-## Model
-
-Environmental stochasticity can translate to fluctuations in the biological component of fishery models. Biomass abundance is a key input for density dependent harvest functions in addition to harvesting technology. To start, we will first examine fishing technology that is aggregated into a single effort variable to determine how overall harvest decisions may change with insurance for risk averse fishers. An example of a harvest production function by individual fishers is given by @eq-y.
+The original model derives steady state biomass through a logistic growth function and a linear technology function as a function of effort. Substituting into the linear technology function creates a production function yielding steady state harvest. Environmental stochasticity can translate to fluctuations in the steady state biomass.
 
 $$
 \begin{aligned}
-y_i=q\tilde{B}e_i^\alpha\\
-\tilde{B}\sim N(\hat{B},\sigma_b^2)
+y=qe\tilde{B}(e)\\
+\tilde{B}(e)\sim N(\hat{B}(e),\sigma_b^2)
 \end{aligned}
 $$ {#eq-y}
 
-Where $q$ is a catchability coefficient, $\tilde{B}$ is the random abundance of fish with a mean at $\hat{B}$ and a variance $\sigma_b^2$, and effort for fisher $i$ is $e_i$.  We can break apart the random variable into a mean effect ($\hat{\beta}$) and variance component ($\omega$).
+Where $q$ is a catchability coefficient, $\tilde{B}$ is the random steady state biomass with a mean at $\hat{B}$ and a variance $\sigma_b^2$, and aggregated effort $e$.  We can break apart the random variable into a mean effect ($\hat{\beta}$) and variance component ($\omega$).
 
 $$
 \begin{aligned}
-\tilde{B}=\hat{B}+\omega \\
+\tilde{B}(e)=\hat{B}(e)+\omega \\
 \omega\sim N(0,\sigma_b^2)
 \end{aligned}
 $$ {#eq-varb}
@@ -134,56 +108,38 @@ Adding @eq-varb back into @eq-y leads to:
 
 $$
 \begin{aligned}
-y_i=qe_i^\alpha(\hat{B}+\omega)
+y=qe(\hat{B}(e)+\omega)
 \end{aligned}
 $$ {#eq-y2}
 
-This formulation is comparable to many standard fishery models. Randomness could originate from weather shocks impacting equilibrium biomass in the current period or measurement error surrounding a stock. For example @eq-y2 is identical to @Tilman2018 production function when $\alpha=1$. This specification is still inherently risk increasing. Instead, we could allow for flexible risk effects. @Just1979 separate input effects into mean and risk components. We can do the same for fishery production where effort controls mean harvest and harvest variance.
+This formulation is often referred to as process error [@Merino2022]. Randomness could originate from weather shocks impacting equilibrium biomass in the current period or measurement error surrounding a stock [@Tilman2018]. Distributing the production terms leads to $y=qe\hat{B}(e)+\omega qe$, which we can generalize to any mean production function $f(e)$ and any risk function $h(e)$.
 
 $$
 \begin{aligned}
-y_i=qe_i^\alpha\hat{B}+\omega qe^\beta
+y=f(e)\hat{B}(e)+\omega h(e)
 \end{aligned}
 $$ {#eq-jp}
 
-Risk effects are controlled by $\beta$. Biomass is an input into the fishers production function so that greater biomass leads to greater production. We can generalize the production function with mean effects $f(e_i)$ and risk effects $h(e_i)$.
+In Gordon Schaefer, $f'(e)>0$ and $h'(e)>0$ because catchability $q>0$. Steady state biomass is decreasing in effort as well, $\hat{B}'(e)<0$. Fishers derive utility from profits, so we add a convex cost function to harvest and normalize price of harvest to 1.
 
 $$
 \begin{aligned}
-y_i=\hat{B}f(e_i)+\omega h(e_i)
-\end{aligned}
-$$ {#eq-jpgen}
-
-Mean production functions $f(e_i)$ are concave with increasing diminishing returns ($f'(e_i)>0,f''(e_i)<0$) while risk effects may exhibit risk increasing properties ($h'(e_i)>0$) or risk decreasing properties ($h'(e_i<0)$).
-
-Fish biomass is dynamic and depends on environmental and biological variables. Equilibrium biomass is the level of fish stock that balances growth with aggregate harvest.  All fishers harvest from the equilibrium biomass in a common pool setting. Equilibrium biomass ought to remain constant for a set limited number of fishers and initial starting conditions. There could be random shocks surrounding the equilibrium biomass captured by the $\omega$ term. The biology of the system is independent of fisher actions. Therefore, fishers can only affect equilibrium biomass through their own harvest $e_i$ and everyone else's harvest $e_{\sim j}$. Equilibrium biomass is a function of aggregate efforts. 
-
-$$
-\begin{aligned}
-y_i=\hat{B}(e_i,e_{\sim j})f(e_i)+\omega h(e_i)
-\end{aligned}
-$$ {#eq-jpeq}
-
-Fishers derive utility from profits. Adding a cost function that is equivalent for each fisher yields a profit function.
-
-$$
-\begin{aligned}
-\pi_i=\hat{B}(e_i,e_{\sim j})f(e_i)+\omega h(e_i)-c(e_i)
+\pi=f(e)\hat{B}(e)+\omega h(e)-c(e)
 \end{aligned}
 $$ {#eq-pi1}
 
 To most seamlessly integrate index insurance, we can break situations into a bad state of the world that occurs with probability $p$ and a good state of the world that happens with probability $(1-p)$.  We can use $\omega$ to create an index to indemnify payouts because it captures the randomness of fishers profits. In reality, the index would be a weather variable known to impact biomass such as sea surface temperature, and the trigger are critical thresholds that cause weather to deviate from equilibrium biomass. Here, all stochasticity is captured by $\omega$. We can align the states of the world to a shock trigger $\bar\omega$ so that $p=P(\omega<\bar\omega)$ and $1-p=P(\omega>\bar\omega)$. 
 
-Insurance then pays a constant amount $\gamma$ in the bad state. Actuarilly fair insurance allows the premium paid in both states to be the probability of receiving a payout $p\gamma$. Additionally, if we set the trigger to $\bar\omega=0$ to indicate any time weather negatively impacts production, we can then separate out profit into good and bad states as well with $\omega_g>0$ and $\omega_b<0$ entering into @eq-pi1. Fishers are risk averse with a concave utility function $u'(\pi_i(e_i),\gamma)>0$ and $u''(\pi_i(e_i),\gamma)<0$. Putting it all together, fishers will maximize expected utility by selecting their own individual effort $e_i$ while accounting for the changes in equilibrium biomass due to other fishers choice of effort.
+Insurance then pays a constant amount $\gamma$ in the bad state. Actuarilly fair insurance allows the premium paid in both states to be the probability of receiving a payout $p\gamma$. Additionally, if we set the trigger to $\bar\omega=0$ to indicate any time weather negatively impacts production, we can then separate out profit into good and bad states as well with $\omega_g>0$ and $\omega_b<0$ entering into @eq-pi1. Fishers are risk averse with a concave utility function $u'(\pi_i(e_i),\gamma)>0$ and $u''(\pi_i(e_i),\gamma)<0$. Putting it all together, fishers will maximize expected utility across good and bad states by selecting effort with a set insurance contract.
 
 $$
-F\equiv\max_{e_i}\mathbb{E}[u]=pu(\pi_b+(1-p)\gamma)+(1-p)u(\pi_g-p\gamma)
+F\equiv\max_{e}\mathbb{E}[u]=pu(\pi_b+(1-p)\gamma)+(1-p)u(\pi_g-p\gamma)
 $$ {#eq-max}
 
-The first order condition that solve @eq-max is then:
+The first order condition that solves @eq-max is then:
 
 $$
-\frac{\partial F}{\partial e_i}=pu'(\pi_b+(1-p)\gamma)\frac{\partial \pi_b}{\partial e_i}+(1-p)u'(\pi_g-p\gamma)\frac{\partial \pi_g}{\partial e_i}=0
+\frac{\partial F}{\partial e}=pu'(\pi_b+(1-p)\gamma)\frac{\partial \pi_b}{\partial e}+(1-p)u'(\pi_g-p\gamma)\frac{\partial \pi_g}{\partial e}=0
 $$ {#eq-foc}
 
 For notional ease, the inputs of the profit function are dropped, but as shown in @eq-pi1 profit in both states ($\pi_b$=bad, $\pi_g$=good) remains a function of effort, equilibrium biomass, and weather shocks.
@@ -191,98 +147,68 @@ For notional ease, the inputs of the profit function are dropped, but as shown i
 To find the impact of insurance on optimal effort we can apply Cramer's Rule to the first order conditions.
 
 $$
-\frac{\partial e_i^*}{\partial \gamma}=-\frac{\frac{\partial F}{\partial e_i \partial \gamma}}{\frac{\partial^2 F}{\partial e_i^2}}
+\frac{\partial e^*}{\partial \gamma}=-\frac{\frac{\partial F}{\partial e \partial \gamma}}{\frac{\partial^2 F}{\partial e^2}}
 $$
 
-By definition of a maximization problem, $\frac{\partial^2 F}{\partial e_i^2}$ is negative so we can focus solely on the numerator to sign the impact of insurance on optimal individual effort. Then we'll use the change in individual effort to understand the implications on conservation. 
+By definition of a maximization problem, $\frac{\partial^2 F}{\partial e^2}$ is negative so we can focus solely on the numerator to sign the impact of insurance on optimal individual effort. Then we'll use the change in individual effort to understand the implications on conservation. 
 
 :::{#prp-cp}
-Index insurance will raise (lower) individual fisher effort when effort is risk increasing (decreasing)
+Gordon-Schaefer production models will always lead to increases in optimal effort with feasible index insurance contracts.
 :::
 
 :::{.proof}
 Differentiate equation @eq-foc with respect to insurance.
 
 $$
-\frac{\partial F}{\partial e_i \partial \gamma}=(1-p)u''(\pi_g-p\gamma)\frac{\partial \pi_g}{\partial e_i}(-p)+pu''(\pi_b+(1-p)\gamma)\frac{\partial \pi_b}{\partial e_i}(1-p)
+\frac{\partial F}{\partial e \partial \gamma}=(1-p)u''(\pi_g-p\gamma)\frac{\partial \pi_g}{\partial e}(-p)+pu''(\pi_b+(1-p)\gamma)\frac{\partial \pi_b}{\partial e}(1-p)
 $$ {#eq-egam}
 
 Suppose insurance fully covers the loss between states, then utility in the good state and bad state are equal to each other so that we can factor out like terms in @eq-egam.
 
 $$
-\frac{\partial F}{\partial e_i \partial \gamma}=(1-p)pu''(\cdot)[\frac{\partial \pi_b}{\partial e_i}-\frac{\partial \pi_g}{\partial e_i}]
+\frac{\partial F}{\partial e \partial \gamma}=(1-p)pu''(\cdot)[\frac{\partial \pi_b}{\partial e}-\frac{\partial \pi_g}{\partial e}]
 $$ {#eq-simp}
 
 The first term outside the brackets is negative by the definition of concave utility. Marginal profits across states share the same mean productions and costs as effort decisions must be made before the realization of the states. Subbing those terms in to @eq-simp demonstrates how they cancel out allowing us to sign the interior brackets.
 
 $$
 \begin{aligned}
-\frac{\partial \pi_b}{\partial e_i}-\frac{\partial \pi_g}{\partial e_i}&=\omega_b h_{e_i}'(e_i)+\cancel{f_{e_i}'(e_i)\hat{B}_{e_i}(e_i,e_{\sim j})}+\cancel{[\frac{\partial \hat{B}}{\partial e_i}+\frac{\partial \hat{B}}{\partial e_{\sim j}}\frac{\partial e_{\sim j}}{\partial e_i}]f(e_i)}-\cancel{c_{e_i}'(e_i)} \\
-&-\omega_g h_{e_i}'(e_i)-\cancel{f_{e_i}'(e_i)\hat{B}_{e_i}(e_i,e_{\sim j})}-\cancel{[\frac{\partial \hat{B}}{\partial e_i}+\frac{\partial \hat{B}}{\partial e_{\sim j}}\frac{\partial e_{\sim j}}{\partial e_i}]f(e_i)}+\cancel{c_{e_i}'(e_i)} \\
-&=\omega_b h'(e_i)-\omega_g h'(e_i)
+\frac{\partial \pi_b}{\partial e}-\frac{\partial \pi_g}{\partial e}&=\omega_b h_{e}'(e)+\cancel{f_{e}'(e)\hat{B}_{e}(e)}+\cancel{\frac{\partial \hat{B}}{\partial e}f(e_)}-\cancel{c_{e}'(e)} \\
+&-\omega_g h_{e}'(e)-\cancel{f_{e}'(e)\hat{B}_{e}(e)}-\cancel{\frac{\partial \hat{B}}{\partial e}f(e)}+\cancel{c_{e}'(e)} \\
+&=\omega_b h'(e)-\omega_g h'(e)
 \end{aligned}
 $$ {#eq-compi}
 
-If an input is risk increasing then $h'(e_i)>0$ with $\omega_b<0$ and $\omega_g>0$. Then @eq-compi is negative.
+The marginal risk function is positive in Gordon-Schaefer so that $h'(e)>0$. With $\omega_b<0$ and $\omega_g>0$, then @eq-compi is negative.
 
 $$
-\frac{\partial \pi_b}{\partial e_i}-\frac{\partial \pi_g}{\partial e_i}=\overbrace{\omega_bh'(e_i)-\omega_gh'(e_i)}^{-}
+\frac{\partial \pi_b}{\partial e}-\frac{\partial \pi_g}{\partial e}=\overbrace{\omega_bh'(e)-\omega_gh'(e)}^{-}
 $$
 
-Now can completely sign @eq-simp by subbing in the bracket sign when effort is risk increasing.
+Now can completely sign @eq-simp by subbing in the bracket sign to show that effort will always increase.
 
-$$
-\frac{\partial F}{\partial e_i \partial \gamma}=\overbrace{\overbrace{(1-p)pu''(\cdot)}^{-}\overbrace{[\frac{\partial \pi_b}{\partial e_i}-\frac{\partial \pi_g}{\partial e_i}]}^{-}}^{+}
-$$ {#eq-rigam}
-
-Therefore, @eq-rigam, index insurance will raise individual fisher effort when effort is risk increasing.
-
-Risk decreasing inputs have $h'(e_i)<0$ by definition. Subbing this into @eq-compi shows the interior bracket is positive and thus insurance lowers optimal individual effort when effort is risk decreasing.^[Intuitively, if inputs are risk decreasing, then marginal profits in the bad state should be higher as the risk reducing effects lower the negative impact of the shock. In the bad state it would be beneficial to invest more effort to reduce the exposure to risk.]
-
-$$
-\frac{\partial \pi_b}{\partial e_i}-\frac{\partial \pi_g}{\partial e_i}=\overbrace{\omega_bh'(e_i)-\omega_gh'(e_i)}^{+}
-$$
-
-$$
-\frac{\partial F}{\partial e_i \partial \gamma}=\overbrace{\overbrace{(1-p)pu''(\cdot)}^{-}\overbrace{[\frac{\partial \pi_b}{\partial e_i}-\frac{\partial \pi_g}{\partial e_i}]}^{+}}^{-}
-$$ {#eq-rdgam}
-
-
-When effort possess no risk effects @eq-compi is zero and there is no change in optimal effort with insurance. 
 :::
 
-@prp-cp solidifies the direction insurance impacts on risk effects still hold in a classic common pool resource. Imposing a Nash Equilibrium on the fishery will elucidate potential conservation impacts insurance may have on a fishery.  
+@prp-cp solidifies the direction insurance impacts on optimal effort decisions. In turn this will lead to destructive conservation outcomes. 
 
 :::{#prp-synas}
-In a symmetric Nash equilibrium with limited entry, index insurance will lower (raise) equilibrium biomass when effort is risk increasing (decreasing)
+Index insurance always lowers steady state biomass in a Gordon-Schaefer model.
 :::
 
 :::{.proof}
-
-First take the total derivative of equilibrium biomass.
-
-$$
-\frac{d \hat{B}}{d e_i}=
-\frac{\partial \hat{B}}{\partial e_i}+\frac{\partial \hat{B}}{\partial e_{\sim j}}\frac{\partial e_{\sim j}}{\partial e_i}
-$$ {#eq-db}
-
-Symmetric Nash equilibrium imply that $e_i=e_{\sim j}$. Subbing into the total derivative simplifies the expression for every $n$ fishers.
-
-$$
-\begin{aligned}
-\frac{d \hat{B}}{d e_i}&=
-\frac{\partial \hat{B}}{\partial e_i}+(n-1)\frac{\partial \hat{B}}{\partial e_i}\frac{\partial e_i}{\partial e_i}\\
-&=n\frac{\partial \hat{B}}{\partial e_i}
-\end{aligned}
-$$
-
-By definition $\frac{\partial \hat{B}}{\partial e_i}<0$ with increasing $e_i$ as more harvest effort lowers biomass. Applying @prp-cp we know that $e_i$ raises with index insurance when $h'(e_i)>0$ and thus equilibrium biomass decreases. Insurance lowers risk reducing effort so that equilibrium biomass $\hat{B}$ increases. 
+Godron-Schaefer uses a logistic growth function so that mean equilibrium biomass always decreasing in effort, $\frac{\partial\hat{B}(e)}{\partial e}<0$. By @prp-cp, effort will always increase with insurance. Therefore, equilibrium biomass will always decrease with insurance.
 :::
 
-Bioeconomic equilibriums arise when aggregate harvest exactly equals stock growth. Applying a logistic growth function into a fishery shows the implications of @prp-synas quite clearly.
+Contrary to initial hypotheses, index insurance will lead to maladapative outcomes in fisheries with standard models. @prp-cp holds for more production models than just Gordon-Schaefer. Any production function where $h'(e)>0$ including Cobb-Douglas, Pella-Tomlinson, and Fox models will lead to the same results. However, these models were not designed to tackle risk and risk aversion necessary for insurance in effective ways. 
+
+Agriculture also encountered a similar issue in the inception of crop insurance programs back in the early 1980s. Risk averse farmers choose inputs that deviated from expected values with Cobb-Douglas production functions. Researchers posited alternative flexible production functions to better capture the influence of risk on farmer decision making. @Just1978 specified the general class of functions that could adequately capture input risk effects that were both positive and negative. Inputs that lead to higher production variance are risk increasing with positive risk effects, and inputs that lowered the variance of production are risk decreasing with negative risk effects. @Ramaswami1993 and @Mahul2001 proved insurance would either increase or decrease the input use contingent on the risk effect qualities of a given input. Risk increasing inputs ($h'(x)>0$) always lead to increases in input use with insurance, while risk decreasing inputs ($h'(x)<0$) always lead to decreases in input use with insurance. Within this framework, Gordon-Schaefer and all other fishery production fisheries fall into the risk increasing category.
+
+Fishers are highly sensitive to risk, especially income risk [@Holland2008;@Sethi2010]. They mitigate risk through a variety of measures. Fishers will choose consistent, known fishing grounds over risking exploring unknown spots [@Holland2008]. Fishers choose to fish less after storms and hurricanes when financial risk is alleviated by transitioning to catch share programs [@Pfeiffer2020;@Pfeiffer2022]. Perhaps they are making decisions surrounding risk beyond that which is modeled by Gordon-Schaefer. If we allow for risk decreasing inputs in fishery production, then the effects of insurance can flip to improve steady state biomass. The proof of @prp-cp allows for risk decreasing inputs by switching $h'(e)<0$ in @eq-compi. The signs flip and insurance will lower effort leading to an increase in biomass by @prp-synas. Therefore we can preserve the prior results of agriculture in regards to the interaction of risk effects and insurance while introducing the dynamics of fisheries.
+
+Allowing for flexible risk effects in the standard fishery models shows that the steady state impacts of insurance can either increase or decrease biomass. This leads to varying welfare impacts depending on the state of the fishery. In @fig-synas, the first initial bieconomic equilibrium to the left demonstrates overexploitation with biomass below maximum sustainable yield. A decrease an effort from index insurance stimulates faster growth of the stock allowing for more harvest in the future. Therefore fishers will be more protected from shocks with insurance, benefit from more current harvest, and there will be a a healthier stock of fish. Alternatively, if inputs are risk increasing, then index insurance will shift production up, lowering harvest and biomass of the fish pushing the fishery further into overexploitation. 
 
 ```{r}
-#| fig-cap: "Equilibrium harvest and biomass levels change with index insurance depending on the risk effects of inputs. Deviations from initial harvest allocations (solid line) have different impacts at levels above and below maximum sustainable yield. Risk decreasing inputs (long dashes) will always lead to higher equilibrium biomass. Risk increasing inputs (short dashes) will always lead to lower equilibrium biomass."
+#| fig-cap: "Equilibrium harvest and biomass levels change with index insurance depending on the risk effects of inputs. Deviations from initial harvest equilibriums (solid line) have different impacts at levels above and below maximum sustainable yield. Risk decreasing inputs (long dashes) will always lead to higher equilibrium biomass. Risk increasing inputs (short dashes) will always lead to lower equilibrium biomass."
 #| label: fig-synas
 
 library(tidyverse)
@@ -345,51 +271,22 @@ ggplot(data.frame(b,h),aes(x=b,y=h))+geom_line(linewidth=lw+1)+
   labs(x="Equilibrium Biomass",y="Equilibrium Harvest")
 ```
 
-Index insurance can lead to conservation benefits in common pool resources if the production inputs are risk decreasing, but the implications for harvest depend on the initial bioeconomic equilibrium. In @fig-synas, the first initial bieconomic equilibrium to the left demonstrates overexploitation with biomass below maximum sustainable yield. A decrease an effort from index insurance stimulates faster growth of the stock allowing for more harvest in the future. Therefore fishers will be more protected from shocks with insurance, benefit from more current harvest, and there will be a a healthier stock of fish. Alternatively, if inputs are risk increasing, then index insurance will shift production to the right lowering harvest and biomass of the fish pushing the fishery further into overexploitation. 
 
 The second initial equilibrium to the right in @fig-synas is underexploited with biomass above maximum sustainable yield. The impact of index insurance on equilibrium biomass remains the same as when overexploited by @prp-synas, but the direction of harvest changes. Now, insurance will lower harvest for risk decreasing inputs and raise harvest for risk increasing inputs. 
 
 
-@prp-synas offers policymakers a powerful tool to assess the viability of using index insurance to protect fisheries from overharvesting and provide conservation benefits.  Conservation of common pool resources through insurance hinges on the risk effects of production technology. If policymakers are solely interested in conservation, then only knowing the direction of the fishery risk effects is necessary. In that case, only fisheries with risk decreasing inputs should be targeted for index insurance policies. Index insurance could also be used to incentivize fishing in low capacity communities, much like how index insurance is used in developing countries to stimulate agriculture investment. Since most fisheries are overfished, it is unlikely that a policymaker would target fisheries with risk increasing inputs with insurance to expand capacity and place more pressure on the fish stock.
+@fig-synas offers policymakers a powerful tool to assess the viability of using index insurance to protect fisheries from overharvesting and provide conservation benefits.  Conservation of fish stocks through insurance hinges on the risk effects of production technology. If policymakers are solely interested in conservation, then only knowing the direction of the fishery risk effects is necessary. In that case, only fisheries with risk decreasing inputs should be targeted for index insurance policies. Index insurance could also be used to incentivize fishing in low capacity communities, much like how index insurance is used in developing countries to stimulate agriculture investment. Since most fisheries are overfished, it is unlikely that a policymaker would target fisheries with risk increasing inputs with insurance to expand capacity and place more pressure on the fish stock.
 
-Risk effects remain an elusive concept in fisheries. It is unclear how to preemptively identify fishery risk effects.  Current bioeconomic models used to study fisheries do not account for risk effects. They are biased towards risk increasing inputs and therefore will always predict a lower equilibrium biomass.
+Risk effects remain an elusive concept in fisheries. It is unclear how to preemptively identify fishery risk effects.  Specific inputs such as frost covers decrease the impact of weather on crops clearly. Other inputs have had more ambiguous results. Fertilizer in some contexts is risk increasing [@horowitz1993] leading to crop burn, but other times is risk decreasing [@Babcock1996]. 
 
-Fishery bioeconomic models need to balance complexity in both the biological and economic systems. More emphasis as been placed on biological complexity with ecosystem-based management rising in prevalence. Though some models use Cobb-Douglas and other more flexible economic production models for harvest, most use a variation of the Gordon-Schaefer production model. The ability to create a proxy for stock abundance through catch per unit effort (CPUE), and its simplicity is why Gordon-Schaefer remains a useful modelling framework for fisheries. However, Gordon-Schaefer does not allow for flexible risk effects. 
+To date, only one study has quantified risk effects in a fishery setting. @Asche2020 used data from four Norwegian fishing fleets to measure three input responses to risk. Each fishery possessed unique mixes of both risk increasing and decreasing inputs. For example, labor was found to be a risk decreasing input across all four groups, but only statistically significant in pelagic and coastal seiners. Capital was risk increasing for coastal seiners and trawlers, but flipped to risk decreasing for purse seiners and trawlers. Fuel had a lower, but statistically significant positive risk increasing measure for three of the four groups. 
 
-
-:::{#prp-gs}
-Gordon-Schaefer fishery production models with linear harvest and multiplicative shocks are always risk increasing.
-:::
-
-:::{.proof}
-
-Risk effects can also be defined as the cross partial of the production function with respect to input and shock. If positive then an input is risk increasing, and if negative an input is risk decreasing.
-
-
-$$
-\begin{aligned}
-y&=qeB\omega \\
-\frac{\partial y}{\partial e \partial \omega} &=qB \\
-&>0
-\end{aligned}
-$$
-
-:::
-
-Fishery harvest ($y$) is a linear function of effort ($e$), stock abundance ($B$), and a catchability coefficient ($q$) acting as a measure of technological efficiency. Stock abundance and technological efficiency are always greater than zero. Without loss of generality, more sophisticated models will find similar limitations as they are extensions of the presented simple form. Cobb-Douglas are known to posses bias towards risk increasing inputs [@Just1979], and age-structure models typically use the same linear profit as a Gordon-Schaefer at each age class with multiplicative environmental shocks  [@Tahvonen2018]. Fox and Pella-Tomlinson models are more flexible production models, but each can reduce down to a Gordon-Schaefer through parameter choice. 
-
-Adding insurance to standard bioeconomic fishery models always leads to an increase in input use by @prp-cp, and a decrease in equilibrium biomass through @prp-synas. However, these models were often not designed to account for risk and risk preferences. Fishers are highly responsive to risk. They mitigate risk through a variety of measures. Fishers will choose consistent, known fishing grounds over risking exploring unknown spots [@Holland2008]. Fishers choose to fish less after storms and hurricanes when financial risk is alleviated by transitioning to catch share programs [@Pfeiffer2020;@Pfeiffer2022]. In this context, effort can be seen as an *income* risk reducing input. If the variability of catch is reduced, then the pressure to fish to ensure consistent catch is also reduced. 
-
-To date, only one study has quantified risk effects in a fishery setting. @Asche2020 used data from four Norwegian fishing fleets to measure three input responses to risk. Each fishery possessed unique mixes of both risk increasing and decreasing inputs. For example, labor was found to be a risk decreasing input across all four groups, but only statistically significant in both pelagic seiners. Capital was risk increasing for coastal seiners and trawlers, but flipped to risk decreasing for purse seiners and trawlers. Fuel had a lower, but statistically significant positive risk increasing measure for three of the four groups. 
-
-However, total output variance fluctuated in ways where it was not clear what the total effect would be. Coastal seiners had significant risk decreasing effects in labor, but also significant risk increasing effects in fuel. Overall output variance was insignificantly different than zero. So while individual inputs impacted risk, overall impacts were unclear. Index insurance may raise or lower individual inputs depending on their own unique risk effects, but the overall direction of conservation cannot be determined. In order to apply the insights gained from index insurance in a common pool setting to the real world effects of Asche et al., (2020), our model must be expanded to understand how index insurance interacts with multiple inputs. 
-
-
+However, total output variance fluctuated widely. Coastal seiners had significant risk decreasing effects in labor, but also significant risk increasing effects in fuel. Overall output variance was insignificantly different than zero. So while individual inputs impacted risk, overall impacts were unclear. Before applying the risk parameters found by @Asche2020, it is beneficial to build out a multiple input model to better understand how risk effects might behave in fisheries. Single variable aggregate effort measures are useful in surplus-production models, but do not reflect the complexity of fisher decisions. Index insurance may raise or lower individual inputs depending on their own unique risk effects, but the overall direction of harvest decisions cannot be determined. Little research has been done on multiple input insurance models. @Ramaswami1993 concluded that only total production variance drives total harvest changes, but does not elaborate on the individual response of inputs. The next section explores how multiple inputs interact with each other and insurance to provide a clearer picture of how index insurance will impact fisheries.
 
 # Insurance with multiple inputs {#sec-multi}
 
 
-We can use the overarching framework from the previous section and expand it by adding multiple inputs. To simplify matters, we will focus on only one fisher, their choice of inputs and insurance, and a set biomass normalized to one. 
+We can use the overarching framework from the previous section and expand it by adding multiple inputs. To simplify matters, we will normalize biomass to one as @Asche2020 did not explicitly include biomass in their estimation model ^[They used year fixed effects to account for biomass].
 
 Some inputs have varying risk effects. Interaction between inputs risk effects could change overall impacts from insurance to aggregate harvest and biomass.  Fishers can use a vector of inputs $X$. Expected mean production ($f(X)$) and variance of outputs ($h(X)$) remains the same. We will  use only two inputs, capital and labor, in our model. Total production thus equals:
 
