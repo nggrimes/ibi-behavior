@@ -158,9 +158,9 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \usepackage{amsthm}
 \theoremstyle{plain}
-\newtheorem{corollary}{Corollary}[section]
-\theoremstyle{plain}
 \newtheorem{proposition}{Proposition}[section]
+\theoremstyle{plain}
+\newtheorem{corollary}{Corollary}[section]
 \theoremstyle{remark}
 \AtBeginDocument{\renewcommand*{\proofname}{Proof}}
 \newtheorem*{remark}{Remark}
@@ -208,7 +208,7 @@ affects on conservation}
 \subtitle{Working Paper Draft \emph{Not For Circulation}}
 \author{Nathaniel Grimes \and Christopher Costello \and Andrew
 Plantinga}
-\date{2024-08-08}
+\date{2024-08-09}
 
 \begin{document}
 \maketitle
@@ -216,24 +216,27 @@ Plantinga}
 Fisheries are vulnerable to environmental shocks that impact stock
 health and fisher income. Index insurance is a promising financial tool
 to protect fishers from environmental risk. However, insurance will
-change fisher behavior through moral hazards. We provide the first
-theoretical application of index insurance on fisher behavior change to
-predict if index insurance will incentivize overfishing or conservation
-of the stock. The direction of change depends on the risk
-characteristics of the inputs called risk effects. We find that index
-insurance will raise (lower) individual fisher effort when effort is
-risk increasing (decreasing). These results hold when a fishery is a
-common pool resource, but the welfare effects depend on the state of the
-fishery. Overfished stocks will gain from reductions in effort while
-undercapacity fisheries will gain from increased production. The
-direction of harvest change become ambiguous when accounting for
-interaction between multiple inputs. Simulating from parameters
-estimated from four Norwegian fisheries shows index inusrance could
-increase harvest as high as 15\% or decrease harvest by 6\%. Before
-widespread adoption, careful consideration must be given to how
-insurance will incentivize or disincentivize overfishing.
+change fisher's behavior through moral hazards. We provide the first
+theoretical application of index insurance on fisher's behavior change
+to predict if index insurance will incentivize overfishing or
+conservation of the stock. Using traditional fishery models will always
+bias index insurance to incentivize overfishing, which in turn reduces
+fish stocks. However, using models with more flexible input risk effects
+shows index insurance will have varying effects on fishery conservation.
+The direction of change depends on the risk characteristics of the
+inputs. We find that index insurance will raise (lower) individual
+fisher effort when effort is risk increasing (decreasing). In turn,
+higher (lower) fishing effort reduces (increases) conservation of fish
+stocks. Overfished stocks will see conservation gains from reductions in
+effort while undercapacity fisheries will see harvest gains from
+increased production. The direction of harvest change becomes ambiguous
+when accounting for interaction between multiple inputs. Simulating from
+parameters estimated from four Norwegian fisheries shows index inusrance
+could increase harvest as high as 15\% or decrease harvest by 6\%.
+Before widespread adoption, careful consideration must be given to how
+index insurance will incentivize or disincentivize overfishing.
 \end{abstract}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, frame hidden, boxrule=0pt, interior hidden, enhanced, breakable, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, enhanced, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -261,7 +264,7 @@ Sorte 2019), pushing species outside their usual habitats (Cavole
 al.} 2023). Expanding fish habitat ranges increase costs when moving
 beyond the fishing grounds of established ports (Rogers \emph{et al.}
 2019). The variability from marine heatwaves alone impacts 77\% of
-species within economic exclusion zones and reduce maximum catch
+species within economic exclusion zones and reduces maximum catch
 potential by 6\% (Cheung \emph{et al.} 2021). Marine heatwaves are often
 accompanied by harmful algal blooms and diseases leading to additional
 fishery collapses (Oken \emph{et al.} 2021).
@@ -292,19 +295,10 @@ income variability by changing harvest productivity or costs.
 Individual choices by fishers and fishery management mitigate
 environmental risk. However, there is a lack of financial tools
 available to fishers to address income risk as a result of environmental
-fluctuations (Sethi 2010; Kasperski and Holland 2013). In the United
-States, financial relief currently comes from government issued disaster
-payments to afflicted fishery communities (Upton 2013). Since 1990, the
-United States has issued nearly \$2 billion dollars to fishing
-communities after a disaster was declared. Environmental disasters, such
-as hurricanes, marine heatwaves, and harmful algal blooms, were solely
-responsible for 56\% of the payments and partially responsible for
-another 27\%. This system may be ineffective as there is an average of 2
-years between disaster impact and fund relief (Bellquist \emph{et al.}
-2021), and may inequitably distribute funds (Jardine \emph{et al.}
-2020). New financial tools need to be developed to alleviate financial
-and income risk for coastal communities (Wabnitz and Blasiak 2019;
-Sumaila \emph{et al.} 2020).
+fluctuations (Sethi 2010; Kasperski and Holland 2013). New financial
+tools need to be developed to alleviate financial and income risk for
+coastal communities (Wabnitz and Blasiak 2019; Sumaila \emph{et al.}
+2020).
 
 Insurance may be an ideal financial tool for risk management in
 fisheries as it is scalable, protects against environmental shocks, and
@@ -340,18 +334,15 @@ One crucial area that remains unaddressed is the potential influence of
 insurance on fishers behavior. Moral hazards are decisions by insured
 agents that they would not otherwise take if they were uninsured (Wu
 \emph{et al.} 2020). Owning insurance contracts will change fisher
-harvesting decisions through moral hazards. An early fishery insurance
-program in Bristol Bay, Alaska suggested insurance would disincentivize
-exit from the fishery exacerbating overfishing concerns (Herrmann
-\emph{et al.} 2004). However, the authors provided no empirical or
-theoretical justification. Fisheries are highly dynamic systems because
-of year to year variation in biological growth and reproduction stemming
-from environmental variables. Overfishing impacts are exacerbated
-through ecological dynamics as lower fish abundances carry over to the
-next year. With 35.6\% of global fisheries overfished and 57.3\% at
-maximum sustainable yield (FAO 2022), ensuring new index insurance
-programs do not push more fisheries toward overfishing is a crucial
-first assessment.
+harvesting decisions through moral hazards. In turn, conservation of
+fish stocks will be impacted. Fisheries are highly dynamic systems
+because of year to year variation in biological growth and reproduction
+stemming from environmental variables. Overfishing impacts are
+exacerbated through ecological dynamics as lower fish abundances carry
+over to the next year. With 35.6\% of global fisheries overfished and
+57.3\% at maximum sustainable yield (FAO 2022), ensuring new index
+insurance programs do not incentivize perverse behavior towards more
+overfishing is a necessary first assessment.
 
 Currently, the assumption appears to be that index insurance would
 completely avoid any moral hazards in fisheries (Watson \emph{et al.}
@@ -359,7 +350,7 @@ completely avoid any moral hazards in fisheries (Watson \emph{et al.}
 ``chasing the trigger'' and ``risk reduction''. ``Chasing the trigger''
 is the directed behavior of policyholders to increase the likelihood of
 a payout. For example, a fisher actively choosing to fish less to
-receive an indenmified harvest insurance payment. Index insurance
+receive an indemnified harvest insurance payment. Index insurance
 completely eliminates this moral hazard through the independent and
 uninfluenced index (fishers cannot affect sea surface temperature).
 ``Risk reduction'' occurs through possessing an insurance contract that
@@ -374,37 +365,41 @@ conservation of fish stocks or spiral delicate systems towards
 destruction.
 
 Agricultural economists have grappled with insurance moral hazards for
-decades. While identifying insurance effects on inputs is an
-excruciatingly difficult task (Biram \emph{et al.} 2024), there are
-numerous ways insurance has changed farmer's decisions. Farmers use more
-water (Deryugina and Konar 2017) and acreage with insurance coverage
-(Goodwin \emph{et al.} 2004; Cai 2016; Claassen \emph{et al.} 2017). The
-direction chemical input use varies with some studies indicating
-increased fertilizer use (Horowitz and Lichtenberg 1993), while others
-indicate less fertilizer use (Babcock and Hennessy 1996; Smith and
-Goodwin 1996). Mishra \emph{et al.} (2005) were the first to connect the
-external environmental benefit of insurance through reduced fertilizer
-use. Suggesting that moral ahzards could be good for the environemnt.
+decades. There are clear, demonstrable behavioral changes in farmers
+because of insurance that impact environmental sustainability. Farmers
+use more water (Deryugina and Konar 2017) and acreage with insurance
+coverage (Goodwin \emph{et al.} 2004; Cai 2016; Claassen \emph{et al.}
+2017). The direction of chemical input use varies with some studies
+indicating increased fertilizer use (Horowitz and Lichtenberg 1993),
+while others indicate less fertilizer use (Babcock and Hennessy 1996;
+Smith and Goodwin 1996). Mishra \emph{et al.} (2005) were the first to
+connect moral hazards to positive effects on the environment. Their
+study found that reduced fertilizer use from insurance led to less
+agricultural run-off pollution. Overall, insurance leads to
+statistically significant changes in pollution levels, but are
+proportionally rather small drivers of total agricultural pollution
+(Claassen \emph{et al.} 2017).
 
-Index insurance increased agricultural capital investments in Kenyan
-maize, Burkina Faso cotton, and Mali cotton farmers (Elabed and Carter
-2018; Sibiko and Qaim 2020; Stoeffler \emph{et al.} 2022). Index
-insurance also encouraged farmers in India to plant higher yield, but
-riskier crops (Cole \emph{et al.} (2017)). In all instances, farmers
-took on riskier positions with the protection offered by insurance. A
-clear demonstration of the ``risk reduction'' element in index insurance
-moral hazards.
+Index insurance also leads to changes in farmers behavior. Index
+insurance increased agricultural capital investments in Kenyan maize,
+Burkina Faso cotton, and Mali cotton farmers (Elabed and Carter 2018;
+Sibiko and Qaim 2020; Stoeffler \emph{et al.} 2022). Index insurance
+also encouraged farmers in India to plant higher yield, but riskier
+crops (Cole \emph{et al.} (2017)). In all instances, farmers took on
+riskier positions with the protection offered by insurance. A clear
+demonstration of the ``risk reduction'' element in index insurance moral
+hazards.
 
 Increased investments through insurance can also harm communities,
-particularly in common pool resources such as livestock grazing. Kenyan
+particularly in dynamic resources such as livestock grazing. Kenyan
 index insurance for livestock discentivized preemptively selling animals
 after negative shocks, leading to larger herds in aggregate (Janzen and
 Carter 2018). Though no empirical work has been done on the long term
 effects, two theoretical studies suggest insurance increases the
 stocking levels of grazing animals in pastures. Higher stocking
-densities diminish the pastures long-term health reducing overall
-utility gains of insurance (Müller \emph{et al.} 2011; Bulte and Haagsma
-2021). Caution must be demonstrated when dealing with complex
+densities diminish the pasture's ecological long-term health reducing
+overall utility gains of insurance (Müller \emph{et al.} 2011; Bulte and
+Haagsma 2021). Caution must be demonstrated when dealing with complex
 bio-economic systems, otherwise maladaptive outcomes can lead to greater
 harm (Müller \emph{et al.} 2017). The race to fish mentality that leads
 to overexploitation is a defining characteristic of fisheries. If index
@@ -424,8 +419,8 @@ insurance. However, the empirical setting uses multiple inputs.
 Therefore, we extend the theoretical model to account for multiple
 inputs in Section~\ref{sec-multi} to develop clearer insights with
 possible input interactions. Numerical results in Section~\ref{sec-sim}
-estimate potential biomass loss or recovery with an index insurance
-program. Implications for the suitability of fishery index insurance are
+estimate potential harvest changes with an index insurance program.
+Implications for the suitability of fishery index insurance are
 discussed in Section~\ref{sec-disc}. Fishery index insurance ultimately
 has ambiguous effects on conservation. Before widespread adoption,
 careful consideration must be given to how insurance will incentivize or
@@ -455,9 +450,10 @@ can isolate the effects of insurance more clearly.
 
 The original model derives steady state biomass through a logistic
 growth function and a linear technology function as a function of
-effort. Substituting into the linear technology function creates a
-production function yielding steady state harvest. Environmental
-stochasticity can translate to fluctuations in the steady state biomass.
+effort. Substituting the steady state biomass as a function of effort
+back into the linear technology function creates a production function
+yielding steady state harvest. Environmental stochasticity can translate
+to fluctuations in the steady state biomass.
 
 \begin{equation}\protect\hypertarget{eq-y}{}{
 \begin{aligned}
@@ -487,9 +483,9 @@ y=qe(\hat{B}(e)+\omega)
 \end{aligned}
 }\label{eq-y2}\end{equation}
 
-This formulation is often referred to as process error
-(\textbf{Merino2022?}). Randomness could originate from weather shocks
-impacting equilibrium biomass in the current period or measurement error
+This formulation is often referred to as process error (Merino \emph{et
+al.} 2022). Randomness could originate from weather shocks impacting
+equilibrium biomass in the current period or measurement error
 surrounding a stock (Tilman \emph{et al.} 2018). Distributing the
 production terms leads to \(y=qe\hat{B}(e)+\omega qe\), which we can
 generalize to any mean production function \(f(e)\) and any risk
@@ -617,7 +613,7 @@ sign to show that effort will always increase.
 
 Proposition~\ref{prp-cp} solidifies the direction insurance impacts on
 optimal effort decisions. In turn this will lead to destructive
-conservation outcomes.
+conservation outcomes when using Gordon-Schaefer.
 
 \begin{proposition}[]\protect\hypertarget{prp-synas}{}\label{prp-synas}
 
@@ -779,8 +775,9 @@ Some inputs have varying risk effects. Interaction between inputs risk
 effects could change overall impacts from insurance to aggregate harvest
 and biomass. Fishers can use a vector of inputs \(X\). Expected mean
 production (\(f(X)\)) and variance of outputs (\(h(X)\)) remains the
-same. We will use only two inputs, capital and labor, in our model.
-Total production thus equals:
+same. We will use only two inputs, capital and labor, in our model to
+simplify results without loss of generality. Total production thus
+equals:
 
 \[
 \begin{aligned}
@@ -846,7 +843,7 @@ Given the existence of the first order condition, we can use the
 implicit function theorem (IFT) to look at the impact of an exogenous
 variable change locally at the solution. In other words, using IFT will
 clarify how a change to the insurance parameter \(\gamma\) will lead to
-new allocations of captial and labor. We can differentiate
+new allocations of capital and labor. We can differentiate
 Equation~\ref{eq-foc1} with respect to \(\gamma\) by the chain rule.
 This yields:
 
@@ -1253,7 +1250,7 @@ change in inputs and aggregate harvest. The simulation model extends the
 two input case to include fuel (\(f\)).
 
 \begin{equation}\protect\hypertarget{eq-sim3}{}{
-\pi(k,l)=k^{\alpha_k}l^{\alpha_l}f^{\alpha_f}+\omega k^{\beta_k}l^{\beta_l}-c_kk^2-c_ll^2-c_ff^2
+\pi(k,l)=k^{\alpha_k}l^{\alpha_l}f^{\alpha_f}+\omega k^{\beta_k}l^{\beta_l}k^{\beta_f}-c_kk^2-c_ll^2-c_ff^2
 }\label{eq-sim3}\end{equation}
 
 Table~\ref{tbl-asche} shows the production and risk elasticities of the
@@ -1360,10 +1357,10 @@ effects may negate some of the desire to change production as insurance
 incentivizes both increases and decreases in harvest.
 
 Inputs in the groundfish trawler industry were all risk reducing.
-Unsurprsingly, each input saw a reduction in use when index insurance
-was offered. Capital was exremely risk reducing and saw a 4.14\%
+Unsurprisingly, each input saw a reduction in use when index insurance
+was offered. Capital was extremely risk reducing and saw a 4.14\%
 reduction in use, but was a relatively less productive input so overall
-harvest changed by only 1.4\%. Inusrance payouts were selected to be low
+harvest changed by only 1.4\%. Insurance payouts were selected to be low
 as seen in the two input simulations with risk decreasing inputs.
 
 \hypertarget{tbl-nor}{}
@@ -1374,8 +1371,8 @@ as seen in the two input simulations with risk decreasing inputs.
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0909}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1039}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.3377}}@{}}
-\caption{\label{tbl-nor}Application of Index Insurance to risk effect
-parameters of Norwegian Fisheries}\tabularnewline
+\caption{\label{tbl-nor}Effects of Index insurance on input use and
+harvest in Norwegian Fisheries.}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -1417,28 +1414,39 @@ Groundfish Trawlers & -4.14\% & -0.979\% & -0.69\% & -1.4\% & 0.23 \\
 \hypertarget{sec-disc}{%
 \section{Discussion}\label{sec-disc}}
 
-Our paper is the first to investigate the interaction of risk effects
-and index insurance in a common pool resource. We emphasize a fishery
-setting due to burgeoning policy considerations and unique
-characteristics of fisheries that merit deeper elucidation. Index
-insurance has the potential to alleviate overfishing pressures in common
-pool fisheries, but it depends on the inputs risk effects. Risk effects
-control the direction and impact of index insurance on input use and
-harvest. Standard fishery models implicitly assume all inputs are risk
-increasing. Thus, applying index insurance in standard models will
-always lead to increases in fishing effort and reductions in stock
-biomass.
+Index insurance will have behavioral impacts on fisheries harvest, which
+in turn will lead to conservation implications. Policy tools leveraging
+behavioral changes have been used to promote environmental conservation
+of water, energy, and fisheries (Campbell \emph{et al.} 2004; Reddy
+\emph{et al.} 2017; McDonald \emph{et al.} 2020). Index insurance has
+the potential to be a tool to help conserve fish population in addition
+to its income smoothing, but it depends on the underlying risk effects
+of inputs. As shown in this paper, harvest pressures could reduce by 6\%
+in Norwegian purse seiners. Norway has well managed fisheries. This
+would place these fisheries to the right or near MSY in
+Figure~\ref{fig-synas} so that a reduction in 6\% harvest also
+corresponds to some level of improved fish stocks. However, the
+ambiguous and sensitive nature of index insurance as a behavioral policy
+tool also opens the possibility of maladaptive outcomes that further
+unsustainable practices. Norwegian coastal groundfish trawlers are
+incentivized to increase their harvest by 15.4\% with index insurance.
+Behavioral policies can backfire through unintended consequences
+especially in complex bio-economic settings (Abbott and Haynie 2012).
+Therefore, it is imperative to have some preemptive understanding of
+potential shortfalls of new policies.
 
-Risk effects need to be reconciled in a fisheries setting, particularly
-risk decreasing inputs. Crop covers and pesticide provide clear examples
-in agriculture, but what do risk decreasing inputs look like in
-fisheries? Asche \emph{et al.} (2020) provide empirical evidence of the
-existence of risk decreasing inputs, but do not elaborate on why or how
-labor and capital directly decrease risk. Labor is perhaps the more
-intuitive risk decreasing input. Technical expertise of crew and
-captains can hedge against luck when fishing (Alvarez \emph{et al.}
-2006). Better trained crew can deploy gear in a safe and timely manner,
-increasing the likelihood of effective sets.
+The fishery conservation success or failure of index insurance hinges on
+input risk effects. Risk effects need to be reconciled in fisheries in
+order to articulate more accurate behavior changes of fishery index
+insurance. Crop covers and pesticide provide clear examples of risk
+decreasing inputs in agriculture, but what do risk decreasing inputs
+look like in fisheries? Asche \emph{et al.} (2020) provide empirical
+evidence of the existence of risk decreasing inputs, but do not
+elaborate on why or how labor and capital directly decrease risk. Labor
+is perhaps the more intuitive risk decreasing input. Technical expertise
+of crew and captains can hedge against luck when fishing (Alvarez
+\emph{et al.} 2006). Better trained crew can deploy gear in a safe and
+timely manner, increasing the likelihood of effective sets.
 
 Capital is a more complex input, because it can be both risk increasing
 and decreasing. Capital investments in fisheries typically refer to
@@ -1472,9 +1480,10 @@ employment may reverberate throughout the community. Fishing is often a
 primary employment opportunity in coastal communities. Lowering
 employment options may lead to increased poverty or concentrated wealth.
 The resiliency of the community would be compromised rather than
-enhanced. The same idea applies to capital. If fishers are overinvesting
-in capital to hedge against some form of risk, policymakers need to be
-sure the insurance is replacing maladaptive self insurance behavior.
+enhanced. The same idea applies to capital. If fishers are over
+investing in capital to hedge against some form of risk, policymakers
+need to be sure the insurance is replacing maladaptive self insurance
+behavior.
 
 The primary form of self insurance in fisheries is management. To this
 point our analysis explicitly modeled scenarios without the existence of
@@ -1485,15 +1494,15 @@ rules may not need insurance. The management system is already providing
 the necessary risk protection. Insurance demand and uptake may be low in
 these fisheries. Insurance may also complement management to provide the
 financial relief that management cannot offer. Managers often focus on
-the biological health of the fishery that can run at odds with fishers
-desire to enhance their income. Insurance can act as the financial
+the biological health of the fishery that can run at odds with fishers'
+desires to enhance their income. Insurance can act as the financial
 relief and allow managers to pursue more active strategies to protect
 fish stocks without political resistance from lowered quotas. The
 interaction between insurance and management requires further
 investigation especially with the the numerous management strategies
 that exist in fisheries.
 
-Design and access of insurance must also consider equity. The current
+Design and access of insurance must also consider equity. The current US
 federal disaster relief program is inequitable with bias towards large
 industrial vessels (Jardine \emph{et al.} 2020). Replacing the program
 with an equally inequitable program would be foolhardy. Current US farm
@@ -1502,11 +1511,11 @@ large agribusinesses (White and Hoppe 2012). Dimensions of access,
 procedural, representation, and distribution must all be built into the
 design of new fishery index insurance programs (Fisher \emph{et al.}
 2019). For example, small scale fishers may have income constraints that
-prevent them from buying the initial contract. Microfinance options
+prevent them from buying the initial contract. Micro-finance options
 connected to insurance have been used in agriculture to alleviate this
-burden to some success (Dougherty \emph{et al.} 2021). Additionally, we
-must ensure that is not only the vessel owners who reap the benefits of
-insurance. Deckhands and crew are laid off during closures. If index
+burden with some success (Dougherty \emph{et al.} 2021). Additionally,
+we must ensure that is not only the vessel owners who reap the benefits
+of insurance. Deckhands and crew are laid off during closures. If index
 insurance payouts are going through the entire fishery, the most
 vulnerable to closures must be protected as well. Contract stipulations
 could mandate that only cost expenses are covered by payouts thereby
@@ -1518,7 +1527,7 @@ Index insurance could be designed to incentivize other forms of
 sustainable behavior change. We define three pathways insurance can
 change behavior: Moral hazards, Quid Pro Quo, and Collective Action.
 Moral hazards were proven in this paper to have ambiguous impacts
-controlled by the risk characteristics of fisher inputs.
+controlled by the risk characteristics of fishery inputs.
 
 Quid Pro Quo is the idea that insurance contracts could be designed with
 conservation measures built in. Fishers would be required to adopt
@@ -1563,7 +1572,8 @@ conservation of fisheries.
 \hypertarget{appendix}{%
 \section{Appendix}\label{appendix}}
 
-Partial Equations
+Partial derivatives used to sign Equation~\ref{eq-ivtsol} are shown
+below.
 
 \begin{equation}\protect\hypertarget{eq-kk}{}{
 \begin{aligned}
@@ -1601,14 +1611,12 @@ Partial Equations
 \frac{\partial F}{\partial l \partial \gamma}=(1-p)u''(\pi_g-p\gamma)\frac{\partial \pi_g}{\partial l}(-p)+pu''(\pi_b+(1-p)\gamma)\frac{\partial \pi_b}{\partial l}(1-p)
 }\label{eq-lgam}\end{equation}
 
-\begin{corollary}[]\protect\hypertarget{cor-mp}{}\label{cor-mp}
+Proof of Corollary~\ref{cor-mp}.
 
-Marginal profit in the bad state of the world is greater (less) than
-marginal profit in the good state for risk decreasing (increasing)
-inputs. If inputs have zero risk effects, the marginal profits are
-equivalent in both states.
-
-\end{corollary}
+\textbf{Corollary 3.1} \emph{Marginal profit in the bad state of the
+world is greater (less) than marginal profit in the good state for risk
+decreasing (increasing) inputs. If inputs have zero risk effects, the
+marginal profits are equivalent in both states.}
 
 By the first order conditions, there exist optimal values \(k^*\) and
 \(l^*\) that must be chosen before the realization of the states of the
@@ -1656,6 +1664,13 @@ profits with no risk effects.
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-Abbott2012}{}}%
+Abbott, J.K. and Haynie, A.C. (2012)
+\href{https://doi.org/10.1890/11-1319.1}{What are we protecting? Fisher
+behavior and the unintended consequences of spatial closures as a
+fishery management tool}. \emph{Ecological Applications} \textbf{22},
+762--777.
+
 \leavevmode\vadjust pre{\hypertarget{ref-Alvarez2006}{}}%
 Alvarez, A., Schmidt, P., Alvarez, A. and Schmidt, P. (2006)
 \href{https://doi.org/10.1007/s11123-006-0002-x}{Is skill more important
@@ -1681,18 +1696,6 @@ test of ecosystem-based fisheries management in the gulf of alaska
 pacific cod fishery}. \emph{Frontiers in Marine Science} \textbf{7},
 1--21.
 
-\leavevmode\vadjust pre{\hypertarget{ref-Bellquist2021}{}}%
-Bellquist, L., Saccomanno, V., Semmens, B.X., Gleason, M. and Wilson, J.
-(2021) \href{https://doi.org/10.7717/peerj.11186}{The rise in climate
-change-induced federal fishery disasters in the united states}.
-\emph{PeerJ} \textbf{9}.
-
-\leavevmode\vadjust pre{\hypertarget{ref-Biram2024}{}}%
-Biram, H.D., Tack, J., Nehring, R. and Yu, J. (2024) Empirical
-challenges for estimating moral hazard effects of crop inusrance on
-pesticide use. \emph{Journal of Agricultural and Resource Economics}
-\textbf{49}, 265--282.
-
 \leavevmode\vadjust pre{\hypertarget{ref-Bulte2021}{}}%
 Bulte, E. and Haagsma, R. (2021)
 \href{https://doi.org/10.1007/s10640-021-00545-1}{The welfare effects of
@@ -1703,6 +1706,13 @@ index-based livestock insurance: Livestock herding on communal lands}.
 Cai, J. (2016) \href{https://doi.org/10.1257/pol.20130371}{The impact of
 insurance provision on household production and financial decisions}.
 \emph{American Economic Journal: Economic Policy} \textbf{8}, 44--88.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Campbell2004}{}}%
+Campbell, H.E., Johnson, R.M. and Larson, E.H. (2004)
+\href{https://doi.org/10.1111/j.1541-1338.2004.00099.x}{Prices, devices,
+people, or rules: The relative effectiveness of policy instruments in
+water conservation}. \emph{Review of Policy Research} \textbf{21},
+637--662.
 
 \leavevmode\vadjust pre{\hypertarget{ref-Carter2017}{}}%
 Carter, M., Janvry, A.D., Sadoulet, E. and Sarris, A. (2017)
@@ -1797,13 +1807,6 @@ Heck, N., Beck, M.W. and Reguero, B. (2021)
 marine fisheries: A global assessment}. \emph{Marine Policy}
 \textbf{132}, 104698.
 
-\leavevmode\vadjust pre{\hypertarget{ref-Herrmann2004}{}}%
-Herrmann, M., Greenberg, J., Hamel, C. and Geier, H. (2004)
-\href{https://doi.org/10.1577/M02-086.1}{Extending federal crop
-insurance programs to commercial fisheries: The case of bristol bay,
-alaska, sockeye salmon}. \emph{North American Journal of Fisheries
-Management} \textbf{24}, 352--366.
-
 \leavevmode\vadjust pre{\hypertarget{ref-Holbrook2019}{}}%
 Holbrook, N.J., Scannell, H.A., Gupta, A.S., et al. (2019)
 \href{https://doi.org/10.1038/s41467-019-10206-z}{A global assessment of
@@ -1858,11 +1861,23 @@ fishers' perceptions of index insurance and coral reef health in the
 context of climate-driven changes in extreme events}. \emph{ICES Journal
 of Marine Science} \textbf{80}, 2210--2221.
 
+\leavevmode\vadjust pre{\hypertarget{ref-McDonald2020}{}}%
+McDonald, G., Wilson, M., Veríssimo, D., et al. (2020)
+\href{https://doi.org/10.1111/cobi.13475}{Catalyzing sustainable
+fisheries management through behavior change interventions}.
+\emph{Conservation Biology} \textbf{34}, 1176--1189.
+
 \leavevmode\vadjust pre{\hypertarget{ref-Memarzadeh2019}{}}%
 Memarzadeh, M., Britten, G.L., Worm, B. and Boettiger, C. (2019)
 \href{https://doi.org/10.1073/pnas.1902657116}{Rebuilding global
 fisheries under uncertainty}. \emph{Proceedings of the National Academy
 of Sciences of the United States of America} \textbf{116}, 15985--15990.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Merino2022}{}}%
+Merino, G., Urtizberea, A., Fu, D., et al. (2022)
+\href{https://doi.org/10.1016/j.fishres.2022.106478}{Investigating
+trends in process error as a diagnostic for integrated fisheries stock
+assessments}. \emph{Fisheries Research} \textbf{256}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-gibbons1993}{}}%
 Mesterton-Gibbons, M. (1993)
@@ -1926,6 +1941,12 @@ Financial insurance in the management of public-good ecosystems}.
 Ramaswami, B. (1993) Supply response to agricultural insurance: Risk
 reduction and moral hazard effects. \emph{American Journal of
 Agricultural Economics} \textbf{75}, 914--925.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Reddy2017}{}}%
+Reddy, S.M.W., Montambault, J., Masuda, Y.J., et al. (2017)
+\href{https://doi.org/10.1111/conl.12252}{Advancing conservation by
+understanding and influencing human behavior}. \emph{Conservation
+Letters} \textbf{10}, 248--256.
 
 \leavevmode\vadjust pre{\hypertarget{ref-Reimer2017}{}}%
 Reimer, M.N., Abbott, J.K. and Wilen, J.E. (2017)
@@ -2012,10 +2033,6 @@ common-pool resource systems keywords: Risk insurance social-ecological
 systems fisheries management sustainability complex adaptive systems
 agent-based model common-poo}. \emph{Journal of Theoretical Biology}
 \textbf{454}, 205--214.
-
-\leavevmode\vadjust pre{\hypertarget{ref-Upton2013}{}}%
-Upton, H.F. (2013) \href{https://www.crs.gov}{Commercial fishery
-disaster assistance}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-Wabnitz2019}{}}%
 Wabnitz, C.C.C. and Blasiak, R. (2019)
