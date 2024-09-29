@@ -1,5 +1,5 @@
 ---
-title: Index Insurance induced moral hazards in fisheries have ambiguous affects on conservation
+title: The behavioral effects of index insurance in fisheries
 subtitle: Working Paper Draft *Not For Circulation*
 author:
   - name: Nathaniel Grimes
@@ -21,19 +21,19 @@ author:
           department: Environmental Markte Solutions Lab
           city: Santa Barbara
           state: California
-  - name: Andrew Plantinga
+  - name: Andrew J. Plantinga
     email: plantinga@ucsb.edu
     affiliations:
         - ref: emlab
 abstract: |
-  Fisheries are vulnerable to environmental shocks that impact stock health and fisher income. Index insurance is a promising financial tool to protect fishers from environmental risk. However, insurance will change fisher's behavior through moral hazards. We provide the first theoretical application of index insurance on fisher's behavior change to predict if index insurance will incentivize overfishing or conservation of the stock. Using traditional fishery models will always bias index insurance to incentivize overfishing, which in turn reduces fish stocks. However, using models with more flexible input risk effects shows index insurance will have varying effects on fishery conservation. The direction of change depends on the risk characteristics of the inputs. We find that index insurance will raise (lower) individual fisher effort when effort is risk increasing (decreasing). In turn, higher (lower) fishing effort reduces (increases) conservation of fish stocks. Overfished stocks will see conservation gains from reductions in effort while undercapacity fisheries will see harvest gains from increased production. The direction of harvest change becomes ambiguous when accounting for interaction between multiple inputs. Simulating from parameters estimated from four Norwegian fisheries shows index inusrance could increase harvest as high as 15% or decrease harvest by 6%. Before widespread adoption, careful consideration must be given to how index insurance will incentivize or disincentivize overfishing.
+  Fisheries are vulnerable to environmental shocks that impact stock health and fisher income. Index insurance is a promising financial tool to protect fishers from environmental risk. However, insurance will change fisher's behavior through moral hazards. We provide the first theoretical application of index insurance on fisher's behavior change to predict if index insurance will incentivize overfishing or conservation of the stock. Using traditional fishery models will always bias index insurance to incentivize overfishing, which in turn reduces fish stocks. However, using models with more flexible input risk effects shows index insurance will have varying effects on fishery conservation. The direction of change depends on the risk characteristics of the inputs. We find that index insurance will raise (lower) individual fisher effort when effort is risk increasing (decreasing). In turn, higher (lower) fishing effort reduces (increases) conservation of fish stocks. The direction of harvest change becomes ambiguous when accounting for interaction between multiple inputs. Simulating from parameters estimated for four Norwegian fisheries shows index inusrance could increase harvest as high as 15% or decrease harvest by 6%. Before widespread adoption, careful consideration must be given to how index insurance will incentivize or disincentivize overfishing.
 keywords: 
   - Index Insurance
   - Moral Hazard
   - Fisheries
   - Conservation
 date: last-modified
-bibliography: lib-8-9.bib
+bibliography: library.bib
 csl: fish-and-fisheries.csl
 toc: true
 number-sections: true
@@ -54,160 +54,208 @@ execute:
 
 Fisheries are vulnerable to stochastic weather shocks. Environmental fluctuations directly impact fishers of all scales from large industrial vessels to small scale subsistence fishers. Fishing is a vital economic engine to coastal communities and is the primary source of protein for millions of people [@Sumaila2012;@Teh2013;@fao2020]. Supporting these communities requires protection from enormous degrees of environmental risk.
 
-Environmental variability in factors such as sea surface temperature or wind speeds impact fishery biological and economic productivity. Marine heatwaves increase animal thermal stress diminishing reproductive ability [@Barbeaux2020], stunting growth [@Pandori2019], pushing species outside their usual habitats [@Cavole2016], and may directly increase mortality [@Smith2023]. Expanding fish habitat ranges increase costs when moving beyond the fishing grounds of established ports [@rogers2019]. The variability from marine heatwaves alone impacts 77% of species within economic exclusion zones and reduces maximum catch potential by 6% [@Cheung2021]. Marine heatwaves are often accompanied by harmful algal blooms and diseases leading to additional fishery collapses [@Oken2021]. 
+Marine heatwaves provide a good example of how environmental variability impacts fishery biological and economic productivity. Marine heatwaves increase animal thermal stress diminishing reproductive ability [@Barbeaux2020], stunting growth [@Pandori2019], pushing species outside their usual habitats [@Cavole2016], and may directly increase mortality [@Smith2023]. Expanding fish habitat ranges increase costs when moving beyond the fishing grounds of established ports [@rogers2019]. The variability from marine heatwaves alone impacts 77% of species within economic exclusion zones and reduces maximum catch potential by 6% [@Cheung2021]. Marine heatwaves are often accompanied by harmful algal blooms and diseases leading to additional fishery collapses [@Oken2021]. 
 
 The devastation of marine heatwaves was made clear in October 2022 when the Alaskan snow crab fishery was shut down after an assessment revealed an 87% decline in population from 2018 [@Zacher2022]. New evidence suggests that the marine heatwave increased caloric demands while tightening the snow crab range leading to a mass starvation event [@Szuwalski2023]. The fishery provided \$132 million from landings and \$174 million from processing in 2020, and the impacts from the closure will reverberate throughout the community [@Garber2022]. Recorded marine heatwaves have become more frequent [@Holbrook2019] and climate change may continue to increase heatwave frequency as climate distributions become more variable [@frolicher2018].
 
-Weather can also impact fisher harvesting efficiency beyond influencing the health of the underlying stock. Rolling seas and high wind speeds make it more difficult to harvest [@Alvarez2006] in addition to raising the danger to crew and vessel [@Heck2021]. More intense storms threaten coastal infrastructure vital to fishing communities [@Sainsbury2019]. Fishers actively avoid fishing in destructive weather at the expense of lost income [@Pfeiffer2020]. All together, environmental shocks increase total income variability by changing harvest productivity or costs.
+Weather can also impact fisher harvesting efficiency beyond influencing the health of the underlying stock. Rolling seas and high wind speeds make it more difficult to harvest [@Alvarez2006] in addition to raising the danger to crew and vessel [@Heck2021]. More intense storms threaten coastal infrastructure vital to fishing communities [@Sainsbury2019]. Fishers actively avoid fishing in destructive weather at the expense of lost income [@Pfeiffer2020].
 
-Individual choices by fishers and fishery management mitigate environmental risk. However, there is a lack of financial tools available to fishers to address income risk as a result of environmental fluctuations [@Sethi2010;@Kasperski2013]. New financial tools need to be developed to alleviate financial and income risk for coastal communities [@sumalia2020;@Wabnitz2019].
+Individual choices by fishers and fishery management mitigate environmental risk. However, there is a lack of financial tools available to fishers to address income risk as a result of environmental fluctuations [@Sethi2010;@Kasperski2013]. There is growing interest in developing new financial tools to alleviate financial and income risk for coastal communities [@sumalia2020;@Wabnitz2019].
 
 Insurance may be an ideal financial tool for risk management in fisheries as it is scalable, protects against environmental shocks, and smooths income for fishers [@Watson2023]. Currently, insurance in fisheries is primarily used to protect assets such as vessel hulls or fishing gear [@fao2022]. Insurance coverage could be expanded to include income variability. Weather fluctuations impact fisher income and their livelihoods. An insurance product covering environmental risk could improve fisher welfare and promote community resilience [@Maltby2023]. 
 
-Policy makers have begun pushing for new fisheries insurance programs modeled after agricultural crop insurance programs [@Murkowski2022]. Index insurance is one such product touted by practitioners as a prime candidate for fisheries productivity insurance [@Watson2023]. Index insurance gained traction in agriculture as an effective alternative to traditional crop insurance in developing countries because it had lower administrative cost, minimized moral hazards, and does not require claim verification [@Carter2017;@Collier2009]. Whereas crop insurance requires an assessment of loss to an individual farm, index insurance uses an independent measure as the basis for issuing payouts to all policyholders. For example, a pilot program through the Caribbean Oceans and Aqauculture Sustainability Facility (COAST) uses index insurance to payout a set amount to fishers when indices of wave height, wind speed, and storm surge indicate a hurricane [@Sainsbury2019]. Triggers are the index values that initiate a payout. Contract design revolve around establishing suitable triggers to cover environmental loss. Interest is growing in expanding index insurance to cover other environmental shocks to more fisheries.
+Policy makers have begun pushing for new fisheries insurance programs modeled after agricultural crop insurance programs [@Murkowski2022]. Index insurance is one such product touted by practitioners as a prime candidate for fisheries productivity insurance [@Watson2023]. Index insurance gained traction in agriculture as an effective alternative to traditional crop insurance in developing countries because it had lower administrative cost, minimized moral hazards, and does not require claim verification [@Carter2017;@Collier2009]. Whereas indemnity crop insurance requires an assessment of loss to an individual farm, index insurance uses an independent measure as the basis for issuing payouts to all policyholders. For example, a pilot program through the Caribbean Oceans and Aqauculture Sustainability Facility (COAST) uses index insurance to payout a set amount to fishers when indices of wave height, wind speed, and storm surge indicate a hurricane [@Sainsbury2019]. Triggers are the index values that initiate a payout. Contract design revolve around establishing suitable triggers to cover environmental loss. Interest is growing in expanding index insurance to cover other environmental shocks to more fisheries.
 
-One crucial area that remains unaddressed is the potential influence of insurance on fishers behavior. Moral hazards are decisions by insured agents that they would not otherwise take if they were uninsured [@Wu2020]. Owning insurance contracts will change fisher harvesting decisions through moral hazards. In turn, conservation of fish stocks will be impacted. Fisheries are highly dynamic systems because of year to year variation in biological growth and reproduction stemming from environmental variables. Overfishing impacts are exacerbated through ecological dynamics as lower fish abundances carry over to the next year. With 35.6% of global fisheries overfished and 57.3% at maximum sustainable yield [@fao2022], ensuring new index insurance programs do not incentivize perverse behavior towards more overfishing is a necessary first assessment. 
+One crucial area that remains unaddressed is the potential influence of insurance on fishers behavior. Moral hazards are decisions by insured agents that they would not otherwise take if they were uninsured [@Wu2020]. Owning insurance contracts may change fisher harvesting decisions through moral hazards, which could impact the sustainability of fish stocks. Policy tools leveraging behavioral changes have been used to promote environmental conservation of water, energy, and fisheries [@Reddy2017;@McDonald2020;@Campbell2004]. Index insurance could be used as a tool to incentive sustainable behavior changes if the conditions are right. However, no study has modeled or examined the behavioral implications of a fisheries insurance program. Behavioral policies can also backfire through unintended consequences especially in bio-economic settings [@Abbott2012]. Therefore, it is imperative to have some preemptive understanding of potential shortfalls of new policies. Fisheries are highly dynamic systems because of year to year variation in biological growth and reproduction stemming from environmental variables. Overfishing impacts are exacerbated through ecological dynamics as lower fish abundances carry over to the next year. With 35.6% of global fisheries overfished and 57.3% at maximum sustainable yield [@fao2022], ensuring new index insurance programs do not incentivize perverse behavior towards more overfishing is a necessary first assessment. 
 
-Currently, the assumption appears to be that index insurance would completely avoid any moral hazards in fisheries [@Watson2023]. Yet, there are two components to insurance moral hazard: "chasing the trigger" and "risk reduction".  "Chasing the trigger" is the directed behavior of policyholders to increase the likelihood of a payout. For example, a fisher actively choosing to fish less to receive an indemnified harvest insurance payment. Index insurance completely eliminates this moral hazard through the independent and uninfluenced index (fishers cannot affect sea surface temperature). "Risk reduction" occurs through possessing an insurance contract that protects policyholders from risk. Policyholders may reoptimize their decisions once protected from risk. Index insurance remains susceptible to this element of moral hazard that could manifest in maladaptive behaviors. A simple example would be choosing to not wear a helmet while riding a bike because you have health insurance. All preliminary analyses of fisheries index insurance are missing rigorous assessment of moral hazards. Moral hazards could enable behavior changes that lead to conservation of fish stocks or spiral delicate systems towards destruction.
+Previous studies articulated hypothetical examples of moral hazards in fishery indemnity insurance programs, such as encouraging fishers to fish in foul weather or to not exit the fishery after a bad year of harvest [@Watson2023;@Herrmann2004]. Building a theoretical framework will better predict the long term sustainability of index insurance programs for fisheries. Currently, the operational assumption of practitioners appears to be that index insurance would completely avoid any moral hazards in fisheries and intrinsically motivate greater fishery sustainability [ORAA?]. Yet, there are two components to insurance moral hazard: "chasing the trigger" and "risk reduction".  "Chasing the trigger" is the directed behavior of policyholders to increase the likelihood of a payout. For example, a fisher actively choosing to fish less to receive an indemnified harvest insurance payment. Index insurance completely eliminates this moral hazard through the independent and uninfluenced index (fishers cannot affect sea surface temperature). "Risk reduction" occurs through possessing an insurance contract that protects policyholders from risk. Policyholders may reoptimize their decisions once protected from risk. Index insurance remains susceptible to this element of moral hazard that could manifest in maladaptive behaviors. A simple example would be choosing to not wear a helmet while riding a bike because you have health insurance. All preliminary analyses of fisheries index insurance are missing rigorous assessment of moral hazards. Moral hazards could enable behavior changes that lead to conservation of fish stocks or spiral delicate systems towards destruction.
 
 Agricultural economists have grappled with insurance moral hazards for decades. There are clear, demonstrable behavioral changes in farmers because of insurance that impact environmental sustainability. Farmers use more water [@Deryugina2017] and acreage with insurance coverage [@Claassen2017;@Goodwin2004;@Cai2016]. The direction of chemical input use varies with some studies indicating increased fertilizer use [@horowitz1993], while others indicate less fertilizer use [@Babcock1996;@Smith1996]. @Mishra2005 were the first to connect moral hazards to positive effects on the environment. Their study found that reduced fertilizer use from insurance led to less agricultural run-off pollution. Overall, insurance leads to statistically significant changes in pollution levels, but are proportionally rather small drivers of total agricultural pollution [@Claassen2017].
 
-Index insurance also leads to changes in farmers behavior. Index insurance increased agricultural capital investments in Kenyan maize, Burkina Faso cotton, and Mali cotton farmers [@Elabed2016;@Sibiko2020;@stoeffler2022]. Index insurance also encouraged farmers in India to plant higher yield, but riskier crops (@Cole2017). In all instances, farmers took on riskier positions with the protection offered by insurance. A clear demonstration of the "risk reduction" element in index insurance moral hazards.
+Index insurance leads to changes in farmers behavior similar to those observed in indemnity insurance. Index insurance increased agricultural capital investments in Kenyan maize, Burkina Faso cotton, and Mali cotton farmers [@Elabed2016;@Sibiko2020;@stoeffler2022]. Index insurance also encouraged farmers in India to plant higher yield, but riskier crops (@Cole2017). In all instances, farmers took on riskier positions with the protection offered by insurance; with each as clear demonstrations of the "risk reduction" element in index insurance moral hazards.
 
-Increased investments through insurance can also harm communities, particularly in dynamic resources such as livestock grazing. Kenyan index insurance for livestock discentivized preemptively selling animals after negative shocks, leading to larger herds in aggregate [@Janzen2018]. Though no empirical work has been done on the long term effects, two theoretical studies suggest insurance increases the stocking levels of grazing animals in pastures. Higher stocking densities diminish the pasture's ecological long-term health reducing overall utility gains of insurance [@muller2011;@Bulte2021]. Caution must be demonstrated when dealing with complex bio-economic systems, otherwise maladaptive outcomes can lead to greater harm [@muller2017]. The race to fish mentality that leads to overexploitation is a defining characteristic of fisheries. If index insurance always leads to increased input use in common pool resources, then implementing index insurance in fisheries could lead to maladaptive outcomes.
+Increased investments through insurance can also harm communities, particularly in dynamic resources such as livestock grazing. Kenyan index insurance for livestock discentivized preemptively selling animals after negative shocks, leading to larger herds in aggregate, which in turn reduce pasture health through overgrazing [@Janzen2018]. Though no empirical work has been done on the long term effects, two theoretical studies suggest insurance increases the stocking levels of grazing animals in pastures. Higher stocking densities diminish the pasture's ecological long-term health reducing overall utility gains of insurance [@muller2011;@Bulte2021]. Caution must be demonstrated when dealing with complex bio-economic systems, otherwise maladaptive outcomes can lead to greater harm [@muller2017]. The race to fish incentive that leads to overexploitation is a defining characteristic of fisheries. If index insurance always leads to increased input use in common pool resources, then implementing index insurance in fisheries could lead to maladaptive outcomes.
 
-This paper explores how fishers could change their behavior if offered viable index insurance contracts. We start in @sec-common with the canonical Gordon-Schaefer fisher production model to show that one to one applications of index insurance in fisheries will always decrease fish stocks leading to loss in abundance. If we adopt more flexible production models from agriculture the affects of index insurance becomes ambiguous, and may lead to healthier fish stocks. We parameterize a model to demonstrate the potential impacts of index insurance. However, the empirical setting uses multiple inputs. Therefore, we extend the theoretical model to account for multiple inputs in @sec-multi to develop clearer insights with possible input interactions.  Numerical results in @sec-sim estimate potential harvest changes with an index insurance program. Implications for the suitability of fishery index insurance are discussed in @sec-disc.  Fishery index insurance ultimately has ambiguous effects on conservation. Before widespread adoption, careful consideration must be given to how insurance will incentivize or disincentivize overfishing. 
+This paper explores how fishers could change their behavior if offered viable index insurance contracts. We start in @sec-common with the canonical Gordon-Schaefer production model to show that standard fishery models predict index insurance will always decrease fish stocks leading to loss in abundance. If we adopt more flexible production models, the effects of index insurance becomes ambiguous, and may lead to healthier fish stocks. We parameterize a model to demonstrate the potential impacts of index insurance. However, fishers use multiple inputs while fishing. Therefore, we extend the theoretical model to account for multiple inputs in @sec-multi to develop clearer insights with possible input interactions.  Numerical results in @sec-sim estimate potential harvest changes with an index insurance program. We calibrate an insurance model with input estimates from Norwegian fisheries. Implications for the suitability of fishery index insurance are discussed in @sec-disc.  Fishery index insurance ultimately has ambiguous effects on conservation. Before widespread adoption, careful consideration must be given to how insurance will incentivize or disincentivize overfishing. 
 
 # Index insurance with standard fishery models {#sec-common}
 
+A set number of $N$ fishers harvest from a common stock of fish. Permits, limited entry policies, or geographic constraints could limit $N$ to be fixed. The fish stock, $\tilde{B}$, is a random variable that experiences stochastic shocks that directly changes the amount of fish available for all fishers to harvest. We can separate the random biomass variable into a mean effect, $\hat{B}$, and a variance component, $\omega$, where $\omega$ can have any distribution so long as $\mathbb{E}[\omega]=0$.
 
-The Gordon-Schaefer production model continues to be one of the most used models in fishery modelling and management [@Memarzadeh2019]. Its simplicity captures a wide range of fishery dynamics and is easily extendable to more complex models such as age-structured [@Tahvonen2018]. The model finds steady state bioeconomic equilibrium that balances fish growth with fish harvest. Management targets such as maximum sustainable and economic yield (MSY and MEY) are easily derived from Gordon-Schaefer. Other popular surplus production models such as the Fox and Pella-Tomlinson models, can reduce down to the Gordon-Schaefer model through parameter choices. Given its ubiquity, it would be prudent to start with the Gordon-Schaefer model to understand how index insurance impacts fisheries.
+$$
+\tilde{B}=\hat{B}+\omega
+$$ {#eq-bio}
 
-Gordon-Schaefer captures biomass dynamics important to fisheries through the steady state equilibrium biomass. Additionally, it allows us to focus on a class of fisheries where behavior is unconstrained. Thus we can isolate the effects of insurance more clearly. 
+This formulation is often referred to as process error, where randomness could originate from weather shocks in the current period or measurement error (@Merino2022;@Tilman2018). An individual fisher, $i$, uses a vector of $M$ inputs $X^i\in\{{x_1,x_2,...x_M}\}$ to harvest, $y^i$, amount of fish.  The stock of fish also acts as an input to harvest ($y^i=f(X^i)\tilde{B}$). All other fishers, $j \text{ where } j\ne i$, harvest from the same stock of fish with their own vector of inputs, $y^j=f(X^ j)\tilde{B}$. Aggregate harvest of all other fishers accounts for every fishers' input vectors $Y(X^{\sim j})=\sum ^{N-1}_jy^j$. The lack of property rights and competition between fishers leads to a subtractability externality. Specifically, mean fish biomass ($\hat{B}(X^i,Y(X^{\sim j}))$) is decreasing in aggregate harvest, $\sum^{N}_{i=1} y^i$. Individual fisher inputs may have different effects on mean production, $f(X^i)$, and the variance of production, $h(X^i)$.
 
-The original model derives steady state biomass through a logistic growth function and a linear technology function as a function of effort. Substituting the steady state biomass as a function of effort back into the linear technology function creates a production function yielding steady state harvest. Environmental stochasticity can translate to fluctuations in the steady state biomass.
+$$
+y^i=f(X^i)\hat{B}(X^i,Y(X^{\sim j}))+\omega h(X^i)
+$${#eq-y}
+
+Fishers derive utility from profits and are price takers, so we add a convex cost function to harvest and normalize price of harvest to 1.
 
 $$
 \begin{aligned}
-y=qe\tilde{B}(e)\\
-\tilde{B}(e)\sim N(\hat{B}(e),\sigma_b^2)
-\end{aligned}
-$$ {#eq-y}
-
-Where $q$ is a catchability coefficient, $\tilde{B}$ is the random steady state biomass with a mean at $\hat{B}$ and a variance $\sigma_b^2$, and aggregated effort $e$.  We can break apart the random variable into a mean effect ($\hat{\beta}$) and variance component ($\omega$).
-
-$$
-\begin{aligned}
-\tilde{B}(e)=\hat{B}(e)+\omega \\
-\omega\sim N(0,\sigma_b^2)
-\end{aligned}
-$$ {#eq-varb}
-
-Adding @eq-varb back into @eq-y leads to:
-
-$$
-\begin{aligned}
-y=qe(\hat{B}(e)+\omega)
-\end{aligned}
-$$ {#eq-y2}
-
-This formulation is often referred to as process error [@Merino2022]. Randomness could originate from weather shocks impacting equilibrium biomass in the current period or measurement error surrounding a stock [@Tilman2018]. Distributing the production terms leads to $y=qe\hat{B}(e)+\omega qe$, which we can generalize to any mean production function $f(e)$ and any risk function $h(e)$.
-
-$$
-\begin{aligned}
-y=f(e)\hat{B}(e)+\omega h(e)
-\end{aligned}
-$$ {#eq-jp}
-
-In Gordon Schaefer, $f'(e)>0$ and $h'(e)>0$ because catchability $q>0$. Steady state biomass is decreasing in effort as well, $\hat{B}'(e)<0$. Fishers derive utility from profits, so we add a convex cost function to harvest and normalize price of harvest to 1.
-
-$$
-\begin{aligned}
-\pi=f(e)\hat{B}(e)+\omega h(e)-c(e)
+\pi^i=f(X^i)\hat{B}(X^i,Y(X^{\sim j}))+\omega h(X^i)-c(X^i)
 \end{aligned}
 $$ {#eq-pi1}
 
-To most seamlessly integrate index insurance, we can break situations into a bad state of the world that occurs with probability $p$ and a good state of the world that happens with probability $(1-p)$.  We can use $\omega$ to create an index to indemnify payouts because it captures the randomness of fishers profits. In reality, the index would be a weather variable known to impact biomass such as sea surface temperature, and the trigger are critical thresholds that cause weather to deviate from equilibrium biomass. Here, all stochasticity is captured by $\omega$. We can align the states of the world to a shock trigger $\bar\omega$ so that $p=P(\omega<\bar\omega)$ and $1-p=P(\omega>\bar\omega)$. 
 
-Insurance then pays a constant amount $\gamma$ in the bad state. Actuarilly fair insurance allows the premium paid in both states to be the probability of receiving a payout $p\gamma$. Additionally, if we set the trigger to $\bar\omega=0$ to indicate any time weather negatively impacts production, we can then separate out profit into good and bad states as well with $\omega_g>0$ and $\omega_b<0$ entering into @eq-pi1. Fishers are risk averse with a concave utility function $u'(\pi_i(e_i),\gamma)>0$ and $u''(\pi_i(e_i),\gamma)<0$. Putting it all together, fishers will maximize expected utility across good and bad states by selecting effort with a set insurance contract.
+To most seamlessly integrate index insurance, we create insurance lotteries by defining a trigger, $\bar\omega$, where insurance pays out a constant amount $\gamma$ if $\omega<\bar\omega$. The probability of entering a bad state and receiving the payout is $F(\bar\omega)$, where $F(\omega)$ is the cumulative distribution of $\omega$.  We can use $\omega$ to create an index to indemnify payouts because it captures the randomness of fishers' profits. In reality, the index would be a weather variable known to impact biomass such as sea surface temperature, and the trigger are critical thresholds of the weather variable where biomass deviates significantly from the mean. Here, all stochasticity is captured by $\omega$ with no basis risk. 
+ 
+Actuarilly fair insurance allows the premium, $\rho$, paid in both states to be the probability of receiving a payout times the payout amount, $\rho=F(\bar\omega)\gamma$. Additionally, if we set the trigger to $\bar\omega=0$ to indicate any time weather negatively impacts production, profits will enter corresponding bad and good states. This leads to the following corollary statement.
+
+:::{#cor-mp}
+Individual fisher expected marginal profit of a specific input, $x_m$, is greater in the good state than expected marginal profit in the bad state when $h_{x_m}(X^i)>0$. Expected marginal profit is higher in the bad state when $h_{x_m}(X^i)<0$.  If $h_{x_m}(X^i)=0$, the marginal profits are equivalent in both states.
+:::
+
+The proof of @cor-mp is included in the appendix.
+
+Risk aversion is a necessary condition for insurance to be desirable [@Outreville2014]. Fishers are highly sensitive to risk, especially income risk and demonstrate risk aversion despite working a seemingly risky profession [@Smith2005;@Holland2008;@Sethi2010]. They mitigate risk through a variety of measures. Fishers will choose consistent, known fishing grounds over risking exploring unknown spots [@Holland2008]. Fishers choose to fish less after storms and hurricanes when financial risk is alleviated by transitioning to catch share programs [@Pfeiffer2020;@Pfeiffer2022]. Therefore, we can assume fishers are risk averse to income shocks through a concave utility function. Fishers will maximize their own expected utility across good and bad states by selecting inputs with an exogenous insurance contract.
 
 $$
-F\equiv\max_{e}\mathbb{E}[u]=pu(\pi_b+(1-p)\gamma)+(1-p)u(\pi_g-p\gamma)
+\begin{aligned}
+U\equiv\max_{X^i}\mathbb{E}[U]=&F(\bar\omega)\mathbb{E}[u(\pi^i(X^i,\hat{B}(X^i,Y(X^{\sim j})),\omega)+(1-F(\bar\omega))\gamma|\omega<\bar\omega)]\\
+&+(1-F(\bar\omega))\mathbb{E}[u(\pi^i(X^i,\hat{B}(X^i,Y(X^{\sim j})),\omega)-F(\bar\omega\gamma)|\omega>\bar\omega)]
+\end{aligned}
 $$ {#eq-max}
 
-The first order condition that solves @eq-max is then:
 
-$$
-\frac{\partial F}{\partial e}=pu'(\pi_b+(1-p)\gamma)\frac{\partial \pi_b}{\partial e}+(1-p)u'(\pi_g-p\gamma)\frac{\partial \pi_g}{\partial e}=0
-$$ {#eq-foc}
+The general model in @eq-max is a flexible framework that can be applied to any fishery production model. A common characteristic of fishery models is the use of a single input technology function that increases with larger stocks of fish. Models of these forms include the canonical Gordon-Schaefer model, the Pella-Tomlinson model, @Clark1975 in deterministic settings, and @Reed1979 for stochastic settings. However, all of these models implicitly assume $h^i_{x_m}(X^i)>0$. For example, the most widespread fishing production function originates from the Gordon-Schaefer model where $y^i=qx^i\tilde{B}(x^i,Y(x^{\sim j}))$^[Traditionally, Gordon-Schaefer uses $e$ as the single input to denote aggregate fishing effort. To stay consistent with the terms used in this paper we present it as $x^i$ for a single input]. Expanding the stochasticity of biomass, production in Gordon-Schaefer becomes $y^i=q\hat{B}(x^iY(x^{\sim j}))x^i+\omega qx^i$. The derivative of the risk component of the production function is always positive, $h_{x}(x^i)=q$, because the catchability coefficient $q$ is positive by definition.
 
-For notional ease, the inputs of the profit function are dropped, but as shown in @eq-pi1 profit in both states ($\pi_b$=bad, $\pi_g$=good) remains a function of effort, equilibrium biomass, and weather shocks.
-
-To find the impact of insurance on optimal effort we can apply Cramer's Rule to the first order conditions.
-
-$$
-\frac{\partial e^*}{\partial \gamma}=-\frac{\frac{\partial F}{\partial e \partial \gamma}}{\frac{\partial^2 F}{\partial e^2}}
-$$
-
-By definition of a maximization problem, $\frac{\partial^2 F}{\partial e^2}$ is negative so we can focus solely on the numerator to sign the impact of insurance on optimal individual effort. Then we'll use the change in individual effort to understand the implications on conservation. 
+We show how this implicit bias on risk production in canonical models will always lead insurance to stimulate greater use of optimal inputs. We simply the general model to one input to reflect the aggregate effort used in these models.
 
 :::{#prp-cp}
-Gordon-Schaefer production models will always lead to increases in optimal effort with feasible index insurance contracts.
+Any single input fishery production model where $h_{x}(x^i)>0$ will always lead to increases in optimal input use with feasible index insurance contracts. 
 :::
 
 :::{.proof}
+
+Individual fishers now only use one input denoted by scalar $x^i$, and all other fishers use one input $x^{\sim j}$. @eq-max becomes:
+
+$$
+\begin{aligned}
+U\equiv\max_{x^i}\mathbb{E}[U]=&F(\bar\omega)\mathbb{E}[u(\pi^i(x^i,\hat{B}(x^i,Y(x^{\sim j})),\omega)+(1-F(\bar\omega))\gamma)|\omega<\bar\omega]\\
+&+(1-F(\bar\omega))\mathbb{E}[u(\pi^i(x^i,\hat{B}(x^i,Y(x^{\sim j})),\omega)-F(\bar\omega))\gamma|\omega>\bar\omega]
+\end{aligned}
+$$ {#eq-maxgs}
+
+The first order condition that solves @eq-maxgs is then:
+
+$$
+\begin{aligned}
+\frac{\partial U}{\partial x^i}=&F(\bar\omega)\mathbb{E}[u_{x^i}(\pi(x^i,\hat{B}(x^i,Y(x^{\sim j})),\omega)+(1-F(\bar\omega))\gamma)|\omega<\bar\omega]\frac{\partial\mathbb{E} [\pi^i|w<\bar\omega]}{\partial x^i}\\
+&+(1-F(\bar\omega))\mathbb{E}[u_{x^i}(\pi(x^i,\hat{B}(x^i,Y(x^{\sim j})),\omega)-F(\bar\omega)\gamma)|\omega>\bar\omega]\frac{\partial\mathbb{E} [\pi^i|w>\bar\omega]}{\partial x^i}=0
+\end{aligned}
+$$ {#eq-foc}
+
+
+To find the impact of insurance on optimal input, we use the implicit function theorem on the first order conditions.
+
+$$
+\frac{\partial x^{*i}}{\partial \gamma}=-\frac{\frac{\partial U}{\partial x^i \partial \gamma}}{\frac{\partial^2 U}{\partial x^{2i}}}
+$$
+
+By the sufficient condition of a maximization problem, $\frac{\partial^2 U}{\partial x^{2i}}$ is negative so we can focus solely on the numerator to sign the impact of insurance on optimal individual input. 
+
 Differentiate equation @eq-foc with respect to insurance.
 
 $$
-\frac{\partial F}{\partial e \partial \gamma}=(1-p)u''(\pi_g-p\gamma)\frac{\partial \pi_g}{\partial e}(-p)+pu''(\pi_b+(1-p)\gamma)\frac{\partial \pi_b}{\partial e}(1-p)
+\begin{aligned}
+\frac{\partial U}{\partial x^i \partial \gamma}=&F(\bar\omega)\mathbb{E}[u_{x^ix^i}(\pi^i+(1-F(\bar\omega))\gamma)|\omega<\bar\omega]\frac{\partial\mathbb{E}[\pi^i|\omega<\bar\omega]}{\partial x^i}(1-F(\bar\omega))\\
+&+(1-F(\bar\omega))\mathbb{E}[u_{x^ix^i}(\pi^i-F(\bar\omega)\gamma)|\omega>\bar\omega]\frac{\partial \mathbb{E}[\pi^i|\omega>\bar\omega]}{\partial x^i}(-F(\bar\omega))
+\end{aligned}
 $$ {#eq-egam}
 
 Suppose insurance fully covers the loss between states, then utility in the good state and bad state are equal to each other so that we can factor out like terms in @eq-egam.
 
 $$
-\frac{\partial F}{\partial e \partial \gamma}=(1-p)pu''(\cdot)[\frac{\partial \pi_b}{\partial e}-\frac{\partial \pi_g}{\partial e}]
+\frac{\partial U}{\partial x^i \partial \gamma}=(1-F(\bar\omega))F(\bar\omega)u_{x^ix^i}(\cdot)[\frac{\partial \mathbb{E}[\pi^i|\omega<\bar\omega]}{\partial x^i}-\frac{\partial \mathbb{E}[\pi^i|\omega>\bar\omega]}{\partial x^i}]
 $$ {#eq-simp}
 
-The first term outside the brackets is negative by the definition of concave utility. Marginal profits across states share the same mean productions and costs as effort decisions must be made before the realization of the states. Subbing those terms in to @eq-simp demonstrates how they cancel out allowing us to sign the interior brackets.
+The first term outside the brackets is negative by the definition of concave utility. @cor-mp demonstrates the interior of the brackets is negative as the marginal profit in the bad state is greater than the marginal profit in the good with $h_x(x^i)>0$. Therefore, index insurance will always increase input use in traditional fishery models.
 
 $$
 \begin{aligned}
-\frac{\partial \pi_b}{\partial e}-\frac{\partial \pi_g}{\partial e}&=\omega_b h_{e}'(e)+\cancel{f_{e}'(e)\hat{B}_{e}(e)}+\cancel{\frac{\partial \hat{B}}{\partial e}f(e_)}-\cancel{c_{e}'(e)} \\
-&-\omega_g h_{e}'(e)-\cancel{f_{e}'(e)\hat{B}_{e}(e)}-\cancel{\frac{\partial \hat{B}}{\partial e}f(e)}+\cancel{c_{e}'(e)} \\
-&=\omega_b h'(e)-\omega_g h'(e)
+&\frac{\partial U}{\partial x^i \partial \gamma}=\overbrace{(1-F(\bar\omega))F(\bar\omega)u_{x^ix^i}(\cdot)}^{-}\overbrace{[\frac{\partial \mathbb{E}[\pi^i|\omega<\bar\omega]}{\partial x^i}-\frac{\partial \mathbb{E}[\pi^i|\omega>\bar\omega]}{\partial x^i}]}^{-}\\
+&\frac{\partial U}{\partial x^i \partial \gamma}>0
 \end{aligned}
-$$ {#eq-compi}
-
-The marginal risk function is positive in Gordon-Schaefer so that $h'(e)>0$. With $\omega_b<0$ and $\omega_g>0$, then @eq-compi is negative.
-
-$$
-\frac{\partial \pi_b}{\partial e}-\frac{\partial \pi_g}{\partial e}=\overbrace{\omega_bh'(e)-\omega_gh'(e)}^{-}
-$$
-
-Now can completely sign @eq-simp by subbing in the bracket sign to show that effort will always increase.
+$$ {#eq-gs}
 
 :::
 
-@prp-cp solidifies the direction insurance impacts on optimal effort decisions. In turn this will lead to destructive conservation outcomes when using Gordon-Schaefer. 
 
-:::{#prp-synas}
-Index insurance always lowers steady state biomass in a Gordon-Schaefer model.
+
+@prp-cp demonstrates that in common-pool fisheries, in the absence of management, index insurance will always increase individual fisher inputs if harvest is modeled with traditional single input fishery models. @prp-cp also provides a relatively quick test to assess whether a harvest function will lead to changes in input use. All fishery models use linear harvest functions or some form of Cobb-Douglas, which contain the implicit assumption that $h_{x}(x^i)>0$. This will bias any analysis of index insurance with traditional fishery models towards overfishing, which runs contrary to practitioners' initial hypotheses.
+
+However, most fishery models have limited applications of risk and risk aversion that do not match observed behavior. For instance, fishery models with concave utility always predict lower optimal effort than risk neutral preferences [@gibbons1993;@Tilman2018;@Tromeur2021]. Yet risk averse fishers appear to consistently over harvest without management constraints. To reconcile these discrepancies, perhaps more flexible models of risk are necessary to capture observed behavior.
+
+Agriculture also encountered a similar issue in the inception of crop insurance programs in the early 1980s. Risk averse farmers choose inputs that deviated from expected values with Cobb-Douglas production functions. Researchers posited alternative flexible production functions to better capture the influence of risk on farmer decision making. @Just1978 specified the general class of functions that could adequately capture input risk effects that were both positive and negative. Inputs that lead to higher production variance are risk increasing with positive risk effects, and inputs that lowered the variance of production are risk decreasing with negative risk effects. @Ramaswami1993 and @Mahul2001 proved insurance would either increase or decrease the input use contingent on the risk effect qualities of a given input. Risk increasing inputs ($h_x(x)>0$) always lead to increases in input use with insurance, while risk decreasing inputs ($h_x(x)<0$) always lead to decreases in input use with insurance. Within this framework, all fishery production fisheries fall into the risk increasing category.
+
+If we allow for risk decreasing inputs in fishery production, then the effects of insurance can reverse and lead to decreases in individual fisher input. The proof of @prp-cp allows for risk decreasing inputs by switching $h_{x}(x_i)<0$. The sign of @eq-gs changes to negative so that insurance will lower input use. The sign is preserved even in a common pool setting with symmetric players. So long as the interaction of other fishers behavior impacts mean biomass and not the variance, the effects of insurance on risk increasing and decreasing inputs tested in agricultural settings hold and apply to all fishers equally. The flexibility of Just-Pope production functions will lead to different harvest outcomes depending on the context of the risk effects of fishery inputs. Whether those changes lead to long term changes in sustainability requires more structure on the biology of a common-pool fishery. 
+
+## Index Insurance effects on fishery conservation
+
+The race to fish incentive that arises from common-pool settings encourages myopic behavior. Fishers do not make decisions on the long run welfare of the fishery, but rather as a series of short run optimizations. However, their decisions on input use directly impact the biological sustainability of the fishery. Biomass growth into the next period is dependent on harvest in the current period. We add dynamics into the model to show how index insurance will impact biological conservation of fishery resources.
+
+Biomass in the next period, $\tilde{B}_{t+1}$, is a function of the current period's biomass, a growth function $G(\tilde{B})$, and aggregate harvest, $\sum y_t^i(\tilde{B}_t,\omega,x^i)$. We focus only on one input, $x^i$, to correspond to the single input case proven in @prp-cp.
+
+$$
+\tilde{B}_{t+1}=\tilde{B}_t+G(\tilde{B}_t)-\sum_{i=1}^n y^i_t(\tilde{B}_t,\omega,x^i)
+$${#eq-biodyn}
+
+The stochastic nature of biomass in the current period spills over into the next period, creating a challenge to extract concise insights. To find clearer interpretations, we focus on the expectation of next period biomass, $\mathbb{E}[\tilde{B}_{t+1}]$. The expectation of $\omega$ is zero, which allows us to focus on the mean production function, biomass, and a deterministic growth function.
+
+$$
+\begin{aligned}
+\mathbb{E}[\tilde{B}_{t+1}]&=\mathbb{E}[\tilde{B}_t]+\mathbb{E}[G(\tilde{B}_t)]-\sum_{i=1}^n \mathbb{E}[y^i_t(\tilde{B}_t,\omega,x^i)] \\
+\hat{B}_{t+1}&=\hat{B}_t+G(\hat{B}_t)-\hat{B}_t\sum_{i=1}^n f(x^i)
+\end{aligned}
+$$ {#eq-exbiodyn}
+
+We can use the expected biomass to approximate a potential steady state in order to predict the conservation effects of changes in input use from index insurance. For convenience, we assume a logistic growth function, $G(\hat{B})=r\hat{B}(1-\frac{\hat{B}}{K})$, where $r$ is the intrinsic growth rate and $K$ is the carrying capacity of the fishery.  We can find the expected steady state biomass by setting $\hat{B}_{t+1}=\hat{B}_t$ in @eq-exbiodyn.
+
+$$
+\hat{B}=K\left(1-\frac{f(x^i)+\sum_{j=1}^{N-1} f(Y(x^{\sim j}))}{r}\right)
+$$ {#eq-ss}
+
+
+:::{#prp-cons}
+
+In a symmetric Nash equilibrium, the change in fisher optimal input use will lead to a change in expected steady state biomass. 
+
+If index insurance leads to less mean production, $f(x^i)$, then the expected steady state biomass will increase. If index insurance leads to more mean production, then the expected steady state biomass will decrease.
+
 :::
 
 :::{.proof}
-Godron-Schaefer uses a logistic growth function so that mean equilibrium biomass always decreasing in effort, $\frac{\partial\hat{B}(e)}{\partial e}<0$. By @prp-cp, effort will always increase with insurance. Therefore, equilibrium biomass will always decrease with insurance.
+
+In a symmetric Nash equilibrium, all fishers will choose the same input use, $x^i=Y(x^{\sim j})$. We can then rewrite the expected steady state biomass as:
+
+$$
+\hat{B}=K\left(1-\frac{nf(x^i)}{r}\right)
+$$ {#eq-ss2}
+
+The change in aggregate harvest is always negative due to the concavity of mean production $f(x^i)$.
+
+$$
+\frac{\partial \hat{B}}{\partial x^i}=-\frac{Knf_{x^i}(x^i)}{r}
+$$
+
+If insurance raises $x_i$, then the expected steady state biomass will decrease. If insurance lowers $x_i$, then the expected steady state biomass will increase.
+
 :::
 
-Contrary to initial hypotheses, index insurance will lead to maladapative outcomes in fisheries with standard models. @prp-cp holds for more production models than just Gordon-Schaefer. Any production function where $h'(e)>0$ including Cobb-Douglas, Pella-Tomlinson, and Fox models will lead to the same results. However, these models were not designed to tackle risk and risk aversion necessary for insurance in effective ways. 
+The results of @prp-cons are summarized in @fig-synas with a simple linear mean production function ,$f(x_i)=qx^i$. Mean production technology generates an expected steady state when it intersects mean biological growth. Index insurance shifts the technology function through adjustments in optimal inputs that originate from the fishers myopic optimization problem. Insurance increases risk increasing inputs shown as a shift to the left in the mean production curve. The new expected steady state equilibrium has a lower expected biomass than the initial equilibrium without insurance.
 
-Agriculture also encountered a similar issue in the inception of crop insurance programs back in the early 1980s. Risk averse farmers choose inputs that deviated from expected values with Cobb-Douglas production functions. Researchers posited alternative flexible production functions to better capture the influence of risk on farmer decision making. @Just1978 specified the general class of functions that could adequately capture input risk effects that were both positive and negative. Inputs that lead to higher production variance are risk increasing with positive risk effects, and inputs that lowered the variance of production are risk decreasing with negative risk effects. @Ramaswami1993 and @Mahul2001 proved insurance would either increase or decrease the input use contingent on the risk effect qualities of a given input. Risk increasing inputs ($h'(x)>0$) always lead to increases in input use with insurance, while risk decreasing inputs ($h'(x)<0$) always lead to decreases in input use with insurance. Within this framework, Gordon-Schaefer and all other fishery production fisheries fall into the risk increasing category.
+Insurance lowers the use of risk decreasing inputs and shifts the mean production function to the right. The new expected steady state equilibrium has a higher expected biomass than the initial equilibrium without insurance.
 
-Fishers are highly sensitive to risk, especially income risk [@Holland2008;@Sethi2010]. They mitigate risk through a variety of measures. Fishers will choose consistent, known fishing grounds over risking exploring unknown spots [@Holland2008]. Fishers choose to fish less after storms and hurricanes when financial risk is alleviated by transitioning to catch share programs [@Pfeiffer2020;@Pfeiffer2022]. Perhaps they are making decisions surrounding risk beyond that which is modeled by Gordon-Schaefer. If we allow for risk decreasing inputs in fishery production, then the effects of insurance can flip to improve steady state biomass. The proof of @prp-cp allows for risk decreasing inputs by switching $h'(e)<0$ in @eq-compi. The signs flip and insurance will lower effort leading to an increase in biomass by @prp-synas. Therefore we can preserve the prior results of agriculture in regards to the interaction of risk effects and insurance while introducing the dynamics of fisheries.
+Throughout the remainder of the paper we focus on the input decisions of fishers as they directly lead to changes in fishery conservation. Many fishery biological models have simple elasticities on biomass that responded to inputs. This implies that changes in the underlying use of inputs will lead to comparable changes in fishery conservation. 
 
-Allowing for flexible risk effects in the standard fishery models shows that the steady state impacts of insurance can either increase or decrease biomass. This leads to varying welfare impacts depending on the state of the fishery. In @fig-synas, the first initial bieconomic equilibrium to the left demonstrates overexploitation with biomass below maximum sustainable yield. A decrease an effort from index insurance stimulates faster growth of the stock allowing for more harvest in the future. Therefore fishers will be more protected from shocks with insurance, benefit from more current harvest, and there will be a a healthier stock of fish. Alternatively, if inputs are risk increasing, then index insurance will shift production up, lowering harvest and biomass of the fish pushing the fishery further into overexploitation. 
+
 
 ```{r}
-#| fig-cap: "Equilibrium harvest and biomass levels change with index insurance depending on the risk effects of inputs. Deviations from initial harvest equilibriums (solid line) have different impacts at levels above and below maximum sustainable yield. Risk decreasing inputs (long dashes) will always lead to higher equilibrium biomass. Risk increasing inputs (short dashes) will always lead to lower equilibrium biomass."
+#| fig-cap: "Expected steady state biomass and aggregate harvest levels change with index insurance in common-pool fisheries. An initial pre-insurance equilibrium exists at the intersection of the growth curve and mean linear production (solid line). If the underlying inputs are risk increasing the curve shifts to the left (dotted line) with index insurance. If the underlying inputs are risk decreasing the curve shifts to the right (dot-dash line) with index insurance."
 #| label: fig-synas
 
 library(tidyverse)
@@ -219,37 +267,37 @@ k=1000
 
 h=r*b*(1-b/k)
 
-a_low=.45
+a_low=.55
 low_h=a_low*b
-rr_low_h=(a_low-.1)*b
-ri_low_h=(a_low+.1)*b
+rr_low_h=(a_low-.15)*b
+ri_low_h=(a_low+.15)*b
 
-a_hi=2
-hi_h=a_hi*b
-rr_hi_h=(a_hi-.15)*b
-ri_hi_h=(a_hi+.15)*b
+# a_hi=2
+# hi_h=a_hi*b
+# rr_hi_h=(a_hi-.15)*b
+# ri_hi_h=(a_hi+.15)*b
 
 lw=2
 
 # intersection x breaks
 b_low=k/r*(r-a_low)
-b_low_rr=k/r*(r-(a_low-.1))
-b_low_ri=k/r*(r-(a_low+.1))
+b_low_rr=k/r*(r-(a_low-.15))
+b_low_ri=k/r*(r-(a_low+.15))
 
-b_hi=k/r*(r-a_hi)
-b_hi_rr=k/r*(r-(a_hi-.15))
-b_hi_ri=k/r*(r-(a_hi+.15))
+# b_hi=k/r*(r-a_hi)
+# b_hi_rr=k/r*(r-(a_hi-.15))
+# b_hi_ri=k/r*(r-(a_hi+.15))
 
 # intersection y breaks
 
 h_low=h[which.min(abs(b-b_low))]
 h_low_rr=h[which.min(abs(b-b_low_rr))]
 h_low_ri=h[which.min(abs(b-b_low_ri))]
-h_hi=h[which.min(abs(b-b_hi))]
-h_hi_rr=h[which.min(abs(b-b_hi_rr))]
-h_hi_ri=h[which.min(abs(b-b_hi_ri))]
+# h_hi=h[which.min(abs(b-b_hi))]
+# h_hi_rr=h[which.min(abs(b-b_hi_rr))]
+# h_hi_ri=h[which.min(abs(b-b_hi_ri))]
 
-temp<-data.frame(b,rr_low_h,ri_low_h,rr_hi_h,ri_hi_h) |> 
+temp<-data.frame(b,rr_low_h,ri_low_h) |> 
   pivot_longer(cols = -b,names_to = "type",values_to = "h") |> 
   mutate(lt=ifelse(stringr::str_detect(type,"rr"),"Risk Decreasing",ifelse(stringr::str_detect(type,"ri"),"Risk Increasing","Neutral")))
 
@@ -257,241 +305,144 @@ temp<-data.frame(b,rr_low_h,ri_low_h,rr_hi_h,ri_hi_h) |>
 ggplot(data.frame(b,h),aes(x=b,y=h))+geom_line(linewidth=lw+1)+
   geom_path(data=temp,aes(x=b,y=h,linetype=lt,color=type),linewidth=lw)+
   geom_line(aes(x=b,y=low_h),color="black",linewidth=lw)+
-  geom_line(aes(x=b,y=hi_h),linewidth=lw)+
-  scale_x_continuous(breaks=c(b_hi_ri,b_hi,b_hi_rr,b_low_ri,b_low,b_low_rr,1000),labels=c(TeX(r'($\hat{B}_{ri}$)'),TeX(r'($\hat{B}$)'),TeX(r'($\hat{B}_{rr}$)'),TeX(r'($\hat{B}_{ri}$)'),TeX(r'($\hat{B}$)'),TeX(r'($\hat{B}_{rr}$)'),"K"),expand = c(0,0),limits=c(0,1300))+
-  scale_y_continuous(breaks=c(h_hi_ri,h_hi,h_hi_rr,h_low_ri,h_low,h_low_rr),labels=c(TeX(r'($\hat{H}_{ri}$)'),TeX(r'($\hat{H}$  )'),TeX(r'($\hat{H}_{rr}$)'),TeX(r'($\hat{H}_{ri}$)'),TeX(r'($\hat{H}$  )'),TeX(r'($\hat{H}_{rr}$)')),expand = c(0,0),limits = c(0,800))+
+  scale_x_continuous(breaks=c(b_low_ri,b_low,b_low_rr,1000),labels=c(TeX(r'($\hat{B}_{ri}$)'),TeX(r'($\hat{B}$)'),TeX(r'($\hat{B}_{rd}$)'),"K"),expand = c(0,0),limits=c(0,1300))+
+  scale_y_continuous(breaks=c(h_low_ri,h_low,h_low_rr),labels=c(TeX(r'($\hat{Y}_{ri}$)'),TeX(r'($\hat{Y}$  )'),TeX(r'($\hat{Y}_{rd}$)')),expand = c(0,0),limits = c(0,800))+
   labs(x="",y="")+
-  scale_color_manual(values=c("black","black","black",'black','black','black'))+
+  scale_color_manual(values=c('black','black','black'))+
   scale_linetype_manual(values=c("Neutral"="solid","Risk Increasing"="dotted","Risk Decreasing"="dotdash"),name="",labels=)+
   theme_classic()+
-  theme(legend.position=c(0.8,0.9))+
+  theme(legend.position=c(0.8,0.9),
+        text=element_text(family = "serif"),
+        axis.text = element_text(size=10),
+        axis.title = element_text(size=14))+
   guides(color="none",
          linetype=guide_legend(keywidth = 3,keyheight = 1))+
-  labs(x="Equilibrium Biomass",y="Equilibrium Harvest")
+  labs(x=TeX(r'(Current expected biomass ($\hat{B}$))'),y=TeX(r'(Expected Aggregate Harvest ($\hat{Y}$))'))
 ```
 
 
-The second initial equilibrium to the right in @fig-synas is underexploited with biomass above maximum sustainable yield. The impact of index insurance on equilibrium biomass remains the same as when overexploited by @prp-synas, but the direction of harvest changes. Now, insurance will lower harvest for risk decreasing inputs and raise harvest for risk increasing inputs. 
+Risk effects determine the impact index insurance has on fishery conservation even in competitive common-pool extraction. However, risk effects remain an elusive concept in fisheries. It is unclear how to preemptively identify fishery risk effects. To date, only one study has quantified risk effects in a fishery. @Asche2020 used data from four Norwegian fishing fleets to measure three input responses to risk. Each fishery possessed unique mixes of both risk increasing and decreasing inputs. For example, labor was found to be a risk decreasing input across all four groups. Capital was risk increasing for coastal seiners and trawlers, but was risk decreasing for purse seiners and trawlers. Fuel had a lower, but statistically significant positive risk increasing measure for three of the four industry groups. 
 
-
-@fig-synas offers policymakers a powerful tool to assess the viability of using index insurance to protect fisheries from overharvesting and provide conservation benefits.  Conservation of fish stocks through insurance hinges on the risk effects of production technology. If policymakers are solely interested in conservation, then only knowing the direction of the fishery risk effects is necessary. In that case, only fisheries with risk decreasing inputs should be targeted for index insurance policies. Index insurance could also be used to incentivize fishing in low capacity communities, much like how index insurance is used in developing countries to stimulate agriculture investment. Since most fisheries are overfished, it is unlikely that a policymaker would target fisheries with risk increasing inputs with insurance to expand capacity and place more pressure on the fish stock.
-
-Risk effects remain an elusive concept in fisheries. It is unclear how to preemptively identify fishery risk effects.  Specific inputs such as frost covers decrease the impact of weather on crops clearly. Other inputs have had more ambiguous results. Fertilizer in some contexts is risk increasing [@horowitz1993] leading to crop burn, but other times is risk decreasing [@Babcock1996]. 
-
-To date, only one study has quantified risk effects in a fishery setting. @Asche2020 used data from four Norwegian fishing fleets to measure three input responses to risk. Each fishery possessed unique mixes of both risk increasing and decreasing inputs. For example, labor was found to be a risk decreasing input across all four groups, but only statistically significant in pelagic and coastal seiners. Capital was risk increasing for coastal seiners and trawlers, but flipped to risk decreasing for purse seiners and trawlers. Fuel had a lower, but statistically significant positive risk increasing measure for three of the four groups. 
-
-However, total output variance fluctuated widely. Coastal seiners had significant risk decreasing effects in labor, but also significant risk increasing effects in fuel. Overall output variance was insignificantly different than zero. So while individual inputs impacted risk, overall impacts were unclear. Before applying the risk parameters found by @Asche2020, it is beneficial to build out a multiple input model to better understand how risk effects might behave in fisheries. Single variable aggregate effort measures are useful in surplus-production models, but do not reflect the complexity of fisher decisions. Index insurance may raise or lower individual inputs depending on their own unique risk effects, but the overall direction of harvest decisions cannot be determined. Little research has been done on multiple input insurance models. @Ramaswami1993 concluded that only total production variance drives total harvest changes, but does not elaborate on the individual response of inputs. The next section explores how multiple inputs interact with each other and insurance to provide a clearer picture of how index insurance will impact fisheries.
+Single variable aggregate effort measures are useful in surplus-production models, but do not reflect the complexity of fisher decisions. As @Asche2020 demonstrates, fishers often use multiple inputs to harvest fish. Index insurance may raise or lower individual inputs depending on their own unique risk effects, but the overall direction of harvest decisions may not be so clear. Interactions between the inputs could override effects of index insurance on individual inputs. Little research has been done on multiple input insurance models. @Ramaswami1993 only examined the total production variance impacts on total harvest changes with insurance, but does not elaborate on the response of specific inputs. The next section explores how multiple inputs interact with each other and insurance to provide a a more comprehensive picture of how index insurance will impact fisheries.
 
 # Insurance with multiple inputs {#sec-multi}
 
+We simplify the general model in @eq-max by using two inputs, $X\in\{{x_a,x_b}\}$ to better understand the impact of insurance on multiple fishery inputs. Adding more variables complicates the model without adding any additional insights. The complexities of input interactions sufficiently arise with two inputs to demonstrate our intended purpose.
 
-We can use the overarching framework from the previous section and expand it by adding multiple inputs. To simplify matters, we will normalize biomass to one as @Asche2020 did not explicitly include biomass in their estimation model ^[They used year fixed effects to account for biomass].
+The original specification of Just and Pope make no assumption on the form of the second derivative of the risk effect function. We postulate reasonable assumptions on the risk effects function to assist with comparative statics later on. The marginal impact of adding an input to production variance should have diminishing effects, because it is impossible to completely eliminate risk or experience infinite risks. Therefore, when $h_{x_a}(X^i)>0 \rightarrow h_{x_ax_a}(X^i)<0$, and when $h_{x_a}(X^i)<0 \rightarrow h_{x_ax_a}(X^i)>0$. The cross partial of risk effects on production $\frac{\partial h}{\partial x_a \partial x_b}$ must also be flexible and depend on how inputs interact with each other. For example, if adding an input does not contribute to the marginal risk effect of another input then $\frac{\partial h}{\partial x_a \partial x_b}=0$. Inputs interactions could be complementary in that adding a risk decreasing input further enhances the risk reducing properties of the other inputs, $\frac{\partial h}{\partial x_a \partial x_b}>0$. In other instances the inputs may interact counter actively in that adding more of a risk increasing input might reduce the effect of a risk decreasing input, $\frac{\partial h^i}{\partial x_a \partial x_b}<0$. In principle, when inputs share the same direction of risk effects, their cross partial ought to be complementary, and when inputs have opposite risk effects they will be counter productive.
 
-Some inputs have varying risk effects. Interaction between inputs risk effects could change overall impacts from insurance to aggregate harvest and biomass.  Fishers can use a vector of inputs $X$. Expected mean production ($f(X)$) and variance of outputs ($h(X)$) remains the same. We will  use only two inputs, capital and labor, in our model to simplify results without loss of generality. Total production thus equals:
+We use the same insurance design from the previous section where payouts, $\gamma$, are triggered by $\omega<0$, and we can partition profit into good states and bad states. Fishers now maximize expected utility by selecting two inputs.
 
 $$
 \begin{aligned}
-y(k,l)=f(k,l)+\omega h(k,l)\\
-\text{where }\omega \sim N(0,\sigma^2)
+U\equiv\max_{x_a^i,x_b^i}\mathbb{E}[U]&=F(\bar\omega)\mathbb{E}[u(\pi^i(X^i,\hat{B}(X^i,Y(X^{\sim j})),\omega)+(1-F(\bar\omega))\gamma)|\omega <\bar\omega]\\
+&+(1-F(\bar\omega))\mathbb{E}[u(\pi^i(X^i,\hat{B}(X^i,Y(X^{\sim j})),\omega)-F(\hat\omega)\gamma)|\omega>\bar\omega]
 \end{aligned}
-$$
-
-As before, random shocks that could be weather or biological shocks is captured by $\omega$. Mean production possess classic production concavity so that $f'(k,l)>0$ and $f''(k,l)<0$. Flexible risk effects imply that $h'(k,l)\lesseqgtr0$ so that risk increasing $h'(k,l)>0$, risk decreasing ($h'(k,l)<0$), and no risk effects $h'(k,l)=0$. The original specification of Just and Pope make no assumption on the form of the second derivative of the risk effect function. To assist signing later on further justification is required. The marginal impact of adding an input to production variance should have diminishing effects, because it is impossible to completely eliminate risk or experience infinite risks. Therefore, when $h'(k,l)>0 \rightarrow h''(k,l)<0$, and when $h'(k,l)<0 \rightarrow h''(k,l)>0$. The cross partial of risk effects on production $\frac{\partial h}{\partial k \partial l}$ must also be flexible and depend on how inputs interact with each other. For example, if adding an input does not contribute to the marginal variance of another input then $\frac{\partial h}{\partial k \partial l}=0$. Inputs interactions could be complementary in that adding a risk decreasing input further enhances the risk reducing properties of the other inputs, e.g. ($\frac{\partial h}{\partial k \partial l}>0$). In other instances the inputs may interact counter actively in that adding more of a risk increasing input might reduce the effect of a risk decreasing input $\frac{\partial h}{\partial k \partial l}<0$. In principle, when inputs share direction of risk effects, their cross partial ought to be complementary, and otherwise they will be counter productive.
-
-Costs are convex, $c'(k,l)>0$ and $c''(k,l)>0$, in each input. Prices are constant and set at one so that production and costs together form random profits.
-
-
-$$
-\pi(k,l)=f(k,l)+\omega h(k,l)-c(k,l)
-$$ {#eq-pi}
-
-We use the same insurance design from the previous section where payouts, $\gamma$, are triggered by $\omega<0$, and we can partition profit into good states and bad states. Fishers now maximize expected utility by selecting both inputs, capital and labor.
-
-$$
-F\equiv\max_{k,l}\mathbb{E}[u]=pu(\pi_b(k,l)+(1-p)\gamma)+(1-p)u(\pi_g(k,l)-p\gamma)
-$$
+$$ {#eq-max2}
 
 
 Taking the first order conditions yields:
 
 $$
 \begin{aligned}
-\frac{\partial F}{\partial k}=(1-p)u'(\pi_g-p\gamma)\frac{\partial \pi_g}{\partial k}+pu'(\pi_b+(1-p)\gamma)\frac{\partial \pi_b}{\partial k} =0\\
-\frac{\partial F}{\partial l}=(1-p)u'(\pi_g-p\gamma)\frac{\partial \pi_g}{\partial l}+pu'(\pi_b+(1-p)\gamma)\frac{\partial \pi_b}{\partial l} =0
+\frac{\partial U}{\partial x_a^i}=&F(\bar\omega)\mathbb{E}[u_{x_a}(\pi^i(X^i,\hat{B}(X^i,Y(X^{\sim j})),\omega)+(1-F(\bar\omega))\gamma)|\omega <\bar\omega]\frac{\partial \mathbb{E}[\pi^i|\omega<\bar\omega]}{\partial x^i_a}\\
+&+(1-F(\bar\omega))\mathbb{E}[u_{x_a}(\pi^i(X^i,\hat{B}(X^i,Y(X^{\sim j})),\omega)+-F(\bar\omega)\gamma)|\omega >\bar\omega]\frac{\partial \mathbb{E}[\pi^i|\omega>\bar\omega]}{\partial x^i_a}\\
+\frac{\partial U}{\partial x^i_b}=&F(\bar\omega)\mathbb{E}[u_{x_b}(\pi^i(X^i,\hat{B}(X^i,Y(X^{\sim j})),\omega)+(1-F(\bar\omega))\gamma)|\omega <\bar\omega]\frac{\partial \mathbb{E}[\pi^i|\omega<\bar\omega]}{\partial x^i_b} \\
+&+(1-F(\bar\omega))\mathbb{E}[u_{x_b}(\pi^i(X^i,\hat{B}(X^i,Y(X^{\sim j})),\omega)+-F(\bar\omega)\gamma)|\omega >\bar\omega]\frac{\partial \mathbb{E}[\pi^i|\omega>\bar\omega]}{\partial x^i_b}\\
 \end{aligned}
 $$ {#eq-foc1}
 
-Given the existence of the first order condition, we can use the implicit function theorem (IFT) to look at the impact of an exogenous variable change locally at the solution. In other words, using IFT will clarify how a change to the insurance parameter $\gamma$ will lead to new allocations of capital and labor. We can differentiate @eq-foc1 with respect to $\gamma$ by the chain rule. This yields:
+Given the first order condition is satisfied, we can use the implicit function theorem (IFT) to look at the impact of a change in the exogenous insurance contract locally at the input solutions. Applying IFT and Cramer's Rule yields a system of equations that determine the impact of insurance on each optimal input:
 
-$$
-\begin{pmatrix}
-\frac{\partial F}{\partial k \partial k} & \frac{\partial F}{\partial k \partial l} \\
-\frac{\partial F}{\partial l \partial k} & \frac{\partial F}{\partial l \partial l}
-\end{pmatrix}
-\begin{pmatrix}
-\frac{\partial k^*}{\partial \gamma} \\
-\frac{\partial l^*}{\partial \gamma}
-\end{pmatrix}
-=-\begin{pmatrix}
-\frac{\partial F}{\partial k \partial \gamma} \\
-\frac{\partial F}{\partial l \partial \gamma}
-\end{pmatrix}
-$$
-
-Inverting the Hessian matrix to the other side allows us to isolate the effects on the optimal allocations.
-
-$$
-\begin{pmatrix}
-\frac{\partial k^*}{\partial \gamma} \\
-\frac{\partial l^*}{\partial \gamma}
-\end{pmatrix}
-=-
-\begin{pmatrix}\frac{\partial F}{\partial k \partial k} & \frac{\partial F}{\partial k \partial l} \\
-\frac{\partial F}{\partial l \partial k} & \frac{\partial F}{\partial l \partial l}
-\end{pmatrix}^{-1}
-\begin{pmatrix}
-\frac{\partial F}{\partial k \partial \gamma} \\
-\frac{\partial F}{\partial l \partial \gamma}
-\end{pmatrix}
-$$ {#eq-opt2}
-
-Crammer's rule allows us to solve this system of equations so long as the determinant of the system is not equal to 0. Luckily, the determinant is a 2x2 hessian of a concave maximization problem. By definition it is strictly positive. Applying Crammer's rule to @eq-opt2 gives us:
-
-$$
-\begin{pmatrix}
-\frac{\partial k^*}{\partial \gamma} \\
-\frac{\partial l^*}{\partial \gamma}
-\end{pmatrix}
-=\frac{-1}{Det}
-\begin{pmatrix}\frac{\partial F}{\partial l \partial l} & \frac{-\partial F}{\partial k \partial l} \\
-\frac{-\partial F}{\partial l \partial k} & \frac{\partial F}{\partial k \partial k}
-\end{pmatrix}
-\begin{pmatrix}
-\frac{\partial F}{\partial k \partial \gamma} \\
-\frac{\partial F}{\partial l \partial \gamma}
-\end{pmatrix}
-$$
-
-Solving the systems yields:
 
 $$
 \begin{aligned}
-&\frac{\partial k}{\partial \gamma}=\frac{-1}{Det}\left[\frac{\partial F}{\partial l \partial l}\frac{\partial F}{\partial k \partial \gamma}-\frac{\partial F}{\partial k \partial l}\frac{\partial F}{\partial l \partial \gamma}\right] \\
-&\frac{\partial l}{\partial \gamma}=\frac{-1}{Det}\left[\frac{-\partial F}{\partial l \partial k}\frac{\partial F}{\partial k \partial \gamma}+\frac{\partial F}{\partial k \partial k}\frac{\partial F}{\partial l \partial \gamma}\right]
+&\frac{\partial x^i_a}{\partial \gamma}=\frac{-1}{Det}\left[\frac{\partial U}{\partial x^i_b \partial x^i_b}\frac{\partial U}{\partial x^i_a \partial \gamma}-\frac{\partial U}{\partial x^i_a \partial x^i_b}\frac{\partial U}{\partial x^i_b \partial \gamma}\right] \\
+&\frac{\partial x^i_b}{\partial \gamma}=\frac{-1}{Det}\left[\frac{-\partial U}{\partial x^i_b \partial x^i_a}\frac{\partial U}{\partial x^i_a \partial \gamma}+\frac{\partial U}{\partial x^i_a \partial x^i_a}\frac{\partial U}{\partial x^i_b \partial \gamma}\right]
 \end{aligned}
 $$ {#eq-ivtsol}
 
-Because the determinate will always be positive by the definition of the second order condition, we can focus on the interior of the brackets. If positive (negative), then insurance will lower (raise) use of that input. To sign @eq-ivtsol, we need to determine the partial derivatives. All six partials are included in the appendix. All the partials help define the impact of insurance on multiple input use. 
+Because the determinate will always be positive by the definition of the second order condition, we can focus on the interior of the brackets. If positive, then insurance will lower use of that specific input and vice versa if negative. The partial derivatives are necessary to sign @eq-ivtsol. Their complete derivations are included in the appendix. The complex interaction between the partial effects of inputs and insurance presents a challenge to understanding the impacts of index insurance on fisheries. Specific conditions must be met to determine the overall impact of index insurance on inputs, otherwise the effect could go either way despite the risk increasing or decreasing characteristic of an individual input.
 
-Fishers must be risk averse, and inputs must contribute to risk management in some way. Otherwise, there will be no impact on insurance.
-
-:::{#prp-rn}
-Risk neutral fishers will not change their input use with index insurance
-:::
-
-:::{.proof}
-Risk neutrality implies that $u'(k,l)=0$ and $u''(k,l)=0$. Subbing $u''(k,l)=0$ into both @eq-kgam and @eq-lgam forces them to both equal zero. Plugging zero for $\frac{\partial F}{\partial l \partial \gamma}$ and $\frac{\partial F}{\partial k \partial \gamma}$ into @eq-ivtsol makes both elements also zero in the interior. Thus risk neutral fishers would not change input allocation with the addition of index insurance. 
-:::
-
-To help prove the remaining propositions, the following corollary will be valuable.
-
-:::{#cor-mp}
-Marginal profit in the bad state of the world is greater (less) than marginal profit in the good state for risk decreasing (increasing) inputs. If inputs have zero risk effects, the marginal profits are equivalent in both states.
-:::
-
-The proof is included in the appendix. 
-
-:::{#prp-rezero}
-Index insurance will not change the input allocations when all inputs possess no risk effects.
-:::
-
-
-:::{.proof}
-The second part of @cor-mp states that the marginal profits across states are equal. If the marginal profits across states are equal, then in @eq-kgam and @eq-lgam the weight between positive and negative utilities is also equal and cancel out leading to @eq-kgam and @eq-lgam both equaling zero. Plugging zeros into @eq-ivtsol for the insurance partials leads to an interior zero and no change in input use.
-:::
-
-Risk averse fishers will buy actuarially fair insurance. If the inputs possess risk effects then they will lead to changes in the input. @prp-samre defines the change in multiple inputs simultaneously with insurance.  
 
 :::{#prp-samre}
-With multiple inputs, index insurance will raise (lower) use of risk increasing (decreasing) inputs in accordance to an inputs individual risk effects when the following sufficient condition is true:
+In common-pool fisheries with multiple inputs, index insurance will change the optimal use of a specific input in accordance to an input's own risk effect when the following sufficient condition is true:
 
-$\frac{\partial F}{\partial k\partial l}>0$ when both inputs share the same risk effects, and $\frac{\partial F}{\partial k\partial l}<0$ when inputs have opposite risk effects.
+$\frac{\partial U}{\partial x^i_a\partial x^i_b}>0$ when both inputs share the same risk effects, and $\frac{\partial U}{\partial x^i_a\partial x^i_b}<0$ when inputs have opposite risk effects.
 
-Otherwise, Index Insurance will have ambiguous effects on each input allocation. 
+Otherwise, Index Insurance will have ambiguous effects on optimal input choice. 
 :::
 
 :::{.proof}
 
 
-@cor-mp allows us to sign @eq-kgam and @eq-lgam for any risk effect on either input. Concave utility by definition leads to $u''<0$. For simplicity, we'll only focus on @eq-kgam, but all applies equally to @eq-lgam. Insurance payouts equalize profits between different states. If insurance completely covers all loss, then we can rewrite equation @eq-kgam as
+@cor-mp allows us to sign the partial equations $\frac{\partial U}{\partial x^i_a\partial \gamma}$ and $\frac{\partial U}{\partial x^i_b\partial \gamma}$ (@eq-kgam and @eq-lgam in the appendix) for any risk effect on either input. Concave utility by definition leads to $u_{xx}<0$. For simplicity, we will only focus on $\frac{\partial U}{\partial x^i_a\partial \gamma}$, but all applies equally to $\frac{\partial U}{\partial x^i_b\partial \gamma}$. Insurance payouts equalize profits between different states. If insurance completely covers all loss and $x^i_a$ is risk increasing, then $\frac{\partial U}{\partial x_a\partial \gamma}$ is positive.
 
 $$
-\frac{\partial F}{\partial k \partial \gamma}=\overbrace{\overbrace{(1-p)pu''(\cdot)}^{-}\overbrace{[\frac{\partial \pi_b}{\partial k}-\frac{\partial \pi_g}{\partial k}]}^{-}}^{+}
+\frac{\partial U}{\partial x_a \partial \gamma}=\overbrace{\overbrace{(1-F(\bar\omega))u_{x_ax_a}(\cdot)}^{-}\overbrace{[\frac{\partial \mathbb{E}[\pi^i|w<\bar\omega]}{\partial x_a}-\frac{\partial \mathbb{E}[\pi^i|w>\bar\omega]}{\partial x_a}]}^{-}}^{+}
 $$ {#eq-kgamsol}
 
-@cor-mp allows us to sign the interior brackets of @eq-kgamsol. Risk increasing (decreasing) inputs make the interior negative (positive). Thus, when an input is risk increasing (decreasing), we can sign @eq-kgam and @eq-lgam as positive (negative).  @eq-kk and @eq-ll will always be negative due to concave utility.
 
-Suppose both inputs are risk increasing so @eq-kgam and @eq-lgam are positive. The only way for @eq-ivtsol to be unambiguously positive is for @eq-crossl and @eq-crossk to be positive. 
+Suppose both inputs are risk increasing so $\frac{\partial U}{\partial x^i_a\partial \gamma}$ and $\frac{\partial U}{\partial x^i_b\partial \gamma}$ are positive. The only way for @eq-ivtsol to be unambiguously positive is for $\frac{\partial U}{\partial x^i_a\partial x^i_b}$ and $\frac{\partial U}{\partial x^i_a\partial x^i_b}$ (@eq-crossl and @eq-crossk in the appendix) to be positive. 
 
 $$
 \begin{aligned}
-&\frac{\partial k}{\partial \gamma}=\overbrace{\frac{-1}{Det}}^{-}\left[\overbrace{\overbrace{\frac{\partial F}{\partial l \partial l}}^{-}\overbrace{\frac{\partial F}{\partial k \partial \gamma}}^{+}\overbrace{-\frac{\partial F}{\partial k \partial l}}^{-}\overbrace{\frac{\partial F}{\partial l \partial \gamma}}^{+}}^{-}\right] >0\\
-&\frac{\partial l}{\partial \gamma}=\overbrace{\frac{-1}{Det}}^{-}\left[\overbrace{\overbrace{\frac{-\partial F}{\partial l \partial k}}^{-}\overbrace{\frac{\partial F}{\partial k \partial \gamma}}^{+}+\overbrace{\frac{\partial F}{\partial k \partial k}}^{-}\overbrace{\frac{\partial F}{\partial l \partial \gamma}}^{+}}^{-}\right]>0
+&\frac{\partial x^i_a}{\partial \gamma}=\overbrace{\frac{-1}{Det}}^{-}\left[\overbrace{\overbrace{\frac{\partial U}{\partial x^i_b \partial x^i_b}}^{-}\overbrace{\frac{\partial U}{\partial x^i_a \partial \gamma}}^{+}\overbrace{-\frac{\partial U}{\partial x^i_a \partial x^i_b}}^{-}\overbrace{\frac{\partial U}{\partial x^i_a \partial \gamma}}^{+}}^{-}\right] >0\\
+&\frac{\partial x^i_b}{\partial \gamma}=\overbrace{\frac{-1}{Det}}^{-}\left[\overbrace{\overbrace{\frac{-\partial U}{\partial x^i_b \partial x^i_a}}^{-}\overbrace{\frac{\partial U}{\partial x^i_a \partial \gamma}}^{+}+\overbrace{\frac{\partial U}{\partial x^i_a \partial x^i_a}}^{-}\overbrace{\frac{\partial U}{\partial x^i_b \partial \gamma}}^{+}}^{-}\right]>0
 \end{aligned}
 $$
 
-Both risk increasing inputs will be raised with index insurance. The results hold for risk decreasing inputs as the overall signs flip. Risk decreasing inputs will be lowered with index insurance. 
+Both risk increasing inputs will be raised with index insurance. Repeating the same steps above with risk decreasing inputs shows both inputs unambiguously decrease with index insurance.  
 
-Now suppose inputs have mixed risk effects. For simplicity, capital will be risk increasing and labor will be risk decreasing. The results will hold for the opposite case. By @cor-mp, @eq-kgam is positive, while @eq-lgam is negative. @eq-ivtsol will be unambiguously positive if @eq-crossl and @eq-crossk are negative.
+Now suppose inputs have mixed risk effects. For simplicity, $x^i_a$ will be risk increasing and $x^i_b$ will be risk decreasing. The results will hold for the opposite case. By @cor-mp, $\frac{\partial U}{\partial x^i_a\partial \gamma}$ is positive, while $\frac{\partial U}{\partial x^i_b\partial \gamma}$ is negative. @eq-ivtsol will be unambiguously positive if $\frac{\partial U}{\partial x^i_a\partial x^i_b}$ and $\frac{\partial U}{\partial x^i_b\partial x^i_a}$  are negative.
 
 $$
 \begin{aligned}
-&\frac{\partial k}{\partial \gamma}=\overbrace{\frac{-1}{Det}}^{-}\left[\overbrace{\overbrace{\frac{\partial F}{\partial l \partial l}}^{-}\overbrace{\frac{\partial F}{\partial k \partial \gamma}}^{+}\overbrace{-\frac{\partial F}{\partial k \partial l}}^{+}\overbrace{\frac{\partial F}{\partial l \partial \gamma}}^{-}}^{-}\right] >0\\
-&\frac{\partial l}{\partial \gamma}=\overbrace{\frac{-1}{Det}}^{-}\left[\overbrace{\overbrace{\frac{-\partial F}{\partial l \partial k}}^{+}\overbrace{\frac{\partial F}{\partial k \partial \gamma}}^{+}+\overbrace{\frac{\partial F}{\partial k \partial k}}^{-}\overbrace{\frac{\partial F}{\partial l \partial \gamma}}^{-}}^{+}\right]<0
+&\frac{\partial x^i_a}{\partial \gamma}=\overbrace{\frac{-1}{Det}}^{-}\left[\overbrace{\overbrace{\frac{\partial U}{\partial x^i_b\partial x^i_b}}^{-}\overbrace{\frac{\partial U}{\partial x^i_a \partial \gamma}}^{+}\overbrace{-\frac{\partial U}{\partial x^i_a \partial x^i_b}}^{+}\overbrace{\frac{\partial U}{\partial x^i_b\partial \gamma}}^{-}}^{-}\right] >0\\
+&\frac{\partial x^i_b}{\partial \gamma}=\overbrace{\frac{-1}{Det}}^{-}\left[\overbrace{\overbrace{\frac{-\partial U}{\partial x^i_b\partial x^i_a}}^{+}\overbrace{\frac{\partial U}{\partial x^i_a \partial \gamma}}^{+}+\overbrace{\frac{\partial U}{\partial x^i_a \partial x^i_a}}^{-}\overbrace{\frac{\partial U}{\partial x^i_b\partial \gamma}}^{-}}^{+}\right]<0
 \end{aligned}
 $$
 
 The risk increasing input will be raised with index insurance, while the risk decreasing input will be lowered.
 
+If these conditions do not hold, then it is impossible to determine which additive element outweighs the other, and the insurance effects on optimal input use will be ambiguous regardless of the underlying risk effects of an input.
+
 :::
 
-@prp-samre shows that index insurance can have clear impacts even in complex settings with multiple inputs provided the sufficient condition holds. However, it is not clear ex-ante what the sign of the cross partial inputs of the first order condition should be. @eq-crossl and @eq-crossk themselves could be ambiguous. Rearranging @eq-crossl and @eq-crossk shows that the relative weight between the marginal profits of each input $\frac{\partial f}{\partial k}$ and the risk effects cross partial $\frac{\partial h}{\partial k \partial l}$ will determine the overall sign of the first order cross partials. Essentially, fishers change their inputs depending on whether a given input makes the other input more productive than the risk it adds. Dividing @eq-crossk by $-\frac{u'}{u'}$ allows us to rearrange terms to show the tension between mean production and risk effects.
+@prp-samre shows that index insurance can have clear impacts on input use even in complex settings with multiple inputs provided the sufficient condition holds. However, it is not clear ex-ante what the sign of the cross partial inputs of the first order condition should be. $\frac{\partial U}{\partial x^i_a\partial x^i_b}$ and $\frac{\partial U}{\partial x^i_b\partial x^i_a}$  themselves could be ambiguous. As shown in the appendix, rearranging $\frac{\partial U}{\partial x^i_a\partial x^i_b}$ and $\frac{\partial U}{\partial x^i_b\partial x^i_a}$ shows the relative weight between the marginal profits of each input and the risk effects cross partial influence the overall sign of first order cross partials.  Essentially, fishers change their inputs depending on whether a given input makes the other input more productive than the risk it adds. Whether inputs are complementary or counteractive in their risk effects influence the sign of the cross partial. When inputs share risk effects, they ought to increase the risk effects of each other. Therefore the cross partial is more likely to be negative when inputs share risk effects and positive when they are complementary following the sufficient conditions proposed in @prp-samre. 
 
-$$
-\begin{aligned}
--\frac{\partial F}{\partial k \partial l}&=(1-p)u'\frac{-u''}{u'}\frac{\partial \pi_g}{\partial k}\frac{\partial \pi_g}{\partial l}-(1-p)u'\frac{\partial \pi_g}{\partial k\partial l}\frac{u'}{u'}\\
-&+ pu'\frac{\partial \pi_b}{\partial k}\frac{\partial \pi_b}{\partial l}\frac{-u''}{u'}-pu'\frac{\partial \pi_b}{\partial k \partial l}\frac{u'}{u'}\\
-&=(1-p)u'[\frac{-u''}{u'}]\frac{\partial \pi_g}{\partial k}\frac{\partial \pi_g}{\partial l}+pu'[\frac{-u''}{u'}]\frac{\partial \pi_b}{\partial k}\frac{\partial \pi_b}{\partial l}\\
-&-(1-p)u'\frac{\partial \pi_g}{\partial k\partial l}-pu'\frac{\partial \pi_b}{\partial k \partial l}
-\end{aligned}
-$$ {#eq-crosssolve}
+Even with two inputs, ambiguity on the optimal use exists. Extending to more inputs introduces more interactions among the inputs, and the relatively weighting between marginal productivity and the risk effect cross partials is even harder to sign. @Ramaswami1993 used this complexity as a justification to only examine the total variance of production with a vector of inputs. @prp-samre helps elucidate his observations, while providing some understanding of how different inputs could change when fishers use a variety of inputs. Specific inputs could have different external environmental and community impacts. Being better able to predict how index insurance changes those inputs, and their ensuing impacts on a fishery, will help minimize any negative impacts that could arise.
 
-The concavity of profit with positive risk aversion $\frac{-u''}{u'}$ lead line 3 in @eq-crosssolve to be positive. The cross partials in line 4 paint a more complicated picture. Whether inputs enhance or reduce the risk effect qualities of each other influences the weight of line 4. When inputs share risk effects, they ought to increase the risk effects of each other so that $\frac{\partial h}{\partial k \partial l}>0$. Therefore line 4 in @eq-crosssolve becomes more negative as all terms are positive. It is relatively more likely that @eq-crosssolve is negative when risk effects are shared.
+Despite the seemingly rigid conditions, @prp-samre provides useful insight into the behavioral effects insurance will have when fishers use multiple inputs. It states that when the conditions hold, the direction all inputs should change is based solely on the characteristics of their own risk effects. Other inputs may influence the magnitude of change, but the direction is unequivocal. It remains unclear what the overall impacts on conservation will be in a multiple input setting. Differences in mean production elasticity lead to different magnitudes of change in input use. The overall change in harvest, and thus conservation, depends on the aggregate change in harvest. For example, a decline in use for a risk decreasing input compared to an equivalent increase in use of a risk increasing input may not lead to lower harvest if the risk increasing input is relatively more productive.
 
-When risk effects are mixed, with one input increasing and one input decreasing, the risk effects counteract each other $\frac{\partial h}{\partial k \partial l}<0$. Line 4 in @eq-crosssolve becomes relatively less negative. If the difference between the risk effects cross partial $\frac{\partial h}{\partial k \partial l}$ outweigh the mean production cross partial $\frac{\partial f}{\partial k \partial l}$ then line 4 becomes unambiguously becomes positive. Then $-\frac{\partial F}{\partial k \partial l}>0$ and $-\frac{\partial F}{\partial l \partial k}>0$. The relative changes with complimentary or counteractive risk effects matches the signs needed for the condition in @prp-samre to hold.
-
-Despite the seemingly rigid conditions, @prp-samre is quite powerful. It states that the direction all inputs should change is based solely on the characteristics of their own risk effects. Other inputs may influence the magnitude of change, but the direction is unequivocal. It remains unclear how much overall harvest will change. Simulations show the total impact on harvest can vary substantially, and that the conditions to ensure unambiguous change can be met. Though when applied with real world estimates of risk effects, the conditions may not hold and the effects of index insurance may not follow simple rules.
+The next section uses simulations to show the total impact on harvest can vary substantially, and that the conditions to ensure unambiguous input change can be met. Though when applied with real world estimates of risk effects, the conditions may not hold and the effects of index insurance does not follow simple rules.
 
 # Numerical Simulations {#sec-sim}
 
-We use a simple numerical simulation to test the necessary conditions in @prp-samre and to determine the magnitude of change in input use for Norwegian fisheries using the parameters found in @Asche2020. First, we present the simulations from the two input case to gain additional insight into how index insurance changes multiple inputs. Fisher earn profit through harvest with a Just and Pope production function with mean biomass normalized to one, and convex cost function.
+We use numerical simulation to test the necessary conditions in @prp-samre and to determine the magnitude of change in input use for Norwegian fisheries using the parameters found in @Asche2020. First, we present the simulations from the two input case to gain additional insight into how index insurance changes multiple inputs. Fishers earn profit through harvest with a Just and Pope production function with mean biomass normalized to one, and convex cost function. Inputs $X \in \{x_a,x_b\}$ are replaced with capital ($k$) and labor ($l$) to ground the interpretation of results in inputs practically used by fishers.
 
 $$
 \pi(k,l)=\hat{B}k^{\alpha_k}l^{\alpha_l}+\omega k^{\beta_k}l^{\beta_l}-c_kk^2-c_ll^2
 $$ {#eq-sim}
 
-Random shocks ($\omega$) are distributed normally with a mean of zero and a standard deviation of $\sigma_w$. Capital ($k$) and labor ($l$) have both mean production elasticities ($\alpha_k$ and $\alpha_l$) and flexible risk elasticities ($\beta_k$ and $\beta_l$). Fishers choose both capital and labor to maximize expected utility. We use a constant absolute risk aversion utility function.
+Random shocks ($\omega$) are distributed normally with a mean of zero and a standard deviation of $\sigma_w$. Capital ($k$) and labor ($l$) have both mean production elasticities ($\alpha_k$ and $\alpha_l$) and flexible risk elasticities ($\beta_k$ and $\beta_l$). Fishers choose both capital and labor to maximize expected utility with constant absolute risk aversion (CARA).
 
-Multiple index insurance policies are tested through changes in coverage and trigger levels. One scenario set constant payout amounts at 50% of pre-insurance profit and the other allows fishers to choose payouts. Trigger levels are set to engage at any below average weather, shocks of more than 75% loss, and catastrophic shocks that reduce biomass below 90%. All premiums are actuarilly fair. We vary fisher production parameters and risk aversion to create a comprehensive dataset of possible combinations. Risk effects vary between -0.7 and 0.7 with iterative increases of 0.1 ignoring situations of 0 risk effects. Fishers can posses low, medium, and high mean elasticity values $\alpha\in\{0.25,0.5,0.75\}$. Coefficient of constant absolute risk aversion ranges from 1 to 3. Within each scenario, a Monte Carlo simulation creates 1000 weather random weather shocks with three variants of standard deviation $\sigma_w\in\{0.33,0.66,1\}$.
+Multiple index insurance policies are tested through changes in coverage and trigger levels. One scenario sets an exogenous constant payout amounts between 0-200% of pre-insurance profit, and the other allows fishers to endogenously choose payouts. The theoretical results of @sec-common and @sec-multi provide comparative statics on $\gamma$ payouts as a means to test whether some insurance is preferred to no insurance and how input use would change. Since the sign remains the same for any $\gamma$, the endogenous choice will also maintain the same sign. However, the magnitudes of input use change will depend on the level of $\gamma$. Allowing fishers to choose insurance coverage ensures that the choice of insurance and input use changes are welfare improving and will not bias input choices with over or under investment of insurance.
 
-## Numerical simulation results 
+Trigger levels are set to engage at any below average weather or for shocks of more than 75% loss. All premiums are actuarilly fair. Risk effects vary between -0.7 and 0.7 with iterative increases of 0.1 ignoring situations of 0 risk effects. Fishers can posses low, medium, and high mean production elasticity values $\alpha\in\{0.25,0.5,0.75\}$. Coefficient of constant absolute risk aversion ranges from 1 to 3. Within each scenario, a Monte Carlo simulation creates 1000 weather random weather shocks with three variants of standard deviation $\sigma_w\in\{0.33,0.5,1\}$.
 
-Increasing insurance incentivizes fishers to use more risk decreasing inputs and less risk increasing inputs (@fig-ins). The conditions of @prp-samre can be satisfied with CARA utility, a Just-Pope Production function, and normal values of mean and risk elasticities. Index insurance also increases utility shown by the green lines in @fig-ins, but there exists an optimal amount of insurance coverage for fishers. The optimal values of insurance are generally lower when fishers use risk decreasing inputs. The inputs and insurance act as substitutes for each other both lowering the variance of income fishers experience. 
+## Numerical simulation results {#sec-simres}
+
+Increasing insurance incentivizes fishers to use more risk decreasing inputs and less risk increasing inputs (@fig-ins). These results confirm @prp-samre, and show the conditions of @prp-samre can be satisfied with CARA utility and a Just-Pope Production function (@fig-ins). The direction of input use is also stable as each class of input is monotonically increasing or decreasing with more insurance coverage. Inputs follow expected changes in use given their own risk effect even when risk effects are mixed. Capital is risk decreasing in the bottom left panel and decreases with more insurance while the risk increasing labor increases. The opposite trend occurs in the top right panel.
+
+Index insurance also increases utility shown by the green lines in @fig-ins, but there exists an optimal amount of insurance coverage for fishers.  The optimal values of insurance are generally lower when fishers use risk decreasing inputs. Notice the peak of the green line in the bottom right quadrant of @fig-ins is closer to 0 than that of the top left quadrant. Even in the mixed case, the optimal amount of coverage is lower than when both inputs are risk increasing. Risk decreasing inputs and insurance act as substitutes for each other as they both lower fisher income variance. Risk decreasing inputs still contribute to production while simultaneously reducing variance. Insurance lowers the need of risk decreasing inputs for their risk reduction qualities, but cannot fully compensate for the foregone production. Thus, fishers will choose to use insurance  until the opportunity cost of lost marginal production is equal to insurance gains in marginal risk protection.
+
+Fishers are more willing to use risk increasing inputs with insurance because the insurance protects from the added risk of more inputs. Purchasing more insurance provides greater protection creating a feedback loop that greatly expands productive input use.
 
 
 ```{r}
 #| label: fig-ins
-#| fig-cap: "Fisher utility (green line) is concave in insurance payouts. Inputs change in accordance to their individual risk effects. The secondary y-axis shows input allocations for capital (blue line) and labor (red line). Panel A has both inputs with positive risk effects ($\\beta=0.5$). Panel B has both inputs with negative risk effects ($\\beta=-0.5$). Panel C shows the effects when capital is a risk decreasing input ($\\beta=- 0.5$) while labor is risk increasing ($\\beta=0.5$). Panel D flips the risk effects of capital and labor."
+#| fig-cap: "Fishers choose capital (blue line) and labor (red line) to maximize utility (green line) for given insurance contracts that offer more coverage along the x-axis. Fisher utility is concave in all insurance payouts with CARA utility."
 #| echo: false
 #| message: false
 #| eval: true
@@ -500,94 +451,125 @@ Increasing insurance incentivizes fishers to use more risk decreasing inputs and
 library(tidyverse)
 load(here::here("data","gam_iter_10_11.Rdata"))
 
+plot_df<-comb |> 
+  filter(betak %in%c(-0.5,0.5) & betal %in%c(-0.5,0.5)) |> 
+  mutate(i_k=i_k/4,
+         i_l=i_l/4) |> 
+  pivot_longer(cols=c(i_k,i_l,utility),names_to="Inputs",values_to="Value")
+
 plot_df_input<-comb |> 
   filter(betak %in%c(-0.5,0.5) & betal %in%c(-0.5,0.5)) |> 
-  pivot_longer(cols=c(i_k,i_l),names_to="Inputs",values_to="Value")
+  pivot_longer(cols=c(i_k,i_l,utility),names_to="Inputs",values_to="Value")
 
-plot_df_utility<-comb |> 
-  filter(betak %in%c(-0.5,0.5) & betal %in%c(-0.5,0.5)) |> 
-  pivot_longer(cols=c(utility),names_to="utility",values_to="Value")
+plot_df$betak<-factor(plot_df$betak,
+                      levels=c(0.5,-0.5),
+                      labels=c("Capital is risk increasing","Capital is risk decreasing"))
 
-col_pal<-c("i_k"="blue","i_l"="red","utility"="forestgreen")
+plot_df$betal<-factor(plot_df$betal,
+                      levels=c(0.5,-0.5),
+                      labels=c("Labor is risk increasing","Labor is risk decreasing"))
+col_pal<-c("i_k"="#003660","i_l"="#EF5645","utility"="#79A540")
 txt_size<-8
 
-
-temp<-plot_df_input|> filter(betak==0.5 & betal==0.5) 
-p_a<-plot_df_utility |> filter(betak==0.5 & betal==0.5) |> 
-  ggplot()+
-  geom_path(aes(x=gammain,y=Value,color=utility),size=2)+
-  geom_path(data=temp,aes(x=gammain,y=Value/4,color=Inputs),size=2)+
+ggplot(plot_df)+
+  geom_line(aes(x=gammain,y=Value,color=Inputs),linewidth=2)+
+  facet_wrap(betak~betal,scales="free")+
   theme_classic()+
-  labs(x="",y="Utility")+
-  scale_y_continuous( sec.axis = sec_axis(~ . *4))+
+  labs(x="Insurance Payouts",y="Values of Utility, Capital, and Labor")+
   scale_color_manual(values=col_pal,name="",labels=c("Capital","Labor","Utility"))+
   theme(axis.text = element_text(size=txt_size),
         axis.title = element_text(size=txt_size+4),
         legend.text=element_text(size=txt_size+2),
-        plot.title = element_text(size=txt_size+6))
+        plot.title = element_text(size=txt_size+6),
+        strip.text = element_text(
+        size = txt_size+4, color = "black", face = "bold"
+        ),
+        legend.position='bottom')
 
-temp<-plot_df_input|> filter(betak==-0.5 & betal==0.5) 
-p_c<-plot_df_utility |> filter(betak==-0.5 & betal==0.5) |> 
-  ggplot()+
-   geom_path(aes(x=gammain,y=Value,color=utility),size=2)+
-  geom_path(data=temp,aes(x=gammain,y=Value/4,color=Inputs),size=2)+
-  theme_classic()+
-  labs(x="",y="Utility")+
-  scale_y_continuous( sec.axis = sec_axis(~ . *4))+
-  scale_color_manual(values=col_pal,name="",labels=c("Capital","Labor","Utility"))+
-  theme(axis.text = element_text(size=txt_size),
-        axis.title = element_text(size=txt_size+4),
-        legend.text=element_text(size=txt_size+2),
-        plot.title = element_text(size=txt_size+6))
-
-temp<-plot_df_input|> filter(betak==-0.5 & betal==-0.5) 
-p_b<-plot_df_utility |> filter(betak==-0.5 & betal==-0.5) |> 
-  ggplot()+
-   geom_path(aes(x=gammain,y=Value,color=utility),size=2)+
-  geom_path(data=temp,aes(x=gammain,y=Value/4,color=Inputs),size=2)+
-  theme_classic()+
-  labs(x="",y="Utility")+
-  scale_y_continuous( sec.axis = sec_axis(~ . *4))+
-  scale_color_manual(values=col_pal,name="",labels=c("Capital","Labor","Utility"))+
-  theme(axis.text = element_text(size=txt_size),
-        axis.title = element_text(size=txt_size+4),
-        legend.text=element_text(size=txt_size+2),
-        plot.title = element_text(size=txt_size+6))
-
-temp<-plot_df_input|> filter(betak==0.5 & betal==-0.5) 
-p_d<-plot_df_utility |> filter(betak==0.5 & betal==-0.5) |> 
-  ggplot()+
-   geom_path(aes(x=gammain,y=Value,color=utility),size=2)+
-  geom_path(data=temp,aes(x=gammain,y=Value/4,color=Inputs),size=2)+
-  theme_classic()+
-  labs(x="",y="Utility")+
-  scale_y_continuous( sec.axis = sec_axis(~ . *4))+
-  scale_color_manual(values=col_pal,name="",labels=c("Capital","Labor","Utility"))+
-  theme(axis.text = element_text(size=txt_size),
-        axis.title = element_text(size=txt_size+4),
-        legend.text=element_text(size=txt_size+2),
-        plot.title = element_text(size=txt_size+6))
+# plot_df_utility<-comb |> 
+#   filter(betak %in%c(-0.5,0.5) & betal %in%c(-0.5,0.5)) |> 
+#   pivot_longer(cols=c(utility),names_to="utility",values_to="Value")
+# 
+# 
+# 
+# 
+# temp<-plot_df_input|> filter(betak==0.5 & betal==0.5) 
+# p_a<-plot_df_utility |> filter(betak==0.5 & betal==0.5) |> 
+#   ggplot()+
+#   geom_path(aes(x=gammain,y=Value,color=utility),size=2)+
+#   geom_path(data=temp,aes(x=gammain,y=Value/4,color=Inputs),size=2)+
+#   theme_classic()+
+#   labs(x="",y="Utility")+
+#   scale_y_continuous( sec.axis = sec_axis(~ . *4))+
+#   scale_color_manual(values=col_pal,name="",labels=c("Capital","Labor","Utility"))+
+#   theme(axis.text = element_text(size=txt_size),
+#         axis.title = element_text(size=txt_size+4),
+#         legend.text=element_text(size=txt_size+2),
+#         plot.title = element_text(size=txt_size+6))
+# 
+# temp<-plot_df_input|> filter(betak==-0.5 & betal==0.5) 
+# p_c<-plot_df_utility |> filter(betak==-0.5 & betal==0.5) |> 
+#   ggplot()+
+#    geom_path(aes(x=gammain,y=Value,color=utility),size=2)+
+#   geom_path(data=temp,aes(x=gammain,y=Value/4,color=Inputs),size=2)+
+#   theme_classic()+
+#   labs(x="",y="Utility")+
+#   scale_y_continuous( sec.axis = sec_axis(~ . *4))+
+#   scale_color_manual(values=col_pal,name="",labels=c("Capital","Labor","Utility"))+
+#   theme(axis.text = element_text(size=txt_size),
+#         axis.title = element_text(size=txt_size+4),
+#         legend.text=element_text(size=txt_size+2),
+#         plot.title = element_text(size=txt_size+6))
+# 
+# temp<-plot_df_input|> filter(betak==-0.5 & betal==-0.5) 
+# p_b<-plot_df_utility |> filter(betak==-0.5 & betal==-0.5) |> 
+#   ggplot()+
+#    geom_path(aes(x=gammain,y=Value,color=utility),size=2)+
+#   geom_path(data=temp,aes(x=gammain,y=Value/4,color=Inputs),size=2)+
+#   theme_classic()+
+#   labs(x="",y="Utility")+
+#   scale_y_continuous( sec.axis = sec_axis(~ . *4))+
+#   scale_color_manual(values=col_pal,name="",labels=c("Capital","Labor","Utility"))+
+#   theme(axis.text = element_text(size=txt_size),
+#         axis.title = element_text(size=txt_size+4),
+#         legend.text=element_text(size=txt_size+2),
+#         plot.title = element_text(size=txt_size+6),
+#         legend.position='bottom')
+# 
+# temp<-plot_df_input|> filter(betak==0.5 & betal==-0.5) 
+# p_d<-plot_df_utility |> filter(betak==0.5 & betal==-0.5) |> 
+#   ggplot()+
+#    geom_path(aes(x=gammain,y=Value,color=utility),size=2)+
+#   geom_path(data=temp,aes(x=gammain,y=Value/4,color=Inputs),size=2)+
+#   theme_classic()+
+#   labs(x="",y="Utility")+
+#   scale_y_continuous( sec.axis = sec_axis(~ . *4))+
+#   scale_color_manual(values=col_pal,name="",labels=c("Capital","Labor","Utility"))+
+#   theme(axis.text = element_text(size=txt_size),
+#         axis.title = element_text(size=txt_size+4),
+#         legend.text=element_text(size=txt_size+2),
+#         plot.title = element_text(size=txt_size+6))
 
 library(patchwork)
 # Use patchwork to arrange the four plots in a 2x2 grid and collect the legends
-h_patch=(p_a+p_b)/(p_c+p_d)+plot_layout(guides = "collect",axis_titles = "collect")+plot_annotation(tag_levels ='A') & theme(legend.position='bottom')
-
-wrap_elements(panel = h_patch) +
-  labs(tag = "Insurance Payouts") +
-  theme(
-    plot.tag = element_text(size = txt_size+4),
-    plot.tag.position = "bottom"
-  )
+# h_patch=(p_a+p_b)/(p_c+p_d)+plot_layout(guides = "collect",axis_titles = "collect")+plot_annotation(tag_levels ='A') & theme(legend.position='bottom')
+# 
+# wrap_elements(panel = h_patch) +
+#   labs(tag = "Insurance Payouts") +
+#   theme(
+#     plot.tag = element_text(size = txt_size+4),
+#     plot.tag.position = "bottom"
+#   )
 ```
 
-@fig-ins shows that conditions of @prp-samre can be satisfied, but it does not show the conservation outcomes of index insurance. Fishers use the new allocation of inputs to change their overall harvest and thus impact on the biomass of fish stocks. Harvest changes are influenced by the relative combination of risk effects, mean production elastiticies, and the amount of insurance.  Fishers reduce harvest more aggressively with risk decreasing inputs when offered a set contract of 50% coverage of pre-insurance profits (Panel A) relative to their optimal choice (Panel B) (@fig-multi-h-even). Allowing fishers to choose their insurance coverage leads them to increase harvest more with risk increasing inputs. This phenomenon relates back to @fig-ins. A 50% coverage is an overinvestment in insurance for risk decreasing inputs and an underinvestment for risk increasing inputs.
+@fig-ins shows that conditions of @prp-samre can be satisfied, but it does not show the conservation outcomes of index insurance. Fishers use the new choice of inputs to change their overall harvest and thus impact on the biomass of fish stocks. Harvest changes are influenced by the relative combination of risk effects, mean production elastiticies, and the amount of insurance (@fig-multi-h-even).  Fishers reduce harvest more aggressively with risk decreasing inputs when offered a set contract of 50% coverage of pre-insurance profits (Panel A) relative to their optimal insurance choice (Panel B). Allowing fishers to choose their insurance coverage leads them to increase harvest more with risk increasing inputs. A 50% coverage is an overinvestment in insurance for risk decreasing inputs and an underinvestment for risk increasing inputs.
 
-Mixed risk effects reduce the overall impact on harvest. The more flexible risk parameter dominates the less flexible one in terms of which input reduces overall harvest shown in the top left and bottom right quadrants of both panels in @fig-multi-h-even. 
+Mixed risk effects have more nuance in overall harvest as seen in the top left and bottom right quadrants of each panel in @fig-multi-h-even. Risk increasing inputs appear to dominant risk reducing inputs leading to generally more increases in harvest. For example, when an input has a risk increasing effect of 0.5, harvest still increases even if the other input has a stronger risk reducing effect at -0.7. The reduction in the risk decreasing output can outweigh the increase in the risk increasing input if the risk decreasing effect is much stronger than the risk increasing effect. For all risk effects at -0.7, when the other input has a risk effect <0.3, harvest decreases. In all cases, the change in harvest is quite small ranging from 0.8%-5%. 
 
 
 ```{r}
 #| label: fig-multi-h-even
-#| fig-cap: "Percent Change in fishing harvest when fishers use index insurance with low mean elasticity values ($\\alpha_{k,l}=0.25$). In Panel A, Insurance payouts are a set variable. In Panel B, fishers choose insurance payouts. Red colors show overall decreases in harvest while blue colors show overall increases in harvest."
+#| fig-cap: "Percent change in fishing harvest when fishers use index insurance with low mean elasticity values ($\\alpha_{k,l}=0.25$). In Panel A, Insurance payouts are a set variable. In Panel B, fishers choose insurance payouts. Red colors show overall decreases in harvest while blue colors show overall increases in harvest. Grey boxes indicate simulations where it was not profitable to fish at all with the given production inputs."
 #| echo: false
 #| message: false
 
@@ -596,16 +578,21 @@ load(here::here("data","two_sim_10_10_gammachoice.Rdata"))
 load(here::here("data","two_sim_10_6.Rdata"))
 
 b<-two_sim_10_6 %>% 
-  filter(i_k>0.0002 & i_l>0.0002) %>% 
-  filter(noi_k>0.0002 & noi_l>0.0002) %>% 
-  filter(pct_h<5) %>% 
   filter(alphak==0.2 & alphal==0.2) %>% 
   filter(wtrig==0) %>% 
   filter(a==1) %>% 
-  filter(sigmaw==.5)
+  filter(sigmaw==.5) |> 
+  mutate(pct_h=case_when(abs(pct_h)>.9~NA,
+                         abs(pct_h)<.9~pct_h))
+  
 
 library(latex2exp)
 library(scales)
+
+
+
+# Add lines where values are less than 0
+
 
 p1<-ggplot(b)+
   geom_tile(aes(x=betak,y=betal,fill=pct_h))+
@@ -622,13 +609,12 @@ p1<-ggplot(b)+
   labs(x=TeX(r'($\beta_k$ Capital Risk Effect)'),y=TeX(r'($\beta_l$ Labor Risk Effect)'))
 
 b<-two_sim_10_10_gammachoice %>% 
-  filter(i_k>0.0002 & i_l>0.0002) %>% 
-  filter(noi_k>0.0002 & noi_l>0.0002) %>%
-  filter(pct_h<20) %>% 
   filter(alphak==0.25 & alphal==0.25) %>% 
   filter(wtrig==0) %>% 
   filter(a==1) %>% 
-  filter(sigmaw==.5)
+  filter(sigmaw==.50) |> 
+  mutate(pct_h=case_when(abs(pct_h)>.9~NA,
+                         abs(pct_h)<.9~pct_h))
 
 p2<-ggplot(b)+
   geom_tile(aes(x=betak,y=betal,fill=pct_h))+
@@ -649,24 +635,22 @@ p1/p2+plot_layout(guides = "collect",axis_titles = "collect")+plot_annotation(ta
 
 ```
 
-Increasing the mean elasticities exacerbates the discrepancies between allowing fishers to choose insurance payouts versus receiving a set amount. When the productivity of harvest ($\alpha$) is higher, the tradeoff between reducing variance and catch changes. Though insurance protects against risk, lowering the use of risk reducing inputs looses more mean catch with higher production elasticities. Fishers reduce aggregate harvest less with risk reducing inputs when mean elasticities are high. The opposite is true for risk increasing inputs. Insurance protects against the variance of adding more inputs and fishers receive a greater mean catch. 
-
+Increasing the mean elasticities exacerbates the discrepancies between changes in harvest through index insurance (@fig-multi-h-even-hi). When the productivity of harvest ($\alpha$) is higher, the tradeoff between reducing variance and catch changes. When the mean production elasticity is increased to 0.5, the maximum amount of observed harvest is 45% when fishers choose their insurance levels while the greatest reduction is only 8%. Higher mean elasticities imply a greater change in harvest and profit with changes in an input. Lowering use will have a proportionally greater tradeoff between risk protection and income for risk decreasing inputs at higher mean production elasticities. 
 
 
 ```{r}
 #| label: fig-multi-h-even-hi
-#| fig-cap: "When fishers choose insurnace, they drastically increase (blue) harvest with risk increasing relative to no insurance harvest.  Inputs share the same mean elasticity ($\\alpha_{k,l}=0.5$). Insurance payouts are a choice variable. Risk aversion is set to 1. Weather variance is 0.5"
+#| fig-cap: "When fishers choose insurnace, they drastically increase (blue) harvest with risk increasing relative to no insurance harvest.  Inputs share the same mean elasticity ($\\alpha_{k,l}=0.5$). Insurance payouts are exogenously set at 50% profits in Panel A. Insurance payouts are chosen in Panel B. Risk aversion is set to 1. Weather variance is 0.5. Below the dotted line show cases where harvest was reduced."
 #| echo: false
 #| message: false
 
 b<-two_sim_10_6 %>% 
-  filter(i_k>0.0002 & i_l>0.0002) %>% 
-  filter(noi_k>0.0002 & noi_l>0.0002) %>% 
-  filter(pct_h<5) %>% 
   filter(alphak==0.5 & alphal==0.5) %>% 
   filter(wtrig==0) %>% 
   filter(a==1) %>% 
-  filter(sigmaw==.5)
+  filter(sigmaw==.5) %>%
+  mutate(pct_h=case_when(abs(pct_h)>.9~NA,
+                         abs(pct_h)<.9~pct_h))
 
 library(latex2exp)
 library(scales)
@@ -683,16 +667,17 @@ p1<-ggplot(b)+
   theme_classic()+
   scale_x_continuous(breaks=seq(-0.7,0.7,by=.2),expand = c(0, 0))+
   scale_y_continuous(breaks=seq(-0.7,0.7,by=.2),expand=c(0,0))+
-  labs(x=TeX(r'($\beta_k$ Capital Risk Effect)'),y=TeX(r'($\beta_l$ Labor Risk Effect)'))
+  labs(x=TeX(r'($\beta_k$ Capital Risk Effect)'),y=TeX(r'($\beta_l$ Labor Risk Effect)'))+ 
+  geom_contour(aes(x=betak,y=betal,z=pct_h),
+               breaks = c(0),color='black',size=1.25,linetype = 'dotted')
 
 b<-two_sim_10_10_gammachoice %>% 
-  filter(i_k>0.0002 & i_l>0.0002) %>% 
-  filter(noi_k>0.0002 & noi_l>0.0002) %>%
-  filter(pct_h<20) %>% 
   filter(alphak==0.5 & alphal==0.5) %>% 
   filter(wtrig==0) %>% 
   filter(a==1) %>% 
-  filter(sigmaw==.5)
+  filter(sigmaw==.5)%>%
+  mutate(pct_h=case_when(abs(pct_h)>.9~NA,
+                         abs(pct_h)<.9~pct_h))
 
 p2<-ggplot(b)+
   geom_tile(aes(x=betak,y=betal,fill=pct_h))+
@@ -707,10 +692,110 @@ p2<-ggplot(b)+
   theme_classic()+
   scale_x_continuous(breaks=seq(-0.7,0.7,by=.2),expand = c(0, 0))+
   scale_y_continuous(breaks=seq(-0.7,0.7,by=.2),expand=c(0,0))+
-  labs(x=TeX(r'($\beta_k$ Capital Risk Effect)'),y=TeX(r'($\beta_l$ Labor Risk Effect)'))
+  labs(x=TeX(r'($\beta_k$ Capital Risk Effect)'),y=TeX(r'($\beta_l$ Labor Risk Effect)'))+ 
+  geom_contour(aes(x=betak,y=betal,z=pct_h),
+               breaks = c(0),color='black',size=1.25,linetype = 'dotted')
   
 p1/p2+plot_layout(guides = "collect",axis_titles = "collect")+plot_annotation(tag_levels ='A')
   
+```
+
+The magnitude of input use also changes based on the fisher risk preferences, weather risk,  and contract terms. We extract simulation results where both inputs have the same risk effects and both have mean production elasticities of 0.5 ($\alpha_k=\alpha_l=0.5$) to more clearly isolate these effects (@fig-multi-para). More risk averse fishers respond more aggressively to insurance and make relatively more changes toward their input decisions (Panel A in @fig-multi-para). Risk aversion implies more sensitivity towards risk. The protection from insurance has greater marginal value for more risk averse fishers. Greater marginal value of insurance means they can invest less into risk reducing inputs than before, and have more protection from greater shocks with risk increasing inputs.
+
+Fisher input choice are much more responsive to insurance protection from larger environmental risks (Panel B @fig-multi-para). Similar to risk aversion, the greater the shocks the greater the marginal value of insurance is to mitigate those shocks. In more volatile environments, insurance provides significantly more income smoothing leading to similar incentives as the higher risk aversion example.
+
+Trigger levels also influence fisher behavior in interesting ways. When insurance covers more catastrophic events, such as shocks that are in the 75th percentile, fishers respond more aggressively if they are using risk decreasing inputs compared to risk increasing inputs (Panel C @fig-multi-para). Payouts occur in disastrous events at higher levels of coverage. When these larger shocks occur adding more risk increasing inputs could lead to more catastrophic outcomes. The incentive to increase input use is reduced in this case. Risk decreasing inputs on the other hand are more easily substitutable with insurance when greater shocks occur. Hence, the incentive for fishers to reduce input use is greater.
+
+```{r}
+#| label: fig-multi-para
+#| fig-cap: "Risk Aversion (A), trigger level (B), and weather variance (C) all influence the magnitude of change in harvest. Mean production elasticity is 0.5 for both inputs. Average percent change in harvest (y-axis) is summarized across all other parameter combinations for each risk effect combination (x-axis) that are the same for both inputs (e.g. $-0.4=\\beta_k=\\beta_l$) "
+#| echo: false
+#| message: false
+
+
+ins<-two_sim_10_6 |> 
+  filter(i_k>0.0001 & i_l>0.0001) |> 
+  filter(alphak==0.5 & alphal==0.5) |> 
+  filter(betak==betal) |> 
+  group_by(a,alphal,alphak,betak,betal) |> 
+  summarize(l=mean(pct_l),k=mean(pct_k),
+            h=mean(pct_h)) 
+
+
+ins_wtrig<-two_sim_10_6 |> 
+  filter(i_k>0.0001 & i_l>0.0001) |> 
+  filter(alphak==0.5 & alphal==0.5) |> 
+  filter(betak==betal) |> 
+  group_by(wtrig,alphal,alphak,betak,betal) |> 
+  summarize(l=mean(pct_l),k=mean(pct_k),
+            h=mean(pct_h)) 
+
+ins_sig<-two_sim_10_6 |> 
+  filter(i_k>0.0001 & i_l>0.0001) |> 
+  filter(alphak==0.5 & alphal==0.5) |> 
+  filter(betak==betal) |> 
+  group_by(sigmaw,alphal,alphak,betak,betal) |> 
+  summarize(l=mean(pct_l),k=mean(pct_k),
+            h=mean(pct_h)) 
+
+# long<-full_join(ins,ins_wtrig,by=c("alphal","alphak","betak","betal","change","value")) |> 
+#   full_join(ins_sig,by=c("alphal","alphak","betak","betal","change","value")) |> 
+#   pivot_longer(cols=c(a,wtrig,sigmaw),names_to="parameter",values_to="p_value") |>
+#   drop_na(p_value)
+
+# facet wrap the table along the p value column    
+# long |>
+#   filter(change=="h") |> 
+#   ggplot()+
+#   geom_line(aes(x=betak,y=value,color=as.factor(p_value)),size=2)+
+#   labs(x="Risk Effects",y="Average Percentage\nChange in Harvest",color="Parameter")+
+#   facet_wrap(~parameter,scales="free")+
+#   theme_classic()+
+#   theme(legend.position = "bottom")+
+#   scale_y_continuous(labels=scales::percent,expand=c(0,0))+
+#   guides(color = guide_legend(title.position="top", title.hjust = 0.5))
+
+
+a<-ggplot(data=ins)+
+  geom_line(aes(x=betak,y=h,color=as.factor(a)),size=2)+
+  labs(x="Risk Effects",y="Average Percentage\nChange in Harvest",color="Risk Aversion (a)")+
+  theme_classic()+
+  scale_color_manual(values=c("#003660","#EF5645","#79A540"))+
+  theme(legend.position = "bottom",
+        legend.title = element_text(size = 10), 
+        legend.text  = element_text(size = 7),
+        legend.key.size = unit(.8, "lines"))+
+  scale_y_continuous(labels=scales::percent,expand=c(0,0))+
+  guides(color = guide_legend(title.position="top", title.hjust = 0.5, override.aes = list(size=0.1)))
+
+
+
+c<-ggplot(data=ins_wtrig)+
+  geom_line(aes(x=betak,y=h,color=as.factor(wtrig)),size=2)+
+  labs(x="Risk Effects",y="Average Percentage\nChange in Harvest",
+       color="Trigger Threshold")+
+  theme_classic()+
+  scale_color_manual(values=c("#003660","#EF5645"))+
+  theme(legend.position = "bottom",
+        legend.title = element_text(size = 10), 
+        legend.text  = element_text(size = 7),
+        legend.key.size = unit(.8, "lines"))+
+  scale_y_continuous(labels=scales::percent,expand=c(0,0))+
+  guides(color = guide_legend(title.position="top", title.hjust = 0.5, override.aes = list(size=0.1)))
+
+b<-ggplot(data=ins_sig)+
+  geom_line(aes(x=betak,y=h,color=as.factor(sigmaw)),size=2)+
+  labs(x="Risk Effects",y="Average Percentage\nChange in Harvest",color=TeX(r'(Variance $\sigma_\omega$)'))+
+  theme_classic()+
+  scale_color_manual(values=c("#003660","#EF5645","#79A540"))+
+  theme(legend.position = "bottom",
+        legend.title = element_text(size = 10), 
+        legend.text  = element_text(size = 7),
+        legend.key.size = unit(.8, "lines"))+
+  scale_y_continuous(labels=scales::percent,expand=c(0,0))+
+  guides(color = guide_legend(title.position="top", title.hjust = 0.5, override.aes = list(size=0.1)))
+
+a+b+c+plot_layout(axis_titles = "collect")+plot_annotation(tag_levels ='A')
 ```
 
 ## Application to Real World Fisheries
@@ -718,14 +803,25 @@ p1/p2+plot_layout(guides = "collect",axis_titles = "collect")+plot_annotation(ta
 Asche et al., (2020) aggregated by vessel type and not species, so there is no reasonable estimate for biomass. They accounted for biomass using fixed effects in their regression, but without additional information, our simulations normalize biomass to 1 and only focus on the relative change in inputs and aggregate harvest. The simulation model extends the two input case to include fuel ($f$).
 
 $$
-\pi(k,l)=k^{\alpha_k}l^{\alpha_l}f^{\alpha_f}+\omega k^{\beta_k}l^{\beta_l}k^{\beta_f}-c_kk^2-c_ll^2-c_ff^2
+\pi(k,l,f)=k^{\alpha_k}l^{\alpha_l}f^{\alpha_f}+\omega k^{\beta_k}l^{\beta_l}k^{\beta_f}-c_kk^2-c_ll^2-c_ff^2
 $$ {#eq-sim3}
+
+Fishers in the simulation choose inputs and insurance coverage to maximize expected utility. The endogenous choice is necessary to ensure fishers choose welfare improving amounts. Ex-ante it is unclear what the amount of insurance should be. Also the simulation results from @sec-simres indicate that over investing in insurance will lead to relatively greater reductions in risk reducing inputs, which would introduce bias in this application.
+
+$$
+\begin{aligned}
+U&\equiv\max_{\gamma,k,l,f}\mathbb{E}[u]=\mathbb{E}[u(k^{\alpha_k}l^{\alpha_l}f^{\alpha_f}+\omega k^{\beta_k}l^{\beta_l}k^{\beta_f}-c_kk^2-c_ll^2-c_ff^2+\mathbb{I}(\gamma)]\\
+\mathbb{I}(\gamma)&=\begin{cases}-\rho\gamma & \text{if } \omega\ge \bar\omega\\
+(1-\rho)\gamma & \text{if } \omega<\bar\omega
+\end{cases}
+\end{aligned}
+$$ {#eq-maxasche}
 
 @tbl-asche shows the production and risk elasticities of the four vessel types used in the simulation. While not all elasticities were found to be statistically different from zero, we used their raw values because dropping only those variables that are significant in both matching parameters would have kept only a few valid combinations. All non-significant elasticities led to small changes as expected, but their interactions with other inputs could partially drive some of the observed outcomes.
 
 
 ```{r}
-#| tbl-cap: "Production and Risk elasticities of Norwegian Fisheries"
+#| tbl-cap: "Production and Risk elasticities of Norwegian Fisheries from Asche et al., (2020)"
 #| label: tbl-asche
 
 load(here::here("data","asche_runs_5_13_al.RData"))
@@ -742,19 +838,19 @@ asche_runs_5_13_al |>
 ```
 
 
-Index insurance in Norwegian fisheries would have lead to changes in input use and overall harvest. @tbl-nor shows that index insurance would have lead to a maximum change of 15% in total harvest for the coastal groundfish fishery. This was primarily driven by large increases in capital (20.36%) and fuel (8.89%). All inputs had relatively similar mean production elasticities, but capital was strongly risk increasing with the highest positive risk elasticity. Labor was a risk decreasing input, but also rose with insurance. This is an example where the conditions of @prp-samre do not hold. The large discrepancy in production risk elastiticites is probably a reason for this in addition to the interactions terms at play by adding a third input. The chosen insurance payout was also much higher than the other vessel types. This reflects the observation from @fig-ins that that fishers choose higher levels of insurance coverage as a means to substitute the additional risk they are taking with expanded production. 
+Applying index insurance in Norwegian fisheries will lead to changes in input use and overall harvest. @tbl-nor shows that index insurance would have lead to a maximum change of 15% in total harvest for the coastal groundfish fishery. This was primarily driven by large increases in capital (20.36%) and fuel (8.89%). All inputs had relatively similar mean production elasticities, but capital was strongly risk increasing with the highest positive risk elasticity. Labor was a risk decreasing input, but also rose with insurance. This is an example where the conditions of @prp-samre do not hold. The large discrepancy in production risk elastiticites is probably a reason for this in addition to the interactions terms at play by adding a third input. The chosen insurance payout was also much higher than the other vessel types. This reflects the observation from @fig-ins that that fishers choose higher levels of insurance coverage as a means to substitute the additional risk they are taking with expanded production. 
 
-Purse seiners saw the largest reduction in overall harvest. Capital for purse seiners is the most productive input out of all fisheries and inputs. Because it is risk reducing, it dominates the slightly risk increasing fuel input to lead the entire fishery to reduce harvest by 6.3%.  this shows another violation of @prp-samre. In the opposite direction this time. Labor allocations did not change. No labor was allocated in either optimal choice, because the production elasticity was negative. Insurance payouts were also higher than the other fisheries that saw reductions. The high productivity of capital and fuel were most likely driving this result because small reductions in these productive inputs needed larger compensations.
+Purse seiners saw the largest reduction in overall harvest. Capital for purse seiners is the most productive input out of all fisheries and inputs. Because it is risk reducing, it dominates the slightly risk increasing fuel input to lead the entire fishery to reduce harvest by 6.3%.  this shows another case where the conditions of @prp-samre do not hold. Despite being a risk increasing input, fuel use declined with index insurance. Labor allocations did not change. No labor was allocated in either optimal choice, because the production elasticity was negative. Insurance payouts were also higher than the other fisheries that saw reductions. The high productivity of capital and fuel were most likely driving this result because small reductions in these productive inputs needed larger compensations.
 
-Coastal seiners are perhaps the most intriguing outcome, because all parameters were significant and shows the conditions for @prp-samre can hold in the real world with multiple inputs. All input use changes followed their respective risk effects. Capital (0.44%) and fuel (0.11%) both increased, while labor (-1.01%) decreased. In aggregate, there was a small reduction in harvest (0.3%). While insurance lead to a change, it was rather small and would not have a large impact on the fishery. The counteractive effects of the risk effects may negate some of the desire to change production as insurance incentivizes both increases and decreases in harvest.
+Coastal seiners show the conditions for @prp-samre can hold in the real world with multiple inputs. All input use changes followed their respective risk effects. Capital (0.44%) and fuel (0.11%) both increased, while labor (-1.01%) decreased. In aggregate, there was a small reduction in harvest (-0.3%). While insurance led to a change, it was rather small and would not have a large impact on the fishery. The counteractive effects of the risk effects may negate some of the desire to change production as insurance incentivizes both increases and decreases in harvest.
 
-Inputs in the groundfish trawler industry were all risk reducing. Unsurprisingly, each input saw a reduction in use when index insurance was offered. Capital was extremely risk reducing and saw a 4.14% reduction in use, but was a relatively less productive input so overall harvest changed by only 1.4%. Insurance payouts were selected to be low as seen in the two input simulations with risk decreasing inputs. 
+Inputs in the groundfish trawler industry were all risk reducing. Unsurprisingly, each input saw a reduction in use when index insurance was offered. Capital was extremely risk reducing and saw a 4.14% reduction in use, but was a relatively less productive input so overall harvest changed by only 1.4%. Optimal insurance payouts were the lowest in this fishery reflecting the substitution of insurance and risk reducing inputs. 
 
 
 
 
 ```{r}
-#| tbl-cap: "Effects of Index insurance on input use and harvest in Norwegian Fisheries."
+#| tbl-cap: "Percent change in input use and harvest for four Norwegian fisheries due to index insurance induced moral hazards."
 #| label: tbl-nor
 
 
@@ -772,31 +868,37 @@ kableExtra::kable_classic()
 ```
 
 
-
-
 # Discussion {#sec-disc}
 
-Index insurance will have behavioral impacts on fisheries harvest, which in turn will lead to conservation implications. Policy tools leveraging behavioral changes have been used to promote environmental conservation of water, energy, and fisheries [@Reddy2017;@McDonald2020;@Campbell2004]. Index insurance has the potential to be a tool to help conserve fish population in addition to its income smoothing, but it depends on the underlying risk effects of inputs. As shown in this paper, harvest pressures could reduce by 6% in Norwegian purse seiners. Norway has well managed fisheries. This would place these fisheries to the right or near MSY in @fig-synas so that a reduction in 6% harvest also corresponds to some level of improved fish stocks. However, the ambiguous and sensitive nature of index insurance as a behavioral policy tool also opens the possibility of maladaptive outcomes that further unsustainable practices. Norwegian coastal groundfish trawlers are incentivized to increase their harvest by 15.4% with index insurance. Behavioral policies can backfire through unintended consequences especially in complex bio-economic settings [@Abbott2012]. Therefore, it is imperative to have some preemptive understanding of potential shortfalls of new policies. 
+Index insurance will have behavioral impacts on fishers' input decisions, which in turn will lead to changes in fishery sustainability. The direction and magnitude of impacts are primarily sensitive to the risk effects of inputs used in production and can have ambiguous outcomes. We found that traditional fisheries models, such as Gordon-Schaefer,  predict that index insurance will always increase fishing pressures. These models are inherently risk increasing and do not adequately capture deeper risk mitigation strategies. Common-pool resource models using similar structures also contain similar biases. @Bulte2021 found index insurance will always raise herd size in common grazing pastures. The underlying production model they use has risk effects that are always positive like Gordon-Schaefer.  Incorporating more flexible production models that allow for both positive and negative risk effects presents a more nuanced view of index insurance. 
 
-The fishery conservation success or failure of index insurance hinges on input risk effects. Risk effects need to be reconciled in fisheries in order to articulate more accurate behavior changes of fishery index insurance. Crop covers and pesticide provide clear examples of risk decreasing inputs in agriculture, but what do risk decreasing inputs look like in fisheries? @Asche2020 provide empirical evidence of the existence of risk decreasing inputs, but do not elaborate on why or how labor and capital directly decrease risk. Labor is perhaps the more intuitive risk decreasing input. Technical expertise of crew and captains can hedge against luck when fishing [@Alvarez2006]. Better trained crew can deploy gear in a safe and timely manner, increasing the likelihood of effective sets. 
 
-Capital is a more complex input, because it can be both risk increasing and decreasing. Capital investments in fisheries typically refer to vessel tonnage, engine power, and gear technology The spatiotemporal dimension of fishing decisions may explain how capital can potentially possess both risk effects.  Fishers have to make decisions on where, when, and how long to fish that differ from the set grids of agriculture [@Reimer2017]. Capital offers protection from risk by allowing fishers to explore more fishing grounds, use more secure gear, and fish in more adverse weather conditions. When common pool resources incentivize the race to fish, having larger vessels may be a risk reducing input as the sooner a fisher can catch they assure their income at the expense of other fishers. Adding risk aversion to standard models of common pool fisheries suggests fishers should lower their capital use compared to risk neutral allocations [@Tilman2018;@gibbons1993]. Yet, overcapitalization and overfishing are more often observed in the real world. Either fishers are never risk averse or the risk effects of capital are not as simple as the standard model suggests. When capital is allowed to be a risk decreasing, optimal allocations are much higher than risk neutral equilibrium suggesting fishers are making rational, risk averse decisions. 
+As shown in this paper, harvest pressures could reduce by 6% in Norwegian purse seiners. Norway has well managed fisheries. This would place these fisheries to the right or near MSY in @fig-synas so that a reduction in 6% harvest also corresponds to some level of improved fish stocks. Norwegian coastal groundfish trawlers were incentivized to increase their harvest by 15.4% with index insurance. Without more specific biological information, we cannot extrapolate the total effect on fish abundance. Whether the changes we estimate for these Norwegian vessel groups are beneficial or detrimental to the fish stocks is not clear. Some level of change will occur and need to be accounted for in the design of index insurance programs. The magnitude of change indicates while index insurance may not be a conservation panacea in isolation, it also may not be a destructive tool. The decision to develop index insurance should revolve around whether it provides sufficient financial relief for fishing communities when designed to minimize negative impacts on fish stocks. While not the focal point of this paper, the average gain in utility from our simulations was 5% indicating that index insurance can achieve welfare improving outcomes for fishers moving forward.
 
+The symmetry of players and the exogenous insurance contract limit analysis of selection bias and conservation stability. Essentially, our model assumes that all fishers have access to insurance while making their decisions and prevents potential free riding. This isolates the effects of input decisions as everyone has equal responses, but does not reflect what could happen with fishers with different productivity, costs, and risk tolerance. All of those elements would inform their decision on whether to take insurance or not. If fishers are allowed to individually buy insurance contracts, there could be more risk loving fishers that choose to take no insurance and gain from less fishing pressure by the more risk averse insurance takers if inputs are risk decreasing. The overall change in direction for harvest would be unclear as it depends on the number and extent of fishers opting out of insurance. 
+
+The direction of index insurance effects on fisher behavior change hinges on input risk effects. Risk effects need to be reconciled in fisheries in order to articulate more accurate behavior changes of fishery index insurance. Crop covers and pesticide provide clear examples of risk decreasing inputs in agriculture, but what do risk decreasing inputs look like in fisheries? @Asche2020 provide empirical evidence of the existence of risk decreasing inputs, but do not elaborate on why or how labor and capital directly decrease risk. Labor is perhaps the more intuitive risk decreasing input. Technical expertise of crew and captains can hedge against luck when fishing [@Alvarez2006]. Better trained crew can deploy gear in a safe and timely manner, increasing the likelihood of effective sets. 
+
+Fuel as a risk increasing input in fisheries makes intuitive sense as well. Fuel is used to power vessels and is a direct cost of fishing. The more fuel used, the more fishing is occurring. The more fishing that is occurring, the more risk is being taken on. Every hour at sea increases the reward, but also the chances of failure.
+
+Capital is a more complex input, because it can be both risk increasing and decreasing. Capital investments in fisheries typically refer to vessel tonnage, engine power, and gear technology. The spatiotemporal dimension of fishing decisions may explain how capital can potentially possess both risk effects.  Fishers have to make decisions on where, when, and how long to fish that differ from the set grids of agriculture [@Reimer2017]. Capital offers protection from risk by allowing fishers to explore more fishing grounds, use more secure gear, and fish in more adverse weather conditions. When common pool resources incentivize the race to fish, having larger vessels may be a risk reducing input as the sooner a fisher can catch they assure their income at the expense of other fishers. Adding risk aversion to standard models of common pool fisheries suggests fishers should lower their capital use compared to risk neutral allocations [@Tilman2018;@gibbons1993]. Yet, overcapitalization and overfishing are more often observed in the real world. Either fishers are never risk averse or the risk effects of capital are not as simple as the standard model suggests. When capital is allowed to be a risk decreasing, optimal allocations are much higher than risk neutral equilibrium suggesting fishers are making rational, risk averse decisions. 
+
+Biomass is a crucial fishery input that may also possess risk effects. To simplify the analysis we focused solely on fisher controlled inputs, but the stochastic nature of growth in fisheries is a fundamental driver of risk. Most biological models assume some additive or multiplicative shock in the growth period. This leads to higher levels of variability with higher levels of abundance. However, different forms of risk could be embedded into the biological component of fishery models. Stock variance could be greater in overfished stocks instead of healthier ones, reflecting more vulnerability in weaker states [@Sims2018]. The effects of insurance with these biological risk effects could lead to unique changes in fisher behavior. Perhaps it strengthens the trends model in this paper. If insurance protects from more risk, fishers may be more willing to expose themselves to greater risk at more vulnerable stock levels. Alternatively, insurance could help mitigate risk and incentivize fishers to move toward healthier stocks with less variance by alleviating pressures to fish. Further analysis is required to understand the full implications of biological risk effects in fisheries.
 
 The transfer between inputs and insurance reflects the substitution between self-insurance and formal insurance [@Quaas2008]. If index insurance is designed to reduce fishing capacity, efforts must be made to ensure that it does not take away from the self resiliency of fishers. Labor appears to be consistently risk reducing and acts as a form of self insurance. If index insurance incentivizes captains to hire less crew, the stock of fish may be preserved, but less employment may reverberate throughout the community. Fishing is often a primary employment opportunity in coastal communities. Lowering employment options may lead to increased poverty or concentrated wealth. The resiliency of the community would be compromised rather than enhanced. The same idea applies to capital. If fishers are over investing in capital to hedge against some form of risk, policymakers need to be sure the insurance is replacing maladaptive self insurance behavior.
 
-The primary form of self insurance in fisheries is management. To this point our analysis explicitly modeled scenarios without the existence of management. Most fisheries are managed in some form. The interaction between management and insurance may be complementary or substitutes. For example, well managed fisheries that have responsive harvest control rules may not need insurance. The management system is already providing the necessary risk protection. Insurance demand and uptake may be low in these fisheries. Insurance may also complement management to provide the financial relief that management cannot offer. Managers often focus on the biological health of the fishery that can run at odds with fishers' desires to enhance their income. Insurance can act as the financial relief and allow managers to pursue more active strategies to protect fish stocks without political resistance from lowered quotas. The interaction between insurance and management requires further investigation especially with the the numerous management strategies that exist in fisheries.
+The primary form of self insurance in fisheries is management. To this point our analysis explicitly modeled scenarios without the existence of management. Most fisheries are managed in some form. The interaction between management and insurance may be complementary or substitutes. For example, well managed fisheries that have responsive harvest control rules may not need insurance. The management system is already providing the necessary risk protection. Insurance demand and uptake may be low in these fisheries. Insurance could instead complement management to provide the financial relief that management cannot offer. Managers often focus on the biological health of the fishery that can run at odds with fishers' desires to enhance their income. Insurance can act as the financial relief and allow managers to pursue more active strategies to protect fish stocks without political resistance from lowered quotas. The interaction between insurance and management requires further investigation especially with the the numerous management strategies that exist in fisheries.
 
-Design and access of insurance must also consider equity. The current US federal disaster relief program is inequitable with bias towards large industrial vessels [@Jardine2020]. Replacing the program with an equally inequitable program would be foolhardy. Current US farm subsidies, including insurance premiums, are heavily skewed towards large agribusinesses [@White2012]. Dimensions of access, procedural, representation, and distribution must all be built into the design of new fishery index insurance programs [@Fisher2019]. For example, small scale fishers may have income constraints that prevent them from buying the initial contract. Micro-finance options connected to insurance have been used in agriculture to alleviate this burden with some success [@Dougherty2021]. Additionally, we must ensure that is not only the vessel owners who reap the  benefits of insurance. Deckhands and crew are laid off during closures. If index insurance payouts are going through the entire fishery, the most vulnerable to closures must be protected as well. Contract stipulations could mandate that only cost expenses are covered by payouts thereby including lost wages to the crew. Agriculture contracts often are designed to directly cover expenses.
+Design and access of insurance must also consider equity. The current US federal disaster relief program is inequitable with bias towards large industrial vessels [@Jardine2020]. Creating another program with an equal inequity would be foolhardy. Current US farm subsidies, including insurance premiums, are heavily skewed towards large agribusinesses [@White2012]. Dimensions of access, procedural, representation, and distribution must all be built into the design of new fishery index insurance programs [@Fisher2019]. For example, small scale fishers may have income constraints that prevent them from buying the initial contract. Micro-finance options connected to insurance have been used in agriculture to alleviate this burden with some success [@Dougherty2021]. Additionally, we must ensure that is not only the vessel owners who reap the  benefits of insurance. Deckhands and crew are laid off during closures. If index insurance payouts are going through the entire fishery, the most vulnerable to closures must be protected as well. Contract stipulations could mandate that only cost expenses are covered by payouts thereby including lost wages to the crew. Agriculture contracts often are designed to directly cover expenses.
 
-Our model only directly models behavior change through moral hazards. Index insurance could be designed to incentivize other forms of sustainable behavior change. We define three pathways insurance can change behavior: Moral hazards, Quid Pro Quo, and Collective Action. Moral hazards were proven in this paper to have ambiguous impacts controlled by the risk characteristics of fishery inputs.
+Our model only directly models behavior change through moral hazards. Index insurance could be designed to incentivize other forms of sustainable behavior change. We define three pathways insurance can change behavior: Moral hazards, Quid Pro Quo, and Collective Action. Moral hazards were proven in this paper to have ambiguous impacts controlled by the risk characteristics of fishery inputs. Contract design can shape moral hazards as well. @fig-multi-para Panel C shows that with higher trigger thresholds, fishers are more incentivized to reduce harvest than increase harvest. Allowing insurees to choose their triggers has been found to increase insurance uptake (@Lichtenberg2022). Well designed contracts can stimulate demand while guiding more sustainable behavior.
 
-Quid Pro Quo is the idea that insurance contracts could be designed with conservation measures built in. Fishers would be required to adopt sustainable practices in order to qualify for insurance. Quid Pro Quo is already used in agricultural insurance in the form of Good Farm Practices. Farmers must submit management plans to US Risk Management Agency that clearly outline their conservation practices in order to qualify for insurance. Working closely with management agencies, insurance companies could design contracts that require fishers to follow fishery specific management practices. For example, fishers may be incentivized to use more sustainable gear types, have an observer onboard, or reduce bycatch. Manager input is needed to tailor fishery best practices to insurance contracts. Further research would need to uncover the full impact of Quid Pro Quo, but an initial hypothesis would be the fishers will be willing to adopt sustainable practices so long as the marginal gain in utility from the insurance is greater or equal to the necessary sustainable changes. Otherwise fishers will not want to buy the contracts and the insurance has no binding stipulations to change the fishery. 
+Quid Pro Quo expands contract design to explicitly build in conservation measures. Fishers would be required to adopt sustainable practices in order to qualify for insurance. Quid Pro Quo is already used in agricultural insurance in the form of Good Farm Practices. Farmers must submit management plans to US Risk Management Agency that clearly outline their conservation practices in order to qualify for insurance. Working closely with management agencies, insurance companies could design contracts that require fishers to follow fishery specific management practices. For example, fishers may be incentivized to use more sustainable gear types, have an observer onboard, or reduce bycatch. Manager input is needed to tailor fishery best practices to insurance contracts. Further research would need to uncover the full impact of Quid Pro Quo, but an initial hypothesis would be the fishers will be willing to adopt sustainable practices so long as the marginal gain in utility from the insurance is greater or equal to the necessary sustainable changes. Otherwise fishers will not want to buy the contracts and the insurance has no binding stipulations to change the fishery. 
 
 
 Collective action ties insurance premiums to biological outcomes to leverage the political economy of the fishery. Insures could reduce premiums in fisheries that have robust management practices such as adaptive harvest control rules, stock assessments, or marine protected areas in the vicinity. Fishers could either pressure regulators to adopt these actions or form industry groups to undertake the required actions. Insurers would agree to this if triggers are connected to biological health so that negative shocks are less frequent and thus payouts occur less. Fishers gain from the insurance premium and the increases sustainability of harvest with rigorous management in place. 
 
-Ultimately, if index insurance is to be used in fisheries, it must be designed with clear objectives and intentions. Index insurance can meet objectives of income stability and risk reduction. There has been an implicit assumption by practitioners that index insurance will always lead to improved sustainability. Without considering the behavior change of fishers when adopting insurance, the outcomes may not be as expected. Index insurance will correct risk reducing overcapacity in specific fisheries providing boosts to the long term sustainability and conservation of fisheries. 
+Ultimately, if index insurance is to be used in fisheries, it must be designed with clear objectives and intentions. Index insurance can meet objectives of income stability and risk reduction. There has been an implicit assumption by practitioners that index insurance will always lead to improved sustainability. Without considering the behavior change of fishers when adopting insurance, the outcomes may not be as expected. New insights derived from this paper will help guide the efficient and sustainable implementation of fisheries index insurance.
 
 # Appendix {.appendix}
 
@@ -840,37 +942,74 @@ $$ {#eq-lgam}
 
 Proof of @cor-mp.
 
-**Corollary 3.1** *Marginal profit in the bad state of the world is greater (less) than marginal profit in the good state for risk decreasing (increasing) inputs. If inputs have zero risk effects, the marginal profits are equivalent in both states.*
+**Corollary 2.1** *Marginal profit in the bad state of the world is greater (less) than marginal profit in the good state when $h_x'(X)<0$ ($h_x'(X)>0$). If $h_x'(X)=0$, the marginal profits are equivalent in both states.*
 
 :::.{.proof}
-By the first order conditions, there exist optimal values $k^*$ and $l^*$ that must be chosen before the realization of the states of the world. Therefore $h(k^*,l^*)$, $f(k^*,l^*)$, and $c(k^*,l^*)$ are equal across states. 
+By the first order conditions, there exist optimal values of any individual input $x_m^{i*}$  that must be chosen before the realization of the states of the world. Therefore $h(X^{i*})$, $f(X^{i*})$, and $c(X^{i*})$ are equal across states. 
 
-Marginal utility in both states of the world is controlled by risk effects and the sign of the random variable $\omega$. Risk increasing inputs have $h'(k,l)>0$ by definition. For either input $k,l$ denoted by $x$ this holds
+Marginal utility in both states of the world is controlled by risk effects and the sign of the random variable $\omega$. Risk increasing inputs have $h_x'(X)>0$ by definition. For any input denoted by $x$ this holds
 
 $$
 \begin{aligned}
-\frac{\partial \pi_b}{\partial x}-\frac{\partial \pi_g}{\partial x}&=\omega_b h_{x}'(k,l)+\cancel{f_{x}'(k,l)}-\cancel{c_{x}'(k,l)} \\
-&-\omega_g h_{x}'(k,l)-\cancel{f_{x}'(k,l)}+\cancel{c_{x}'(k,l)} \\
-&=\omega_b h_{x}'(k,l)-\omega_g h_{x}'(k,l)
+\frac{\partial \mathbb{E}[\pi^i|\omega<\bar\omega]}{\partial x^{i*}_m}-\frac{\partial \mathbb{E}[\pi^i|\omega>\bar\omega]}{\partial x^{i*}_m}=&\mathbb{E}[\omega h_{x_m^*}(X^{i*})|\omega<\bar\omega]+\cancel{f_{x_m^*}'(X^{i*})\hat{B}(X^{i*},Y(X^{\sim j *}))}+\cancel{f_{x^*_m}(X^{i*})\frac{\partial \hat{B}(X^{i*},Y(X^{\sim j *}))}{\partial x_m^{*}}\frac{\partial Y(X^{\sim j *})}{\partial x^*_m}}-\cancel{c_{x^*_m}(X^{i*})} \\
+&\mathbb{E}[\omega h_{x_m^*}(X^{i*})|\omega>\bar\omega]+\cancel{f_{x_m^*}'(X^{i*})\hat{B}(X^{i*},Y(X^{\sim j *}))}+\cancel{f_{x^*_m}(X^{i*})\frac{\partial \hat{B}(X^{i*},Y(X^{\sim j *}))}{\partial x_m^{*}}\frac{\partial Y(X^{\sim j *})}{\partial x^*_m}}-\cancel{c_{x^*_m}(X^{i*})} \\
+=&\mathbb{E}[\omega h_{x_m^*}(X^{i*})|\omega<\bar\omega]-\mathbb{E}[\omega h_{x_m^*}(X^{i*})|\omega>\bar\omega]
 \end{aligned}
 $$ {#eq-comppi1}
 
 
 
-If an input is risk decreasing then $h_x'(k,l)<0$ with $\omega_b<0$ and $\omega_g>0$. Then @eq-comppi1 is positive and marginal profit in the bad state is greater than the marginal profit in the good state. Adding more of a risk reducing input reduces the negative impact in the bad state relative to the good state.
+If an input is risk decreasing then $h_{x_m}(X^i)<0$. Then @eq-comppi1 is positive and marginal profit in the bad state is greater than the marginal profit in the good state. Adding more of a risk reducing input reduces the negative impact in the bad state relative to the good state.
 
 $$
-\frac{\partial \pi_b}{\partial x}-\frac{\partial \pi_g}{\partial x}=\overbrace{\omega_bh_x'(k,l)-\omega_gh_x'(k,l)}^{+}
+\frac{\partial \mathbb{E}[\pi^i|\omega<\bar\omega]}{\partial x^{i*}_m}-\frac{\partial \mathbb{E}[\pi^i|\omega>\bar\omega]}{\partial x^{i*}_m}=\overbrace{\mathbb{E}[\omega h_{x_m^*}(X^{i*})|\omega<\bar\omega]-\mathbb{E}[\omega h_{x_m^*}(X^{i*})|\omega>\bar\omega]}^{+}
 $$
 
-Repeating the same thing for risk increasing inputs $h_x'(k,l)>0$ shows that marginal profit in the bad state is less than marginal profit in the good state.
+Repeating the same thing for risk increasing inputs $h_{x_m}(X^i)>0$ shows that marginal profit in the bad state is less than marginal profit in the good state.
 
 $$
-\frac{\partial \pi_b}{\partial x}-\frac{\partial \pi_g}{\partial x}=\overbrace{\omega_bh_x'(k,l)-\omega_gh_x'(k,l)}^{-}
+\frac{\partial \mathbb{E}[\pi^i|\omega<\bar\omega]}{\partial x^{i*}_m}-\frac{\partial \mathbb{E}[\pi^i|\omega>\bar\omega]}{\partial x^{i*}_m}=\overbrace{\mathbb{E}[\omega h_{x_m^*}(X^{i*})|\omega<\bar\omega]-\mathbb{E}[\omega h_{x_m^*}(X^{i*})|\omega>\bar\omega]}^{-}
 $$
 
-If inputs have no risk effects then $h'(k,l)=0$. Subbing into @eq-comppi1 shows there is no difference in marginal profits with no risk effects.
+If inputs have no risk effects then $h_{x_m}(X^i)=0$. Subbing into @eq-comppi1 shows there is no difference in marginal profits with no risk effects.
 :::
 
+:::{#prp-rn}
+Risk neutral fishers will not change their input use with index insurance
+:::
+
+:::{.proof}
+Risk neutrality implies that $u'(k,l)=0$ and $u''(k,l)=0$. Subbing $u''(k,l)=0$ into both @eq-kgam and @eq-lgam forces them to both equal zero. Plugging zero for $\frac{\partial F}{\partial l \partial \gamma}$ and $\frac{\partial F}{\partial k \partial \gamma}$ into @eq-ivtsol makes both elements also zero in the interior. Thus risk neutral fishers would not change input allocation with the addition of index insurance. 
+:::
+
+:::{#prp-rezero}
+Index insurance will not change the input allocations when all inputs possess no risk effects.
+:::
+
+
+:::{.proof}
+The second part of @cor-mp states that the marginal profits across states are equal. If the marginal profits across states are equal, then in @eq-kgam and @eq-lgam the weight between positive and negative utilities is also equal and cancel out leading to @eq-kgam and @eq-lgam both equaling zero. Plugging zeros into @eq-ivtsol for the insurance partials leads to an interior zero and no change in input use.
+:::
+
+Risk averse fishers will buy actuarially fair insurance. If the inputs possess risk effects then they will lead to changes in the input. @prp-samre defines the change in multiple inputs simultaneously with insurance.  
+
+
+## Cross partial comparison
+
+Dividing $\frac{\partial F}{\partial k\partial l}$ by $-\frac{u'}{u'}$ allows us to rearrange terms to show the tension between mean production and risk effects.
+
+$$
+\begin{aligned}
+-\frac{\partial F}{\partial k \partial l}&=(1-p)u'\frac{-u''}{u'}\frac{\partial \pi_g}{\partial k}\frac{\partial \pi_g}{\partial l}-(1-p)u'\frac{\partial \pi_g}{\partial k\partial l}\frac{u'}{u'}\\
+&+ pu'\frac{\partial \pi_b}{\partial k}\frac{\partial \pi_b}{\partial l}\frac{-u''}{u'}-pu'\frac{\partial \pi_b}{\partial k \partial l}\frac{u'}{u'}\\
+&=(1-p)u'[\frac{-u''}{u'}]\frac{\partial \pi_g}{\partial k}\frac{\partial \pi_g}{\partial l}+pu'[\frac{-u''}{u'}]\frac{\partial \pi_b}{\partial k}\frac{\partial \pi_b}{\partial l}\\
+&-(1-p)u'\frac{\partial \pi_g}{\partial k\partial l}-pu'\frac{\partial \pi_b}{\partial k \partial l}
+\end{aligned}
+$$ {#eq-crosssolve}
+
+
+The concavity of profit with positive risk aversion $\frac{-u''}{u'}$ lead line 3 in @eq-crosssolve to be positive. The cross partials in line 4 paint a more complicated picture. Whether inputs enhance or reduce the risk effect qualities of each other influences the weight of line 4. When inputs share risk effects, they ought to increase the risk effects of each other so that $\frac{\partial h}{\partial k \partial l}>0$. Therefore line 4 in @eq-crosssolve becomes more negative as all terms are positive. It is relatively more likely that @eq-crosssolve is negative when risk effects are shared.
+
+When risk effects are mixed, with one input increasing and one input decreasing, the risk effects counteract each other $\frac{\partial h}{\partial k \partial l}<0$. Line 4 in @eq-crosssolve becomes relatively less negative. If the difference between the risk effects cross partial $\frac{\partial h}{\partial k \partial l}$ outweigh the mean production cross partial $\frac{\partial f}{\partial k \partial l}$ then line 4 becomes unambiguously becomes positive. Then $-\frac{\partial F}{\partial k \partial l}>0$ and $-\frac{\partial F}{\partial l \partial k}>0$. The relative changes with complimentary or counteractive risk effects matches the signs needed for the condition in @prp-samre to hold.
 
 # References {.unnumbered}
