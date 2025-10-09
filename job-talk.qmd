@@ -1,0 +1,597 @@
+---
+format: 
+  revealjs:
+    chalkboard: true
+    slide-number: true
+    show-slide-number: print
+    theme:
+     - presentations/ucsb-media.scss
+    logo: presentations/img/bren-logo.png
+bibliography: library.bib
+csl: fish-and-fisheries.csl
+---
+
+##  {#title-slide data-menu-title="Title Slide" background=".white"}
+
+[Behavorial Effects of Index Insurance in Fisheries]{.custom-title .blue-text}
+
+[Job Market Practice Talk]{.custom-subtitle .gold}
+
+<hr class="hr-teal">
+
+[Nathaniel Grimes]{.body-text-l .center-text .blue-text}
+
+[Bren School of Environmental Science & Management]{.center-text .body-text-m .blue-text}
+
+[**Last updated:** `r format(Sys.time(), '%b %d, %Y')`]{.body-text-s .blue-text}
+
+##  {background-image="https://i.insider.com/5644098bdd0895b0578b465f?width=1300&format=jpeg&auto=webp"}
+
+::: {.absolute left="10%" top="8%" style="font-size:1.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, .5); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .75); border-radius: 20px;"}
+-   Fishing is a risky business
+
+-   Storms, marine heatwaves, and other environmental variables directly impact fisher livelihoods
+
+-   Fisher choices and management take steps to eliminate risk
+
+-   Lack of financial tools to hedge against losses
+:::
+
+##  {#uni data-menu-title="Urchin"}
+
+[Red Sea Urchin collapse in 2024]{.slide-title}
+
+<hr>
+
+
+::::: columns
+::: column
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','uni.jpg'))
+```
+:::
+
+::: column
+```{r}
+#| fig-align: center
+#| out-width: "100%"
+knitr::include_graphics(here::here('presentations','img','uni-graph.PNG'))
+```
+
+:::
+:::::
+
+- 95% loss of kelp forest canopy in Mendicino, CA from warm waters and overpredation
+
+- Divers are going deeper
+
+- Fishing community is disappearing
+
+##  {#albacore data-menu-title="Albacore"}
+
+[Albacore lost 67% of revenue last year]{.slide-title}
+
+<hr>
+
+::::: columns
+::: column
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','albacore.png'))
+```
+:::
+
+::: column
+```{r}
+#| out-width: "100%"
+#| fig-align: center
+#| fig-cap: "Distribution of Albacore catch from @Blixt2025"
+
+knitr::include_graphics(here::here('presentations','img','albacore-dist.PNG'))
+```
+:::
+:::::
+
+- Commercial fishers choose between troll or longline fishing 
+
+- Warmer waters expanded Albacore range making it more difficult for fishers to find schools 
+
+
+##  {#risk data-menu-title="Risk"}
+
+[Fishers are risk averse and take steps to eliminate risk]{.slide-title}
+
+<hr>
+
+- Maneuver around storms or refuse to go out despite losing income [@Pfeiffer2020;@Pfeiffer2022]
+
+- Choose consistent, known fishing grounds rather than exploring new territory [@Holland2008]
+
+- Select gear to minimize income variance [@Eggert2004]
+
+<br>
+
+:::{.body-text-l}
+:::{.center-text}
+
+**These efforts do not completely eliminate income risk**
+
+:::
+
+:::
+
+##  {#tools data-menu-title="Financial Tools"}
+
+[Growing demand for financial tools to reduce income risk]{.slide-title}
+
+<hr>
+
+::::: columns
+::: column
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','lisa.jpg'))
+```
+:::
+
+::: column
+- Government disaster payouts in the US and Europe have been inefficient
+
+    - Red sea urchin collapsed in 2018. Payouts delivered in 2025, *7 YEARS LATER!*
+
+- Senator Murkowski (R-AK) has called for insurance programs in fisheries akin to US crop insurance
+
+
+
+:::
+:::::
+
+:::{.body-text-l}
+:::{.center-text}
+**Index Insurance has become the leading candidate financial tool to address fisher income risk**
+:::
+
+:::
+
+##  {#ibi data-menu-title="Index Based Insurance"}
+
+[What is Index Insurance?]{.slide-title}
+
+<hr>
+
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','windex.png'))
+```
+
+
+##  {#ibi-why data-menu-title="Index Based Insurance"}
+
+[Why Index Insurance?]{.slide-title}
+
+<hr>
+
+- **Fast payouts and cheap administration**
+
+    - Money in policyholders accounts in as little as 3 days
+    
+<br>
+    
+- **Immune to fisher choices**
+
+    - Fishers choosing to fish less will not lead to fund insolvency
+    
+    - Fishers cannot control sea surface temperature
+    
+<br>
+    
+- **Avoids quantifying individual loss**
+
+    - Very difficult to indemnify whether a fisher lost income due to weather or their own luck
+    
+    
+##  {#moral data-menu-title="Moral Hazards"}
+
+[Index Insurance possesses moral hazards]{.slide-title}
+
+<hr>    
+
+:::{.callout-note icon=false}
+## Moral Hazard Definition
+
+Decisions by insured agents that they would not otherwise take if they were uninsured [@Wu2020]
+:::
+
+:::{.center-text}
+**Theory from agriculture**
+:::
+
+- Insurance incentivizes farmers to change inputs use depending on the marginal risk effects of the inputs [@Mahul2001;@Ramaswami1993;@Babcock1996;@horowitz1993]
+
+    - Insurance lowers input use of risk decreasing inputs
+    
+    - Insurance raises input use of risk increasing inputs
+    
+- Behavior change leads to environmental consequences [@Mishra2005;@Claassen2017]
+
+- Rainfall insurance in common-pool pastures leads to overstocking and long term degradation of pasture commons [@Bulte2021;@muller2011]
+
+
+##  {#ag data-menu-title="Agriculture Insurance"}
+
+[Evidence from agriculture suggests we should expect behavior change in fisheries]{.slide-title2}
+
+<hr>
+
+::::{.columns}
+::: {.column width="33%"}
+
+:::{.center-text}
+**Overstock Pastures**
+:::
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','pasture.png'))
+```
+:::
+
+::: {.column width="33%"}
+
+:::{.center-text}
+**Chemical Application** $\lessgtr0$
+:::
+
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','fert.png'))
+```
+:::
+
+::: {.column width="33%"}
+
+:::{.center-text}
+**Increased Irrigation**
+:::
+
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','irrig.png'))
+```
+:::
+::::
+
+##  {#fish data-menu-title="Fishery Moral Harzard"}
+
+[Fisheries remain vulnerable to overfishing]{.slide-title}
+
+<hr>
+
+::::{.columns}
+
+:::{.column width="40%"}
+
+- Moral hazards will influence fishery sustainability
+
+<br>
+
+- Working assumption by NGOs is that insurance will lead to conservation
+
+<br>
+
+- Insurance companies ignore moral hazards
+
+:::
+
+:::{.column width="60%"}
+```{r}
+#| fig-align: center
+#| out-width: "100%"
+knitr::include_graphics(here::here('presentations','img','fish.jpg'))
+```
+
+:::
+
+::::
+
+##  {#rq data-menu-title="Research Questions"}
+
+[Research Questions]{.slide-title}
+
+<hr>
+
+[**Will insurance increase or decrease harvest?**]{.body-text-l}
+
+<br>
+
+[**What factors lead insurance to increase or decrease harvest?**]{.body-text-l}
+
+<br>
+
+[**How much will insurance change harvest decisions?**]{.body-text-l}
+
+##  {#results data-menu-title="Results Summary"}
+
+[Results Summary]{.slide-title}
+
+<hr>
+
+**Result 1:** Index insurance will always increase harvest with standard fishing models
+
+<br>
+
+**Result 2:** The design of the contract matters. Contracts on extraction risks could increase or decrease, contracts on stock risks will always increase
+
+<br>
+
+**Result 3:** Incentives that increase harvest lead to larger absolute changes than decreases in harvest
+
+    - Norwegian fisheries would increase harvest by 20% as oppossed to 2% decreases
+    
+##  {#outline data-menu-title="Outline"}
+
+[Outline]{.slide-title}
+
+<hr>
+  
+  
+**1.** Define stochastic fishery production
+
+<br>
+
+**2.** Prove index insurance behavioral effects on a single input model
+
+
+<br>
+
+**3.** Visualize with simulations to bolster intuition
+
+<br>
+
+**4.** Index Insurance effects with multiple inputs
+
+<br>
+
+**5.** Application to Norwegian fisheries
+
+<br>
+
+**6.** Discussion
+
+## {#mod-sec data-menu-title="Model Section" background-color="#047C90"}
+
+<div class="page-center">
+<div class="custom-subtitle">Stochastic Fishery Production</div>
+</div>
+
+##  {#mod data-menu-title="Model"}
+
+[Standard Stochastic Fishery Model]{.slide-title}
+
+<hr>
+
+Stock abundance is the primary stochastic variable for fishers in a single period
+
+
+$$
+y=\tilde{B}f(x)
+$$ {#eq-trad}
+
+$\tilde{B}$ stochastic stock abundance
+
+$f(x)$ concave technology function
+
+::: {.fragment}
+$$
+y=\hat{B}f(x)+\theta f(x)
+$$ {#eq-trad2}
+
+$\hat{B}$ expected stock abundance
+
+$\theta$ shock to stock abundance with $\mathbb{E}[\theta]=0$ and known variance $\sigma^2_\theta$
+
+<br>
+
+:::{.center-text}
+$\theta$ will be called stock risk.
+:::
+:::
+
+
+##  {#result1 data-menu-title="Result 1"}
+
+[Result 1]{.slide-title}
+
+<hr>
+
+Under standard assumptions, fishers are price takers, incur convex costs, and are risk averse over profits.
+
+
+Index Insurance will raise risk increasing inputs $\frac{\partial V(y)}{\partial x}>0$ [@Mahul2001]
+
+$$
+\begin{aligned}
+\frac{V(y)}{\partial x} &= \sigma^2_\theta\frac{\partial f(x)}{\partial x}>0 &\text{by concavity of $f(x)$}
+\end{aligned}
+$$
+
+<br>
+
+[**Result 1:** Index insurance will increase fishing effort if we apply traditional fishery models one-to-one]{.body-text-m}
+
+:::{.callout-note icon=false}
+
+## Intuition for Result 1 
+
+Insurance protects against risk. The added risk of additional inputs is protected by insurance encouraging fishers to fish more
+:::
+
+::: fragment
+***However, fishers are exposed to other risks and are quite adaptive to mitigating risk exposure***
+:::
+
+##  {#flex data-menu-title="Flexible"}
+
+[Flexible Stochastic Production Function]{.slide-title}
+
+<hr>
+
+Other shocks may not influence quantity of biomass, but ability of fishers to harvest
+
+![](presentations/img/tuna.jpg){.absolute top=165 left=40 width="100" height="75"}
+
+
+$$
+y=\hat{B}f(x)+\theta f(x)+\omega h(x)
+$$ {#eq-jpfish}
+
+
+:::: columns
+
+::: column
+$h(x)$ risk effect function
+
+$\frac{\partial h(x)}{\partial x}\lessgtr0$
+
+:::
+
+::: column
+
+$\omega$ extraction shock with $\mathbb{E}[\omega]=0$
+
+:::
+
+::::
+
+Fishers can mitigate that risk through the risk effects function $h(x)$ with "extraction risk" $\omega$
+
+<br>
+
+**Now with two sources of risk and two margins to influence risk, unclear how insurance will change optimal input choice**
+
+
+## {#sol-sec data-menu-title="Proof Section" background-color="#047C90"}
+
+<div class="page-center">
+<div class="custom-subtitle">Proof of IBI behavior change</div>
+</div>
+
+
+##  {#method data-menu-title="Solution Method"}
+
+[We solve by solving the FOC of a maximization problem with insurance]{.slide-title}
+
+<hr>
+
+::: {style="font-size: 0.8em"}
+$$
+\begin{aligned}
+U\equiv\max_{x}\mathbb{E}[U]=\int^{\infty}_{-\infty}&\left[\overbrace{ \int^{\bar \omega}_{-\infty}j_{\omega,\theta}(\omega,\theta)u(\pi(x,\hat{B},\theta,\omega)+(1-J(\bar \omega))\gamma)d\omega}^{\text{Insurance pays out on bad $\omega$}} \right.\\
+&\left.+\underbrace{\int^{\infty}_{\bar{\omega}}j_{\omega,\theta}(\omega,\theta) u(\pi(x,\hat{B},
+\theta,\omega)-J(\bar \omega)\gamma)d \omega}_{\text{Fisher pays premium in good state}}\right] d\theta
+\end{aligned}
+$$ {#eq-max}
+:::
+
+::::: columns
+::: column
+$u(\cdot)$ is concave utility
+
+$\pi$ fisher profits from $y$
+
+$j_{\omega,\theta}$ joint distribution of independent shocks
+:::
+
+::: column
+$\gamma$ how much insurance pays out
+
+$\bar\omega$ trigger value for a contract
+
+$J(\bar\omega)\gamma$ is the premium
+:::
+:::::
+
+##  {#ivt data-menu-title="IVT"}
+
+[Apply IVT to analyze the direction of change in input use with insurance]{.slide-title}
+
+<hr>
+
+$$
+\frac{\partial x^{*}}{\partial \gamma}=-\frac{\frac{\partial U}{\partial x \partial \gamma}}{\frac{\partial^2 U}{\partial x^{2}}}
+$$ {#eq-ivt}
+
+Focus on numerator because of the sufficent conditions of a maximization problem:
+
+$$
+\begin{aligned}
+\frac{\partial U}{\partial x \partial \gamma}=\int^{\infty}_{-\infty}\left[ \int^{\bar \omega}_{-\infty}j_{\omega,\theta}(\omega,\theta)u''(\pi(x,\hat{B},\theta,\omega)+(1-J(\bar \omega))\gamma)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta,\omega)(1-J(\bar \omega))d\omega\right.\\
++\left.\int^{\infty}_{\bar{\omega}}j_{\omega,\theta}(\omega,\theta) u''(\pi(x,\hat{B},\theta,\omega)-J(\bar \omega)\gamma)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta,\omega)(-J(\bar \omega))d\omega\right] d\theta
+\end{aligned}
+$$ {#eq-xgam}
+
+##  {#results2 data-menu-title="Results"}
+
+[**Result 2:** Contracts specified on extraction shocks, $\omega$, could increase or decrease fisher harvest contingent on the risk effects ($\frac{\partial h(x)}{\partial x}$) of the input]{.body-text-l .blue-text}
+
+[**Result 3:** Contracts specified on biological stock shocks, $\theta$, will always increase fisher harvest]{.body-text-l .blue-text}
+
+<br>
+
+***Intution: Insurance contracts protect risk along their specific margins. Fishers use that channel to reduce or increase inputs. Because of the implicit risk increasing nature of*** $f(x)$, $\theta$ contracts lead to harvest increases.
+
+##  {#asche data-menu-title="Asche Results"}
+
+[Applying to Norwegian fishers shows potential magnitude of changes in harvest from insurance]{.slide-title}
+
+<hr>
+
+::: center-text
+**Contract on** $\omega$
+:::
+
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','asche-omega.png'))
+```
+
+##  {#asche2 data-menu-title="Asche Results 2"}
+
+[Applying to Norwegian fishers shows potential magnitude of changes in harvest from insurance]{.slide-title}
+
+<hr>
+
+::: center-text
+**Contract on** $\theta$
+:::
+
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','asche-theta.png'))
+```
+
+##  {#summary data-menu-title="Summary"}
+
+[Application of index insurance in fisheries needs to acknowledge moral hazards]{.slide-title}
+
+<hr>
+
+-   Most proposed contracts use biological traits or shocks
+
+<br>
+
+-   Without considering moral hazards, insurance could unsustainably increase fishing pressures
+
+<br>
+
+::: center-text
+**Future Steps**
+:::
+
+-   How does insurance intersect with management?
+
+-   Is IBI even feasible?
+
+## References
+
+<hr>
