@@ -48,7 +48,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="job-talk_files/libs/revealjs/dist/theme/quarto-440dc1d7ffecb250761cbab5270673cf.css">
+  <link rel="stylesheet" href="job-talk_files/libs/revealjs/dist/theme/quarto-4bbb72bfc81381b470185afc6d151ec0.css">
   <link href="job-talk_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="job-talk_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="job-talk_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -142,6 +142,12 @@
       margin-right: 0; 
     }
   </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous">
+  <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              TeX: { extensions: ["cancel.js"] }
+            });
+  </script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -155,7 +161,7 @@
 <hr class="hr-teal">
 <p><span class="body-text-l center-text blue-text">Nathaniel Grimes</span></p>
 <p><span class="center-text body-text-m blue-text">Bren School of Environmental Science &amp; Management</span></p>
-<p><span class="body-text-s blue-text"><strong>Last updated:</strong> Oct 08, 2025</span></p>
+<p><span class="body-text-s blue-text"><strong>Last updated:</strong> Oct 09, 2025</span></p>
 </section>
 <section id="section" class="slide level2" data-background-image="https://i.insider.com/5644098bdd0895b0578b465f?width=1300&amp;format=jpeg&amp;auto=webp">
 <h2></h2>
@@ -534,6 +540,56 @@ Proof of IBI behavior change
 </div>
 </div>
 </section>
+<section id="profit" class="slide level2" data-menu-title="Profit">
+<h2></h2>
+<p><span class="slide-title">Fishers derive utility from profits</span></p>
+<hr>
+<p><span id="eq-profit"><span class="math display">\[
+\pi=\hat{B}f(x)+\theta f(x)+\omega h(x) -c(x)
+\qquad(4)\]</span></span></p>
+<p><span class="math inline">\(c(x)\)</span> are convex costs and harvest is the numeraire good so price equals 1</p>
+<div class="center-text">
+<p><strong>Insurance Contract</strong></p>
+</div>
+<div class="columns">
+<div class="column">
+<p><span id="eq-pay"><span class="math display">\[
+I(\omega)= \begin{cases}
+\gamma &amp; \omega&lt;\bar\omega \\
+0 &amp;\omega&gt;\bar\omega
+\end{cases}
+\qquad(5)\]</span></span></p>
+<p><span class="math inline">\(\gamma\)</span> constant payout <span class="math inline">\(\bar\omega\)</span> is the trigger</p>
+</div><div class="column">
+<p>Actuarially fair premium</p>
+<p><span id="eq-prem"><span class="math display">\[
+\rho=J(\bar\omega)\gamma
+\qquad(6)\]</span></span></p>
+<p><span class="math inline">\(J(\omega)\)</span> is the cumulative distribution</p>
+</div></div>
+</section>
+<section id="lemmas" class="slide level2" data-menu-title="Lemmas">
+<h2></h2>
+<p><span class="slide-title">Set <span class="math inline">\(\bar\omega=0\)</span>, we have good and bad states of profit</span></p>
+<hr>
+<p>Fishers make decisions on the marginal profitabilty between states when maximizing utility</p>
+<div id="lem-mp" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1</strong></span> Expected marginal profit is higher in bad states for risk decreasing inputs when contracts are built on extraction risk <span class="math inline">\(\omega\)</span>.</p>
+<p><span class="math inline">\(\frac{\mathbb{E}[\partial \pi|\omega&lt;\bar \omega]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\omega&gt;\bar \omega]}{\partial x}&gt;0\)</span> if <span class="math inline">\(h_{x}(x)&lt;0\)</span>.</p>
+<p>Otherwise, risk increasing inputs lead to higher expected marginal profit in the good states.</p>
+<p><span class="math inline">\(\frac{\mathbb{E}[\partial \pi|\omega&lt;\bar \omega]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\omega&gt;\bar \omega]}{\partial x}&lt;0\)</span> if <span class="math inline">\(h_{x}(x)&gt;0\)</span></p>
+</div>
+<div id="lem-theta" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2</strong></span> Contracts built on <span class="math inline">\(\theta\)</span> will always lead to higher expected marginal profits in the good state regardless of extraction risk effects</p>
+<p><span class="math inline">\(\frac{\mathbb{E}[\partial \pi|\theta&lt;\bar \theta]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\theta&gt;\bar \theta]}{\partial x}&lt;0\)</span></p>
+</div>
+<div class="columns">
+<div class="column">
+<p><a href="#/lemma-1" class="btn btn-outline-primary" role="button">Proof of Lemma 1</a></p>
+</div><div class="column">
+<p><a href="#/lemma-2" class="btn btn-outline-primary" role="button">Proof of Lemma 2</a></p>
+</div></div>
+</section>
 <section id="method" class="slide level2" data-menu-title="Solution Method">
 <h2></h2>
 <p><span class="slide-title">We solve by solving the FOC of a maximization problem with insurance</span></p>
@@ -545,7 +601,7 @@ U\equiv\max_{x}\mathbb{E}[U]=\int^{\infty}_{-\infty}&amp;\left[\overbrace{ \int^
 &amp;\left.+\underbrace{\int^{\infty}_{\bar{\omega}}j_{\omega,\theta}(\omega,\theta) u(\pi(x,\hat{B},
 \theta,\omega)-J(\bar \omega)\gamma)d \omega}_{\text{Fisher pays premium in good state}}\right] d\theta
 \end{aligned}
-\qquad(4)\]</span></span></p>
+\qquad(7)\]</span></span></p>
 </div>
 <div class="columns">
 <div class="column">
@@ -564,21 +620,21 @@ U\equiv\max_{x}\mathbb{E}[U]=\int^{\infty}_{-\infty}&amp;\left[\overbrace{ \int^
 <hr>
 <p><span id="eq-ivt"><span class="math display">\[
 \frac{\partial x^{*}}{\partial \gamma}=-\frac{\frac{\partial U}{\partial x \partial \gamma}}{\frac{\partial^2 U}{\partial x^{2}}}
-\qquad(5)\]</span></span></p>
+\qquad(8)\]</span></span></p>
 <p>Focus on numerator because of the sufficent conditions of a maximization problem:</p>
 <p><span id="eq-xgam"><span class="math display">\[
 \begin{aligned}
 \frac{\partial U}{\partial x \partial \gamma}=\int^{\infty}_{-\infty}\left[ \int^{\bar \omega}_{-\infty}j_{\omega,\theta}(\omega,\theta)u''(\pi(x,\hat{B},\theta,\omega)+(1-J(\bar \omega))\gamma)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta,\omega)(1-J(\bar \omega))d\omega\right.\\
 +\left.\int^{\infty}_{\bar{\omega}}j_{\omega,\theta}(\omega,\theta) u''(\pi(x,\hat{B},\theta,\omega)-J(\bar \omega)\gamma)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta,\omega)(-J(\bar \omega))d\omega\right] d\theta
 \end{aligned}
-\qquad(6)\]</span></span></p>
+\qquad(9)\]</span></span></p>
 </section>
 <section id="results2" class="slide level2" data-menu-title="Results">
 <h2></h2>
 <p><span class="body-text-l blue-text"><strong>Result 2:</strong> Contracts specified on extraction shocks, <span class="math inline">\(\omega\)</span>, could increase or decrease fisher harvest contingent on the risk effects (<span class="math inline">\(\frac{\partial h(x)}{\partial x}\)</span>) of the input</span></p>
 <p><span class="body-text-l blue-text"><strong>Result 3:</strong> Contracts specified on biological stock shocks, <span class="math inline">\(\theta\)</span>, will always increase fisher harvest</span></p>
 <p><br></p>
-<p><strong><em>Intution: Insurance contracts protect risk along their specific margins. Fishers use that channel to reduce or increase inputs. Because of the implicit risk increasing nature of</em></strong> <span class="math inline">\(f(x)\)</span>, <span class="math inline">\(\theta\)</span> contracts lead to harvest increases.</p>
+<p><strong><em>Intuition: Insurance contracts protect risk along their specific margins. Fishers use that channel to reduce or increase inputs. Because of the implicit risk increasing nature of</em></strong> <span class="math inline">\(f(x)\)</span>, <span class="math inline">\(\theta\)</span> contracts lead to harvest increases.</p>
 </section>
 <section id="asche" class="slide level2" data-menu-title="Asche Results">
 <h2></h2>
@@ -617,6 +673,57 @@ U\equiv\max_{x}\mathbb{E}[U]=\int^{\infty}_{-\infty}&amp;\left[\overbrace{ \int^
 <li><p>How does insurance intersect with management?</p></li>
 <li><p>Is IBI even feasible?</p></li>
 </ul>
+</section>
+<section id="appendix" class="slide level2" data-menu-title="Appendix" data-background-color="#047C90">
+<h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+Appendix
+</div>
+</div>
+</section>
+<section id="lemma-1" class="slide level2 scrollable" data-menu-title="Proof of Lemma 1">
+<h2></h2>
+<p><span class="slide-title">Proof of lemma 1</span></p>
+<hr>
+<p><a href="#/lemmas" class="btn btn-outline-primary" role="button">Back to slides</a></p>
+<p>By the first order conditions, there exist optimal values of any individual input <span class="math inline">\(x\)</span> that must be chosen before the realization of the states of the world. Therefore <span class="math inline">\(h(x^*)\)</span>, <span class="math inline">\(f(x^*)\)</span>, and <span class="math inline">\(c(x^*)\)</span> are equal across states. Where <span class="math inline">\(x^*\)</span> denotes the optimal input choice.</p>
+<p>Marginal utility in both states of the world is controlled by risk effects and the sign of the random variables. Given <span class="math inline">\(\theta\)</span> is independent of <span class="math inline">\(\omega\)</span>, the expected value of <span class="math inline">\(\mathbb{E}[\theta|\omega\lessgtr\bar\omega]=0\)</span>. The difference in expected marginal profit across insurance states is defined as:</p>
+<p><span id="eq-comppi1"><span class="math display">\[
+\begin{aligned}
+\small
+\frac{\partial \mathbb{E}[\pi|\omega&lt;\bar\omega]}{\partial x^*_m}-\frac{\partial \mathbb{E}[\pi|\omega&gt;\bar\omega]}{\partial x^*_m}=&amp;\mathbb{E}[\omega h_{x^*}(x^*)|\omega&lt;\bar\omega]+\cancel{f_{x^*}(x^*)\hat{B}}+\cancel{\mathbb{E}[\theta f_x(x^*)|\omega &lt;\bar\omega]}-\cancel{c_{x^*_m}(x^*)} \\
+&amp;-\mathbb{E}[\omega h_{x^*}(x^*)|\omega&gt;\bar\omega]+\cancel{f_{x^*}(x^*)\hat{B}}+\cancel{\mathbb{E}[\theta f_x(x^*)|\omega &gt;\bar\omega]}-\cancel{c_{x^*_m}(x^*)}\\
+=&amp;\mathbb{E}[\omega h_{x^*}(x^*)|\omega&lt;\bar\omega]-\mathbb{E}[\omega h_{x^*}(x^*)|\omega&gt;\bar\omega]
+\end{aligned}
+\qquad(10)\]</span></span></p>
+<p>If an input is risk decreasing then <span class="math inline">\(h_{x}(x)&lt;0\)</span>. Then <a href="#/eq-comppi1" class="quarto-xref">Equation&nbsp;10</a> is positive and marginal profit in the bad state is greater than the marginal profit in the good state. Adding more of a risk reducing input reduces the negative impact in the bad state relative to the good state.</p>
+<p><span class="math display">\[
+\frac{\partial \mathbb{E}[\pi|\omega&lt;\bar\omega]}{\partial x^*}-\frac{\partial \mathbb{E}[\pi|\omega&gt;\bar\omega]}{\partial x^*}=\overbrace{\mathbb{E}[\omega h_{x^*}(x^*)|\omega&lt;\bar\omega]-\mathbb{E}[\omega h_{x^*}(x^*)|\omega&gt;\bar\omega]}^{+}
+\]</span></p>
+<p>Repeating the same steps for risk increasing inputs <span class="math inline">\(h_{x}(x)&gt;0\)</span> shows that marginal profit in the bad state is less than marginal profit in the good state.</p>
+<p><span class="math display">\[
+\frac{\partial \mathbb{E}[\pi|\omega&lt;\bar\omega]}{\partial x^*_m}-\frac{\partial \mathbb{E}[\pi|\omega&gt;\bar\omega]}{\partial x^*_m}=\overbrace{\mathbb{E}[\omega h_{x^*}(x^*)|\omega&lt;\bar\omega]-\mathbb{E}[\omega h_{x^*}(x^*)|\omega&gt;\bar\omega]}^{-}
+\]</span></p>
+</section>
+<section id="lemma-2" class="slide level2" data-menu-title="Proof of Lemma 2">
+<h2></h2>
+<p><span class="slide-title">Proof of Lemma 2</span></p>
+<hr>
+<p><a href="#/lemmas" class="btn btn-outline-primary" role="button">Back to slides</a></p>
+<p>Independent shocks lead <span class="math inline">\(\mathbb{E}[\omega|\theta \lessgtr \bar \theta]=0\)</span>.</p>
+<p><span id="eq-compz"><span class="math display">\[
+\begin{aligned}
+\small
+\frac{\partial \mathbb{E}[\pi|\theta&lt;\bar\theta]}{\partial x^*_m}-\frac{\partial \mathbb{E}[\pi|\theta&gt;\bar\theta]}{\partial x^*_m}=&amp;\cancel{\mathbb{E}[\omega h_{x^*}(x^*)|\theta&lt;\bar\theta]}+\cancel{f_{x^*}(x^*)\hat{B}}+\mathbb{E}[\theta f_x(x^*)|\theta &lt;\bar\theta]-\cancel{c_{x^*_m}(x^*)} \\
+&amp;-\cancel{\mathbb{E}[\omega h_{x^*}(x^*)|\theta&gt;\bar\theta]}-\cancel{f_{x^*}(x^*)\hat{B}}-\mathbb{E}[\theta f_x(x^*)|\theta &gt;\bar\theta]+\cancel{c_{x^*_m}(x^*)}\\
+=&amp;\mathbb{E}[\theta f_x(x^*)|\theta &lt;\bar\theta]-\mathbb{E}[\theta f_x(x^*)|\theta &gt;\bar\theta]
+\end{aligned}
+\qquad(11)\]</span></span></p>
+<p>The concavity of <span class="math inline">\(f(x)\)</span> leads to <span class="math inline">\(f_x(x)&gt;0\)</span> always. <a href="#/eq-compz" class="quarto-xref">Equation&nbsp;11</a> can then be signed to always be negative so that marginal profit in the good state is always higher when insurance contracts are triggered on <span class="math inline">\(\theta\)</span>.</p>
+<p><span class="math display">\[
+\frac{\partial \mathbb{E}[\pi|\theta&lt;\bar\theta]}{\partial x^*_m}-\frac{\partial \mathbb{E}[\pi|\theta&gt;\bar\theta]}{\partial x^*_m}=\overbrace{\mathbb{E}[\theta f_{x^*}(x^*)|\theta&lt;\bar\theta]-\mathbb{E}[\theta f_{x^*}(x^*)|\theta&gt;\bar\theta]}^{-}
+\]</span></p>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>

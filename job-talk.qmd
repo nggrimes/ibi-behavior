@@ -7,6 +7,14 @@ format:
     theme:
      - presentations/ucsb-media.scss
     logo: presentations/img/bren-logo.png
+include-in-header: 
+  text: |
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel ="stylesheet" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous">
+      <script type="text/x-mathjax-config">
+                MathJax.Hub.Config({
+                  TeX: { extensions: ["cancel.js"] }
+                });
+      </script>
 bibliography: library.bib
 csl: fish-and-fisheries.csl
 ---
@@ -358,7 +366,7 @@ knitr::include_graphics(here::here('presentations','img','fish.jpg'))
 
 **6.** Discussion
 
-## {#mod-sec data-menu-title="Model Section" background-color="#047C90"}
+## {#mod-sec data-menu-title="Model Section" background-color="#047C90" }
 
 <div class="page-center">
 <div class="custom-subtitle">Stochastic Fishery Production</div>
@@ -470,16 +478,99 @@ Fishers can mitigate that risk through the risk effects function $h(x)$ with "ex
 **Now with two sources of risk and two margins to influence risk, unclear how insurance will change optimal input choice**
 
 
-## {#sol-sec data-menu-title="Proof Section" background-color="#047C90"}
+## {#sol-sec data-menu-title="Proof Section" background-color="#047C90" }
 
 <div class="page-center">
 <div class="custom-subtitle">Proof of IBI behavior change</div>
 </div>
 
+## {#profit data-menu-title="Profit"}
 
-##  {#method data-menu-title="Solution Method"}
+[Fishers derive utility from profits]{.slide-title}
 
-[We solve by solving the FOC of a maximization problem with insurance]{.slide-title}
+<hr>
+
+$$
+\pi=\hat{B}f(x)+\theta f(x)+\omega h(x) -c(x)
+$$ {#eq-profit}
+
+$c(x)$ are convex costs and harvest is the numeraire good so price equals 1
+
+:::{.center-text}
+**Insurance Contract**
+:::
+
+::::{.columns}
+
+:::{.column}
+$$
+I(\omega)= \begin{cases}
+\gamma & \omega<\bar\omega \\
+0 &\omega>\bar\omega
+\end{cases}
+$$ {#eq-pay}
+
+$\gamma$ constant payout
+$\bar\omega$ is the trigger
+:::
+
+:::{.column}
+
+Actuarially fair premium
+
+$$
+\rho=J(\bar\omega)\gamma
+$$ {#eq-prem}
+
+$J(\omega)$ is the cumulative distribution
+:::
+
+::::
+
+## {#lemmas data-menu-title="Lemmas"}
+
+[Set $\bar\omega=0$, we have good and bad states of profit]{.slide-title}
+
+<hr>
+
+*Fishers make decisions on the marginal profitability between states when maximizing utility*
+
+::: {#lem-mp}
+Expected marginal profit is higher in bad states for risk decreasing inputs when contracts are built on extraction risk $\omega$.
+
+$\frac{\mathbb{E}[\partial \pi|\omega<\bar \omega]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\omega>\bar \omega]}{\partial x}>0$ if $h_{x}(x)<0$.
+
+Otherwise, risk increasing inputs lead to higher expected marginal profit in the good states.
+
+$\frac{\mathbb{E}[\partial \pi|\omega<\bar \omega]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\omega>\bar \omega]}{\partial x}<0$ if $h_{x}(x)>0$
+:::
+
+::: {#lem-theta}
+Contracts built on $\theta$ will always lead to higher expected marginal profits in the good state regardless of extraction risk effects
+
+$\frac{\mathbb{E}[\partial \pi|\theta<\bar \theta]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\theta>\bar \theta]}{\partial x}<0$
+:::
+
+::::{.columns}
+
+:::{.column}
+
+[Proof of Lemma 1](#lemma-1){.btn .btn-outline-primary .btn role="button"}      
+
+:::
+
+:::{.column}
+[Proof of Lemma 2](#lemma-2){.btn .btn-outline-primary .btn role="button"} 
+
+:::
+
+::::
+
+
+
+##  {#utility data-menu-title="Utility"}
+
+[Risk averse fishers maximize expected utility]{.slide-title}
 
 <hr>
 
@@ -538,7 +629,7 @@ $$ {#eq-xgam}
 
 <br>
 
-***Intution: Insurance contracts protect risk along their specific margins. Fishers use that channel to reduce or increase inputs. Because of the implicit risk increasing nature of*** $f(x)$, $\theta$ contracts lead to harvest increases.
+***Intuition: Insurance contracts protect risk along their specific margins. Fishers use that channel to reduce or increase inputs. Because of the implicit risk increasing nature of*** $f(x)$, $\theta$ contracts lead to harvest increases.
 
 ##  {#asche data-menu-title="Asche Results"}
 
@@ -591,6 +682,71 @@ knitr::include_graphics(here::here('presentations','img','asche-theta.png'))
 -   How does insurance intersect with management?
 
 -   Is IBI even feasible?
+
+## {#appendix data-menu-title="Appendix" background-color="#047C90" }
+
+<div class="page-center">
+<div class="custom-subtitle">Appendix</div>
+</div>
+
+## {#lemma-1 data-menu-title="Proof of Lemma 1" .scrollable}
+
+[Proof of lemma 1]{.slide-title}
+
+<hr>
+
+[Back to slides](#lemmas){.btn .btn-outline-primary .btn role="button"}
+
+By the first order conditions, there exist optimal values of any individual input $x$ that must be chosen before the realization of the states of the world. Therefore $h(x^*)$, $f(x^*)$, and $c(x^*)$ are equal across states. Where $x^*$ denotes the optimal input choice.
+
+Marginal utility in both states of the world is controlled by risk effects and the sign of the random variables. Given $\theta$ is independent of $\omega$, the expected value of $\mathbb{E}[\theta|\omega\lessgtr\bar\omega]=0$. The difference in expected marginal profit across insurance states is defined as:
+
+$$
+\begin{aligned}
+\small
+\frac{\partial \mathbb{E}[\pi|\omega<\bar\omega]}{\partial x^*_m}-\frac{\partial \mathbb{E}[\pi|\omega>\bar\omega]}{\partial x^*_m}=&\mathbb{E}[\omega h_{x^*}(x^*)|\omega<\bar\omega]+\cancel{f_{x^*}(x^*)\hat{B}}+\cancel{\mathbb{E}[\theta f_x(x^*)|\omega <\bar\omega]}-\cancel{c_{x^*_m}(x^*)} \\
+&-\mathbb{E}[\omega h_{x^*}(x^*)|\omega>\bar\omega]+\cancel{f_{x^*}(x^*)\hat{B}}+\cancel{\mathbb{E}[\theta f_x(x^*)|\omega >\bar\omega]}-\cancel{c_{x^*_m}(x^*)}\\
+=&\mathbb{E}[\omega h_{x^*}(x^*)|\omega<\bar\omega]-\mathbb{E}[\omega h_{x^*}(x^*)|\omega>\bar\omega]
+\end{aligned}
+$$ {#eq-comppi1}
+
+If an input is risk decreasing then $h_{x}(x)<0$. Then @eq-comppi1 is positive and marginal profit in the bad state is greater than the marginal profit in the good state. Adding more of a risk reducing input reduces the negative impact in the bad state relative to the good state.
+
+$$
+\frac{\partial \mathbb{E}[\pi|\omega<\bar\omega]}{\partial x^*}-\frac{\partial \mathbb{E}[\pi|\omega>\bar\omega]}{\partial x^*}=\overbrace{\mathbb{E}[\omega h_{x^*}(x^*)|\omega<\bar\omega]-\mathbb{E}[\omega h_{x^*}(x^*)|\omega>\bar\omega]}^{+}
+$$
+
+Repeating the same steps for risk increasing inputs $h_{x}(x)>0$ shows that marginal profit in the bad state is less than marginal profit in the good state.
+
+$$
+\frac{\partial \mathbb{E}[\pi|\omega<\bar\omega]}{\partial x^*_m}-\frac{\partial \mathbb{E}[\pi|\omega>\bar\omega]}{\partial x^*_m}=\overbrace{\mathbb{E}[\omega h_{x^*}(x^*)|\omega<\bar\omega]-\mathbb{E}[\omega h_{x^*}(x^*)|\omega>\bar\omega]}^{-}
+$$
+
+
+## {#lemma-2 data-menu-title="Proof of Lemma 2"}
+
+[Proof of Lemma 2]{.slide-title}
+
+<hr>
+
+[Back to slides](#lemmas){.btn .btn-outline-primary .btn role="button"}
+
+Independent shocks lead $\mathbb{E}[\omega|\theta \lessgtr \bar \theta]=0$.
+
+$$
+\begin{aligned}
+\small
+\frac{\partial \mathbb{E}[\pi|\theta<\bar\theta]}{\partial x^*_m}-\frac{\partial \mathbb{E}[\pi|\theta>\bar\theta]}{\partial x^*_m}=&\cancel{\mathbb{E}[\omega h_{x^*}(x^*)|\theta<\bar\theta]}+\cancel{f_{x^*}(x^*)\hat{B}}+\mathbb{E}[\theta f_x(x^*)|\theta <\bar\theta]-\cancel{c_{x^*_m}(x^*)} \\
+&-\cancel{\mathbb{E}[\omega h_{x^*}(x^*)|\theta>\bar\theta]}-\cancel{f_{x^*}(x^*)\hat{B}}-\mathbb{E}[\theta f_x(x^*)|\theta >\bar\theta]+\cancel{c_{x^*_m}(x^*)}\\
+=&\mathbb{E}[\theta f_x(x^*)|\theta <\bar\theta]-\mathbb{E}[\theta f_x(x^*)|\theta >\bar\theta]
+\end{aligned}
+$$ {#eq-compz}
+
+The concavity of $f(x)$ leads to $f_x(x)>0$ always. @eq-compz can then be signed to always be negative so that marginal profit in the good state is always higher when insurance contracts are triggered on $\theta$.
+
+$$
+\frac{\partial \mathbb{E}[\pi|\theta<\bar\theta]}{\partial x^*_m}-\frac{\partial \mathbb{E}[\pi|\theta>\bar\theta]}{\partial x^*_m}=\overbrace{\mathbb{E}[\theta f_{x^*}(x^*)|\theta<\bar\theta]-\mathbb{E}[\theta f_{x^*}(x^*)|\theta>\bar\theta]}^{-}
+$$
 
 ## References
 

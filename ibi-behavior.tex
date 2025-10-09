@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -7,21 +8,22 @@
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrartcl}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -39,9 +41,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -67,8 +66,7 @@
 \makeatother
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -93,6 +91,8 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
+
+
 % definitions for citeproc citations
 \NewDocumentCommand\citeproctext{}{}
 \NewDocumentCommand\citeproc{mm}{%
@@ -126,6 +126,18 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 \usepackage{cancel}
 \addtokomafont{disposition}{\rmfamily}
@@ -182,11 +194,9 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={The behavioral effects of index insurance in fisheries},
   pdfauthor={Nathaniel Grimes; Christopher Costello; Andrew J. Plantinga},
@@ -202,8 +212,7 @@
 \title{The behavioral effects of index insurance in fisheries}
 \author{Nathaniel Grimes \and Christopher Costello \and Andrew J.
 Plantinga}
-\date{2025-10-07}
-
+\date{2025-10-09}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -1639,7 +1648,7 @@ Lemma~\ref{lem-mp}}{Proof of Lemma~}}\label{proof-of-lem-mp}
 
 \textbf{Lemma 3.1} \emph{Expected marginal profit is higher in bad
 states for risk decreasing inputs when contracts are built on extraction
-risk \(\omega\) and shocks are uncorrelated.}
+risk} \(\omega\) and shocks are uncorrelated.
 
 \(\frac{\mathbb{E}[\partial \pi|\omega<\bar \omega]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\omega>\bar \omega]}{\partial x}>0\)
 if \(h_{x}(x)<0\).
@@ -1692,9 +1701,9 @@ the good state.
 \subsection{\texorpdfstring{Proof of
 Lemma~\ref{lem-theta}}{Proof of Lemma~}}\label{proof-of-lem-theta}
 
-\textbf{Lemma 3.2} \emph{Contracts built on \(\theta\) will always lead
+\textbf{Lemma 3.2} \emph{Contracts built on} \(\theta\) will always lead
 to higher expected marginal profits in the good state regardless of
-extraction risk effects when shocks are uncorrelated}
+extraction risk effects when shocks are uncorrelated
 
 \(\frac{\mathbb{E}[\partial \pi|\theta<\bar \theta]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\theta>\bar \theta]}{\partial x}<0\)
 
@@ -1726,15 +1735,15 @@ contracts are triggered on \(\theta\).
 \subsection{\texorpdfstring{Proof of
 Proposition~\ref{prp-samre}}{Proof of Proposition~}}\label{sec-samre}
 
-\textbf{Proposition 4.1} \emph{In fisheries with two inputs, when
+\textbf{Proposition 4.1} \emph{In fisheries with two inputs, when}
 \(\theta\) and \(\omega\) are uncorrelated, index insurance will change
 the optimal use of a specific input in accordance to an input's own risk
-effect when the following sufficient condition is true:}
+effect when the following sufficient condition is true:
 
-\emph{\(\frac{\partial U}{\partial x_a x_b}>0\) when both inputs share
-the same risk effects, and
+\(\frac{\partial U}{\partial x_a x_b}>0\) when both inputs share the
+same risk effects, and
 \(\frac{\partial U}{\partial x_a \partial x_b}<0\) when inputs have
-opposite risk effects}
+opposite risk effects
 
 \emph{Otherwise, index insurance will have ambiguous effects on optimal
 input choice.}

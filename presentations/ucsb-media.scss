@@ -57,14 +57,16 @@ td {
 
 // horizontal line (default dark blue)
 hr {
-  border: 4px solid $blue;
-  border-radius: 5px;
-  margin-bottom: 30px;
+  border: 4px solid $blue !important;
+  border-radius: 5px !important;
+  margin-bottom: 30px !important;
+  opacity: 1 !important;
+  background-color: $teal !important;
 }
 
 // teal horizontal line
 .hr-teal {
-  border: 4px solid $teal;
+  border: 4px solid $teal !important;
 }
 
 // teal horizontal line
@@ -304,3 +306,7 @@ hr {
 .citation {
   font-size: 14px;
 }
+
+
+// Scrollable?
+
