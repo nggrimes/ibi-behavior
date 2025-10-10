@@ -1,5 +1,4 @@
 % Options for packages loaded elsewhere
-% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -8,22 +7,21 @@
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrartcl}
-\usepackage{xcolor}
+
 \usepackage{amsmath,amssymb}
-\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math} % this also loads fontspec
+  \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else
-  % xetex/luatex font selection
+\ifPDFTeX\else  
+    % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -41,6 +39,9 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -66,7 +67,8 @@
 \makeatother
 
 
-\usepackage{longtable,booktabs,array}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -91,8 +93,6 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
-
-
 % definitions for citeproc citations
 \NewDocumentCommand\citeproctext{}{}
 \NewDocumentCommand\citeproc{mm}{%
@@ -126,18 +126,6 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-
-
-
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-
-
- 
-
 
 \usepackage{cancel}
 \addtokomafont{disposition}{\rmfamily}
@@ -194,9 +182,11 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+
 \usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same}
+\urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
   pdftitle={The behavioral effects of index insurance in fisheries},
   pdfauthor={Nathaniel Grimes; Christopher Costello; Andrew J. Plantinga},
@@ -212,7 +202,8 @@
 \title{The behavioral effects of index insurance in fisheries}
 \author{Nathaniel Grimes \and Christopher Costello \and Andrew J.
 Plantinga}
-\date{2025-10-09}
+\date{2025-10-10}
+
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -256,7 +247,7 @@ tools available to protect fishing communities against environmental
 risks (Sethi 2010; Kasperski and Holland 2013). Index insurance is a new
 financial tool that has significant potential to bolster community
 welfare in response to disastrous weather events (Maltby \emph{et al.}
-2023; Watson \emph{et al.} 2023; \textbf{Hobday2025?}). However,
+2023; Watson \emph{et al.} 2023; Hobday \emph{et al.} 2025). However,
 insurance possesses moral hazards that may induce behavior change in
 fishers that exacerbate overfishing. In this paper, we provide the first
 examination of whether index insurance will lead to incentives that
@@ -314,8 +305,8 @@ fisher welfare and promote community resilience (Maltby \emph{et al.}
 Policy makers have begun advocating for new fisheries insurance programs
 modeled after agricultural crop insurance programs (Murkowski 2022).
 Index insurance is one such product extolled by practitioners as a prime
-candidate for fisheries productivity insurance (\textbf{Hobday2025?}).
-Index insurance gained traction in agriculture as an effective
+candidate for fisheries productivity insurance (Hobday \emph{et al.}
+2025). Index insurance gained traction in agriculture as an effective
 alternative to indemnity crop insurance in developing countries because
 it had lower administrative cost, minimizes moral hazards, and does not
 require claim verification (Collier \emph{et al.} 2009; Carter \emph{et
@@ -878,8 +869,8 @@ always positive. The opposite is true when \(dx_a<0\) and \(dx_b<0\).
 
 For inputs with changes in opposite directions, Equation~\ref{eq-totaly}
 is positive or negative contingent on the relative weight between
-\(\frac{\partial f(x_a)}{\partial x_a}dx_a\) and
-\(\frac{\partial f(x_b)}{\partial x_b}dx_b\)
+\(\frac{\partial f(x_a,x_b)}{\partial x_a}dx_a\) and
+\(\frac{\partial f(x_a,x_b)}{\partial x_b}dx_b\)
 \end{proof}
 
 Proposition~\ref{prp-har} shows that reductions in certain inputs may be
@@ -1149,13 +1140,13 @@ other independent shock do not affect fishers decisions.
 }
 
 \caption{\label{fig-sum}Risk Aversion (A), trigger threshold (B), stock
-variance \(\sigma_omega\) (C), and extraction variance \(\sigma_theta\)
-(D) all influence the magnitude of change in input use. Mean production
-elasticity is set to 0.5. Average percent change in input (y-axis) is
-summarized across all other parameter combinations for each risk effect
-value of \(\beta\). Contracts built on extraction risk are in the
-subpanels with \(\omega\), while contracts built on stock risk are
-indicated by the \(\theta\) subpanel.}
+variance \(\sigma_{omega}\) (C), and extraction variance
+\(\sigma_{theta}\) (D) all influence the magnitude of change in input
+use. Mean production elasticity is set to 0.5. Average percent change in
+input (y-axis) is summarized across all other parameter combinations for
+each risk effect value of \(\beta\). Contracts built on extraction risk
+are in the subpanels with \(\omega\), while contracts built on stock
+risk are indicated by the \(\theta\) subpanel.}
 
 \end{figure}%
 
@@ -2115,6 +2106,12 @@ Herrmann, M., Greenberg, J., Hamel, C. and Geier, H. (2004)
 \href{https://doi.org/10.1577/M02-086.1}{Extending federal crop
 insurance programs to commercial fisheries: The case of bristol bay,
 alaska, sockeye salmon}. 352--366 pp.
+
+\bibitem[\citeproctext]{ref-Hobday2025}
+Hobday, A.J., Little, L.R., Watson, J.R. and Spillman, C.M. (2025)
+\href{https://doi.org/10.1007/s11160-025-09920-3}{Parametric insurance
+for climate adaptation in fisheries and aquaculture}. \emph{Reviews in
+Fish Biology and Fisheries} \textbf{35}, 175--185.
 
 \bibitem[\citeproctext]{ref-Holland2008}
 Holland, D.S. (2008)

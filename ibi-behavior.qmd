@@ -303,7 +303,7 @@ $$ {#eq-totaly}
 
 Marginal production is positive, therefore $\frac{\partial f(x_m)}{\partial x_m}>0$ for either input represented by $x_m$. When $dx_a>0$ and $dx_b>0$, @eq-totaly is always positive. The opposite is true when $dx_a<0$ and $dx_b<0$.
 
-For inputs with changes in opposite directions, @eq-totaly is positive or negative contingent on the relative weight between $\frac{\partial f(x_a)}{\partial x_a}dx_a$ and $\frac{\partial f(x_b)}{\partial x_b}dx_b$
+For inputs with changes in opposite directions, @eq-totaly is positive or negative contingent on the relative weight between $\frac{\partial f(x_a,x_b)}{\partial x_a}dx_a$ and $\frac{\partial f(x_a,x_b)}{\partial x_b}dx_b$
 :::
 
 @prp-har shows that reductions in certain inputs may be offset by subsequent increases in more productive ones, thereby limiting the conservation potential of index insurance. In other words, lowering one margin of production through insurance does not necessarily result in a smaller total harvest.
@@ -503,7 +503,7 @@ Different triggers also lead to different magnitudes of input change, but do not
 Fisher input choice is much more responsive to insurance protection from more variable shocks (Panel C and D @fig-sum), but it depends on the insurance contract. Similar to risk aversion, the greater the shocks the greater the marginal value of insurance to mitigate those shocks. In more volatile environments, insurance provides significantly more income smoothing leading to similar incentives as the higher risk aversion example. Shocks the insurance does not protect against has little influence on fisher input decisions. If the insurance is designed to protect against one specific shock, it is unsurprising changes in the other independent shock do not affect fishers decisions.
 
 ```{r}
-#| fig-cap: "Risk Aversion (A), trigger threshold (B), stock variance $\\sigma_omega$ (C), and extraction variance $\\sigma_theta$ (D) all influence the magnitude of change in input use. Mean production elasticity is set to 0.5. Average percent change in input (y-axis) is summarized across all other parameter combinations for each risk effect value of $\\beta$. Contracts built on extraction risk are in the subpanels with $\\omega$, while contracts built on stock risk are indicated by the $\\theta$ subpanel."
+#| fig-cap: "Risk Aversion (A), trigger threshold (B), stock variance $\\sigma_{omega}$ (C), and extraction variance $\\sigma_{theta}$ (D) all influence the magnitude of change in input use. Mean production elasticity is set to 0.5. Average percent change in input (y-axis) is summarized across all other parameter combinations for each risk effect value of $\\beta$. Contracts built on extraction risk are in the subpanels with $\\omega$, while contracts built on stock risk are indicated by the $\\theta$ subpanel."
 #| label: fig-sum
 #| fig-height: 7
 #| fig-width: 6
