@@ -35,73 +35,6 @@ csl: fish-and-fisheries.csl
 
 ##  {background-image="https://i.insider.com/5644098bdd0895b0578b465f?width=1300&format=jpeg&auto=webp"}
 
-::: {.absolute left="10%" top="8%" style="font-size:1.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, .5); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .75); border-radius: 20px;"}
--   Fishing is a risky business
-
--   Storms, marine heatwaves, and other environmental variables directly impact fisher livelihoods
-
--   Fisher choices and management take steps to eliminate risk
-
--   Lack of financial tools to hedge against losses
-:::
-
-##  {#uni data-menu-title="Urchin"}
-
-[Red Sea Urchin collapse in 2024]{.slide-title}
-
-<hr>
-
-::::: columns
-::: column
-```{r}
-#| fig-align: center
-knitr::include_graphics(here::here('presentations','img','uni.jpg'))
-```
-:::
-
-::: column
-```{r}
-#| fig-align: center
-#| out-width: "100%"
-knitr::include_graphics(here::here('presentations','img','uni-graph.PNG'))
-```
-:::
-:::::
-
--   95% loss of kelp forest canopy in Mendicino, CA from warm waters and overpredation
-
--   Divers are going deeper
-
--   Fishing community is disappearing
-
-##  {#albacore data-menu-title="Albacore"}
-
-[Albacore lost 67% of revenue last year]{.slide-title}
-
-<hr>
-
-::::: columns
-::: column
-```{r}
-#| fig-align: center
-knitr::include_graphics(here::here('presentations','img','albacore.png'))
-```
-:::
-
-::: column
-```{r}
-#| out-width: "100%"
-#| fig-align: center
-#| fig-cap: "Distribution of Albacore catch from @Blixt2025"
-
-knitr::include_graphics(here::here('presentations','img','albacore-dist.PNG'))
-```
-:::
-:::::
-
--   Commercial fishers choose between troll or longline fishing
-
--   Warmer waters expanded Albacore range making it more difficult for fishers to find schools
 
 ##  {#risk data-menu-title="Risk"}
 
@@ -109,15 +42,19 @@ knitr::include_graphics(here::here('presentations','img','albacore-dist.PNG'))
 
 <hr>
 
+- Fisher risk aversion varies widely and is characteristic dependent [@Bockstael1983; @Eggert2004a;@Brick2012]
+
 -   Maneuver around storms or refuse to go out despite losing income [@Pfeiffer2020; @Pfeiffer2022]
+
 
 -   Choose consistent, known fishing grounds rather than exploring new territory [@Holland2008]
 
--   Select gear to minimize income variance [@Eggert2004]
 
-<br>
+-   Select gear and species to minimize income variance [@Eggert2004]
 
-:::: body-text-l
+
+
+:::: body-text-m
 ::: center-text
 **These efforts do not completely eliminate income risk**
 :::
@@ -129,30 +66,47 @@ knitr::include_graphics(here::here('presentations','img','albacore-dist.PNG'))
 
 <hr>
 
-::::: columns
-::: column
-```{r}
-#| fig-align: center
-knitr::include_graphics(here::here('presentations','img','lisa.jpg'))
-```
-:::
+-   Fishers and policymakers are increasingly interested in financial tools to manage risk [@Sethi2010; @Sumaila2021]
 
-::: column
--   Government disaster payouts in the US and Europe have been inefficient
 
-    -   Red sea urchin collapsed in 2018. Payouts delivered in 2025, *7 YEARS LATER!*
+-   Government disaster payouts in the US and Europe have been inefficient [@Jardine2020]
+
+    -   Red sea urchin collapsed in 2018 
+    
+    -   Payouts delivered in 2025
 
 -   Senator Murkowski (R-AK) has called for insurance programs in fisheries akin to US crop insurance
-:::
-:::::
+
 
 :::: body-text-l
 ::: center-text
-**Index Insurance being promoted to potentially reduce fisher income risk**
+**Index Insurance is a promising policy tool to fill this need**
 :::
 ::::
 
-##  {#ibi data-menu-title="Index Based Insurance"}
+##  {#ibi-1 data-menu-title="Index Based Insurance"}
+
+[What is Index Insurance?]{.slide-title}
+
+<hr>
+
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','windex-1.png'))
+```
+
+##  {#ibi-2 data-menu-title="Index Based Insurance"}
+
+[What is Index Insurance?]{.slide-title}
+
+<hr>
+
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','windex-2.png'))
+```
+
+##  {#ibi-3 data-menu-title="Index Based Insurance"}
 
 [What is Index Insurance?]{.slide-title}
 
@@ -162,6 +116,7 @@ knitr::include_graphics(here::here('presentations','img','lisa.jpg'))
 #| fig-align: center
 knitr::include_graphics(here::here('presentations','img','windex.png'))
 ```
+
 
 ##  {#ibi-why data-menu-title="Index Based Insurance"}
 
@@ -181,38 +136,61 @@ knitr::include_graphics(here::here('presentations','img','windex.png'))
 
 <br>
 
--   **Payouts immune to fisher choices**
+-   **Index Insurance immune to "chasing the trigger" moral hazard**
 
-    -   Fishers choosing to fish less will not lead to fund insolvency
+    -   Fishers choosing to fish less will not lead to excessive payouts for the insurance company
 
     -   Fishers cannot control sea surface temperature
 
 
 ##  {#moral data-menu-title="Moral Hazards"}
 
-[Index Insurance possesses moral hazards]{.slide-title}
+[Index Insurance still has "Risk Reduction" moral hazards]{.slide-title}
 
 <hr>
 
-::: {.callout-note icon="false"}
-## Moral Hazard Definition
+::: {.callout-note icon="false"  style="font-size: 1.5em;"}
+## Risk Reduction Moral Hazard Definition
 
-Decisions by insured agents that they would not otherwise take if they were uninsured [@Wu2020]
+An agent chooses new riskier actions because insurance protects against additional risk
 :::
 
-::: center-text
-**Theory from agriculture**
+::::{.columns}
+
+:::{.column}
+
+:::{.center-text}
+**No Insurance**
+
 :::
 
--   Insurance incentivizes farmers to change inputs use depending on the marginal risk effects of the inputs [@Mahul2001; @Ramaswami1993; @Babcock1996; @horowitz1993]
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here("presentations","img","ski.jpg"))
+```
 
-    -   Insurance lowers input use of risk decreasing inputs
 
-    -   Insurance raises input use of risk increasing inputs
+:::
 
--   Behavior change leads to environmental consequences [@Mishra2005; @Claassen2017]
 
--   Rainfall insurance in common-pool pastures leads to overstocking and long term degradation of pasture commons [@Bulte2021; @muller2011]
+:::{.column}
+:::{.center-text}
+**With Insurance**
+:::
+
+```{r}
+#| fig-align: center
+#| out-width: "85%"
+
+knitr::include_graphics(here::here("presentations","img","abby-ski.jpg"))
+```
+
+
+:::
+
+::::
+
+
 
 ##  {#ag data-menu-title="Agriculture Insurance"}
 
@@ -234,7 +212,7 @@ knitr::include_graphics(here::here('presentations','img','pasture.png'))
 
 :::: {.column width="33%"}
 ::: center-text
-**Chemical Application** $\lessgtr0$
+**Chemical Use** $\lessgtr0$
 :::
 
 ```{r}
@@ -245,15 +223,19 @@ knitr::include_graphics(here::here('presentations','img','fert.png'))
 
 :::: {.column width="33%"}
 ::: center-text
-**Increased Irrigation**
+**Crop Shift**
 :::
 
 ```{r}
 #| fig-align: center
-knitr::include_graphics(here::here('presentations','img','irrig.png'))
+#| out-width: 3.25in
+#| out-height: 3.75in
+knitr::include_graphics(here::here('presentations','img','cotton.jpg'))
 ```
 ::::
 :::::::::
+
+-   Behavior change leads to environmental consequences [@Mishra2005; @Claassen2017;@Bulte2021;@muller2011;@Janzen2018;@Stoeffler2022;@Sibiko2020]
 
 ##  {#fish data-menu-title="Fishery Moral Harzard"}
 
@@ -261,27 +243,20 @@ knitr::include_graphics(here::here('presentations','img','irrig.png'))
 
 <hr>
 
-::::: columns
-::: {.column width="40%"}
+
 -   Moral hazards will influence fishery sustainability
 
 <br>
 
--   Working assumption by NGOs is that insurance will lead to conservation
+
+-   Insurance companies ignore moral hazards
 
 <br>
 
--   Insurance companies ignore moral hazards
-:::
 
-::: {.column width="60%"}
-```{r}
-#| fig-align: center
-#| out-width: "100%"
-knitr::include_graphics(here::here('presentations','img','fish.jpg'))
-```
-:::
-:::::
+-   Working assumption by NGOs is that insurance will lead to conservation [@RARE2021]
+
+
 
 ##  {#rq data-menu-title="Research Questions"}
 
@@ -289,13 +264,14 @@ knitr::include_graphics(here::here('presentations','img','fish.jpg'))
 
 <hr>
 
-[**Will index insurance increase or decrease harvest?**]{.body-text-l}
+[**Will index insurance incentivize fishers to increase or decrease expected harvest?**]{.body-text-l}
 
 <br>
 
 [**What factors lead index insurance to increase or decrease harvest?**]{.body-text-l}
 
 <br>
+
 
 [**How much will index insurance change harvest decisions?**]{.body-text-l}
 
@@ -305,19 +281,20 @@ knitr::include_graphics(here::here('presentations','img','fish.jpg'))
 
 <hr>
 
-**Result 1:** Index insurance will always increase harvest with standard fishing models
+[**Result 1:** Index insurance will always increase harvest with standard fishing production models, but has the potential to decrease harvest with more flexible specifications of risk]{.body-text-m}
 
 <br>
 
-**Result 2:** The design of the contract matters. Contracts on extraction risks could increase or decrease harvest, contracts on stock risks will always increase harvest
+
+[**Result 2:** The design of the contract matters. What kind of risk the contract protects influences the behavior of fishers]{.body-text-m}
 
 <br>
 
-**Result 3:** Incentives that increase harvest lead to larger absolute changes than decreases in harvest
+[**Result 3:** Incentives that increase expected harvest lead to larger absolute changes than decreases in harvest]{.body-text-m}
 
-```         
+       
 - Norwegian fisheries would increase harvest by 20% as oppossed to 2% decreases
-```
+
 
 ##  {#outline data-menu-title="Outline"}
 
@@ -345,15 +322,19 @@ knitr::include_graphics(here::here('presentations','img','fish.jpg'))
 
 <br>
 
+
 **6.** Discussion
 
-##  {#mod-sec data-menu-title="Model Section" background-color="#047C90"}
+##  {#mod-sec data-menu-title="Model Section" background-color="#047C90" .center-middle}
 
-:::: page-center
+<div style="display:flex; align-items:center; justify-content:center; height:100%; text-align:center;">
+
 ::: custom-subtitle
 Stochastic Fishery Production
 :::
-::::
+
+</div>
+
 
 ##  {#mod data-menu-title="Model"}
 
@@ -367,18 +348,33 @@ $$
 y=\tilde{B}f(x)
 $$ {#eq-trad}
 
-$\tilde{B}$ stochastic stock abundance
 
-$f(x)$ concave technology function
+::::{.columns}
+
+:::{.column}
+
+$y:$ harvest
+
+$x:$ input (e.g. effort, boats, gear)
+:::
+
+:::{.column}
+$\tilde{B}:$ stochastic stock abundance
+
+$f(x):$ concave technology function
+
+:::
+
+::::
 
 :::: fragment
 $$
 y=\hat{B}f(x)+\theta f(x)
 $$ {#eq-trad2}
 
-$\hat{B}$ expected stock abundance
+$\hat{B}:$ expected stock abundance
 
-$\theta$ shock to stock abundance with $\mathbb{E}[\theta]=0$ and known variance $\sigma^2_\theta$
+$\theta:$ shock to stock abundance with $\mathbb{E}[\theta]=0$ and known variance $\sigma^2_\theta$
 
 <br>
 
@@ -387,11 +383,105 @@ $\theta$ will be called stock risk.
 :::
 ::::
 
+## {#stock data-menu-title="Stock Risk"}
+
+[Examples of Stock Risk]{.slide-title}
+
+<hr>
+
+::::{.columns}
+
+:::{.column width="50%"}
+
+:::{.center-text}
+**Mendicino Red Sea Urchin**
+:::
+
+```{r}
+#| fig-align: center
+knitr::include_graphics(here::here('presentations','img','uni.jpg'))
+```
+
+- 95% of kelp canopy lost
+
+- 10 billion crabs disappeared
+:::
+
+:::{.column width="50%"}
+
+:::{.center-text}
+**Bering Sea Snow Crab**
+:::
+
+```{r}
+#| fig-align: center
+#| out-width: "50%"
+#| fig-cap: "@Szuwalski2023"
+knitr::include_graphics(here::here('presentations','img','snow-crab-dis.png'))
+```
+
+:::
+
+::::
+
+
+## {#risk-effect data-menu-title="Risk Effects"}
+
+[Risk Effects]{.slide-title}
+
+<hr>
+
+-   Inputs could increase or decrease harvest risk [@Just1978]
+
+::::{.columns}
+
+:::{.column width="50%"}
+
+:::{.callout-note icon="false" style="font-size: 1.2em;"}
+## Risk Increasing 
+
+An input is risk increasing if the variance of harvest increases with more of the input
+
+$\frac{\partial V(y)}{\partial x}>0$
+:::
+
+:::
+
+:::{.column}
+
+:::{.callout-note icon="false" style="font-size: 1.2em;"}
+## Risk Decreasing
+
+An input is risk decreasing if the variance of harvest decreases with more of the input
+
+$\frac{\partial V(y)}{\partial x}<0$
+:::
+
+:::
+
+::::
+
+::: fragment
+
+::: center-text
+**Insurance incentives operates through input risk effects**
+:::
+
+- Insurance incentivizes farmers to change inputs use depending on the marginal risk effects of the inputs [@Mahul2001; @Ramaswami1993; @Babcock1996; @horowitz1993]
+
+    -   Insurance lowers input use of risk decreasing inputs
+
+    -   Insurance raises input use of risk increasing inputs
+    
+:::
+
+
 ##  {#result1 data-menu-title="Result 1"}
 
 Under standard assumptions, fishers are price takers, incur convex costs, and are risk averse over profits.
 
-Index Insurance will raise risk increasing inputs $\frac{\partial V(y)}{\partial x}>0$ [@Mahul2001]
+
+Only need to test whether @eq-trad2 is risk increasing [@Mahul2001] 
 
 $$
 \begin{aligned}
@@ -399,20 +489,17 @@ $$
 \end{aligned}
 $$
 
-<br>
 
 ::: fragment
 
-[**Result 1:** Index insurance will increase fishing effort if we apply traditional fishery models one-to-one]{.body-text-l .blue-text}
+[**Result 1:** Index insurance will increase fishing effort if we assume standard fishery models]{.body-text-l .blue-text}
 
 
 
-<br>
-
-::: {.callout-note icon="false"}
+::: {.callout-note icon="false" style="font-size: 1.35em;"}
 ## Intuition for Result 1
 
-Insurance protects against risk. The added risk of additional inputs is protected by insurance encouraging fishers to fish more
+More effort increases variability with higher stock risk. Insurance protects against risk. The added risk of additional inputs is protected by insurance encouraging more effort.
 :::
 
 :::
@@ -421,9 +508,114 @@ Insurance protects against risk. The added risk of additional inputs is protecte
 ***However, fishers are exposed to other risks and are quite adaptive to mitigating risk exposure***
 :::
 
+
+##  {#flex-1 data-menu-title="Flexible"}
+
+[Flexible Stochastic Fishery Model]{.slide-title}
+
+<hr>
+
+Other shocks may not influence quantity of biomass, but ability of fishers to harvest
+
+
+$$
+y=\hat{B}f(x)+\theta f(x)+\omega h(x)
+$$ {#eq-jpfish}
+
+::::: columns
+::: column
+[$h(x):$ risk effect function]{.body-text-s}
+
+[$\frac{\partial h(x)}{\partial x}\lesseqgtr0$]{.body-text-s}
+:::
+
+::: column
+[$\omega:$ extraction shock with $\mathbb{E}[\omega]=0$]{.body-text-s}
+
+[Known variance $\sigma^2_\omega$]{.body-text-s}
+:::
+:::::
+
+## {#flex-ex data-menu-title="Flexible Example"}
+
+[Example of Extraction Risk $\omega$]{.slide-title}
+
+<hr>
+
+::::{.columns}
+
+:::{.column width="45%"}
+
+:::{.center-text}
+
+**Troll fishing**
+
+:::
+
+```{r}
+#| fig-align: center
+#| out-width: "90%"
+knitr::include_graphics(here::here('presentations','img','albacore.png'))
+```
+
+  
+:::
+
+:::{.column width="10%"}
+
+:::{.center-text}
+
+**vs.**
+
+:::
+
+:::
+
+:::{.column width="45%"}
+
+:::{.center-text}
+
+**Longline**
+
+:::
+```{r}
+#| out-width: "85%"
+#| fig-align: center
+
+knitr::include_graphics(here::here('presentations','img','longline.jpg'))
+```
+
+
+:::
+::::
+
+::::{.columns}
+
+:::{.column}
+
+-  Move towards fish schools
+
+-  Effort reduces $\omega$ risk
+
+    - Effort would be risk decreasing, $h_x(x)<0$
+
+:::
+
+:::{.column}
+- Set lines and wait
+
+- Increasing soak time $\uparrow$ variance
+
+    - Effort would be risk increasing, $h_x(x)>0$
+:::
+
+
+::::
+
+
 ##  {#flex data-menu-title="Flexible"}
 
-[Flexible Stochastic Production Function]{.slide-title}
+[Flexible Stochastic Fishery Model]{.slide-title}
 
 <hr>
 
@@ -437,40 +629,39 @@ $$ {#eq-jpfish}
 
 ::::: columns
 ::: column
-$h(x)$ risk effect function
+[$h(x)$ risk effect function]{.body-text-s}
 
-$\frac{\partial h(x)}{\partial x}\lessgtr0$
+[$\frac{\partial h(x)}{\partial x}\lesseqgtr0$]{.body-text-s}
 :::
 
 ::: column
-$\omega$ extraction shock with $\mathbb{E}[\omega]=0$
+[$\omega$ extraction shock with $\mathbb{E}[\omega]=0$]{.body-text-s}
 
-Known variance $\sigma^2_\omega$
+[Known variance $\sigma^2_\omega$]{.body-text-s}
 :::
 :::::
 
-::: fragment
 
-Fishers can mitigate that risk through the risk effects function $h(x)$ with "extraction risk" $\omega$
+Fishers interact with new risk $\omega$ through $h(x)$ 
 
 ::::{.columns}
 ::: {.column width="50%"}
--   Risk decreasing input $\frac{\partial h(x)}{\partial x}<0$
 
-    -   E.g. better gear, more crew, safer boats
+Risk decreasing input $\frac{\partial h(x)}{\partial x}<0$
+
+  -   [E.g. better gear, more crew, safer boats]{.body-text-s}
 :::
 
 :::{.column width="50%"}
 
--  Risk increasing input $\frac{\partial h(x)}{\partial x}>0$
+Risk increasing input $\frac{\partial h(x)}{\partial x}>0$
 
-    -   E.g. more fishing days, more boats, riskier grounds
+  -   [E.g. more fishing days, more boats, riskier grounds]{.body-text-s}
 
 :::
 
 ::::
 
-:::
 
 ::: fragment
 
@@ -480,11 +671,13 @@ Fishers can mitigate that risk through the risk effects function $h(x)$ with "ex
 
 ##  {#sol-sec data-menu-title="Proof Section" background-color="#047C90"}
 
-:::: page-center
+<div style="display:flex; align-items:center; justify-content:center; height:100%; text-align:center;">
+
 ::: custom-subtitle
-Proof of IBI behavior change
+Proof of IBI Behavior Change
 :::
-::::
+
+</div>
 
 
 ##  {#profit data-menu-title="Profit"}
@@ -544,21 +737,31 @@ Otherwise, risk increasing inputs lead to higher expected marginal profit in the
 $\frac{\mathbb{E}[\partial \pi|\omega<\bar \omega]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\omega>\bar \omega]}{\partial x}<0$ if $h_{x}(x)>0$
 :::
 
+<br>
+
+[Proof of Lemma 1](#lemma-1){.btn .btn-outline-primary .btn role="button"}
+
+
+
+
+##  {#lemmas-1 data-menu-title="Lemmas"}
+
+[Set $\bar\omega=0$, we have good and bad states of profit]{.slide-title}
+
+<hr>
+
+*Fishers make decisions on the marginal profitability between states when maximizing utility*
+
 ::: {#lem-theta}
 Contracts built on $\theta$ will always lead to higher expected marginal profits in the good state regardless of extraction risk effects
 
 $\frac{\mathbb{E}[\partial \pi|\theta<\bar \theta]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\theta>\bar \theta]}{\partial x}<0$
 :::
 
-::::: columns
-::: column
-[Proof of Lemma 1](#lemma-1){.btn .btn-outline-primary .btn role="button"}
-:::
+<br>
 
-::: column
 [Proof of Lemma 2](#lemma-2){.btn .btn-outline-primary .btn role="button"}
-:::
-:::::
+
 
 ##  {#utility data-menu-title="Utility"}
 
@@ -599,7 +802,7 @@ $J(\bar\omega)\gamma$ is the premium
 [First order conditions]{.slide-title}
 
 <hr>
-
+::: {style="font-size: 0.9em"}
 $$
 \begin{aligned}
 \frac{\partial U}{\partial x}=&\int^{\infty}_{-\infty}\left[ \int^{\bar \omega}_{-\infty}j(\omega,\theta)u_{x}(\pi(x,\hat{B},\theta,\omega)+(1-J(\bar \omega))\gamma)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta,\omega)d\omega\right.\\
@@ -607,7 +810,7 @@ $$
 &=0
 \end{aligned}
 $$ {#eq-foc1}
-
+:::
 
 :::{.center-text}
 **Use Implicit Value Thereom  to analyze how the optimal choice of input changes with insurance**
@@ -626,7 +829,7 @@ Focus on numerator because the sufficent conditions of a maximization problem ar
 <hr>
 
 ::: {#prp-ind}
-For feasible index insurance contracts specified at trigger $\bar\omega=0$, optimal fisher harvest will decrease with an increase in $\gamma$ when $h_x(x)<0$ and increase when $h_x(x)>0$.
+*For feasible index insurance contracts specified at trigger* $\bar\omega=0$, *optimal fisher harvest will decrease with an increase in* $\gamma$ *when* $h_x(x)<0$ *and increase when* $h_x(x)>0$.
 :::
 
 
@@ -639,7 +842,7 @@ For feasible index insurance contracts specified at trigger $\bar\omega=0$, opti
 
 Independence of $\omega$ and $\theta$ allows us to factor out the joint distribution into the respective marginal distributions shown by $j_\theta(\theta)$ and $j_\omega(\omega)$ respectively.
 
-::: {style="font-size: 0.8em"}
+::: {style="font-size: 0.76em"}
 $$
 \begin{aligned}
 \frac{U}{\partial x \partial \gamma}=\int^{\infty}_{-\infty}j_{\theta}(\theta)\left[ \int^{\bar\omega}_{-\infty}j_{\omega}(\omega)u''(\pi(x,\hat{B},\theta,\omega)+(1-J(\bar\omega))\gamma)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta,\omega)(1-J(\bar\omega))d\omega\right.\\
@@ -669,11 +872,19 @@ $$ {#eq-simp}
 
 The first term outside the brackets is negative by the definition of concave utility, $u''<0$.
 
+::: fragment
 By @lem-mp, the interior of the brackets is positive when $h_x(x)<0$ and negative when $h_x(x)>0$.
 
-Therefore, index insurance will decrease input use when $h_x(x)<0$ and increase input use when $h_x(x)>0$.
+:::
 
+::: fragment
+Therefore, index insurance will decrease input use when $h_x(x)<0$ and increase input use when $h_x(x)>0$.
+:::
+
+::: fragment
 Expected harvest will change in accordance to the change in inputs as $f(x)$ is increasing. 
+
+:::
 
 ## {#prp-2 data-menu-title="Prop 2"}
 
@@ -717,11 +928,11 @@ Therefore, index insurance will always increase input use and harvest when contr
 
 <br>
 
-:::{.callout-note icon="false"}
+:::{.callout-note icon="false" style="font-size: 1.3em;"}
 
 ## Intution for Result 2
 
-- Insurance protects fishers from risk. Adding inputs increases stock risk by definition. Therefore, insurance will incentivize fishers to increase harvest as insurance protects against the risk of every added input.
+- Adding inputs increases stock risk by definition. Therefore, insurance will incentivize fishers to increase harvest as insurance protects against the risk of every added input.
 
 - Some inputs may decrease extraction risk. With insurance protecting risk, those inputs are not needed as much. Lowering input use will always lead to less harvest and thus conservation
 
@@ -733,12 +944,13 @@ Therefore, index insurance will always increase input use and harvest when contr
 
 ##  {#Num-sec data-menu-title="Numerical Simulations" background-color="#047C90"}
 
-:::: page-center
+<div style="display:flex; align-items:center; justify-content:center; height:100%; text-align:center;">
+
 ::: custom-subtitle
 Numerical Simulations
 :::
-::::
 
+</div>
 ## {#sim data-menu-title="Simulation"}
 
 [Structural form and solution technique]{.slide-title}
@@ -748,11 +960,14 @@ Numerical Simulations
 
 ::::{.columns}
 
-:::{.column}
+:::{.column width="45%"}
 
+::: {style="font-size: 0.80em"}
 $$
 \pi=x^\alpha(\hat{B}+\theta) +\omega x^\beta -cx^2
 $$ {#eq-simprofit}
+
+:::
 
 $f(x)=x^\alpha$
 
@@ -762,7 +977,7 @@ $\omega\sim N(0,\sigma^2_\omega)$
 
 :::
 
-::: {.column}
+::: {.column width="55%"}
 
 ::: {style="font-size: 0.65em"}
 $$
@@ -791,7 +1006,7 @@ $\theta\sim N(0,\sigma^2_\theta)$
 ::::{.columns}
 
 :::{.column}
-[**Utility is concave in insurance**]{.body-text-m .blue-text}
+[**Utility is concave in $\gamma$**]{.body-text-m .blue-text}
 :::
 
 :::{.column}
@@ -829,7 +1044,7 @@ plot_df$contract<-factor(plot_df$contract,
                       labels=c('Contract built on extraction risk',"Contract built on stock risk"))
 
 col_pal<-c("u"="#003660","x"="#79A540")
-txt_size<-8
+txt_size<-10
 
 ggplot(plot_df)+
   geom_path(aes(x=gammain,y=Value,color=Inputs),linewidth=2)+
@@ -890,7 +1105,7 @@ my_labeller_one <- as_labeller(
 
 p_df<-comb |> 
   filter(a==1,wtrig==0,sigmaw==0.4,sigmat==.4,corr==0)
-
+txt_size<-12
                       
 p_df |> 
   ggplot()+
@@ -957,6 +1172,7 @@ p_df |>
 
 ```{r}
 #| label: fig-sum
+#| fig-cap: "Comparative statics for different parameter effects on optimal input change"
 #| fig-height: 6
 #| fig-width: 6
 
@@ -1010,8 +1226,8 @@ a<-ggplot(data=ins)+
   scale_color_manual(values=c("#003660","#EF5645","#79A540"))+
   theme(text=element_text(family="serif"),
     legend.position = "bottom",
-        legend.title = element_text(size = 10), 
-        legend.text  = element_text(size = 7),
+        legend.title = element_text(size = 12), 
+        legend.text  = element_text(size = 9),
         legend.key.size = unit(.8, "lines"))+
   scale_y_continuous(labels=scales::percent,expand=c(0,0),limits=c(-0.05,.25))+
   guides(color = guide_legend(title.position="top", title.hjust = 0.5, override.aes = list(size=0.1)))
@@ -1029,8 +1245,8 @@ b<-ggplot(data=ins_wtrig)+
   scale_color_manual(values=c("#003660","#EF5645","#79A540"))+
   theme(text=element_text(family="serif"),
     legend.position = "bottom",
-        legend.title = element_text(size = 10), 
-        legend.text  = element_text(size = 7),
+        legend.title = element_text(size = 12), 
+        legend.text  = element_text(size = 9),
         legend.key.size = unit(.8, "lines"))+
   scale_y_continuous(labels=scales::percent,expand=c(0,0),limits=c(-.05,.25))+
   guides(color = guide_legend(title.position="top", title.hjust = 0.5, override.aes = list(size=0.1)))
@@ -1039,14 +1255,14 @@ c<-ggplot(data=ins_sig)+
   geom_vline(xintercept = 0,color="grey")+
   geom_hline(yintercept = 0,color="grey")+
   geom_line(aes(x=bk,y=x,color=as.factor(sigmaw)),size=2)+
-  labs(x="Risk Effects",y="Average Percentage\nChange in Input",color=TeX(r'(Variance $\sigma_\omega$)'))+
+  labs(x="Risk Effects",y="Average Percentage\nChange in Input",color=TeX(r'(Variance $\sigma^2_\omega$)'))+
   theme_bw()+
   facet_grid(~contract,labeller=my_labeller_one)+
   scale_color_manual(values=c("#003660","#EF5645","#79A540","#09847A"))+
   theme(text=element_text(family="serif"),
     legend.position = "bottom",
-        legend.title = element_text(size = 10), 
-        legend.text  = element_text(size = 7),
+        legend.title = element_text(size = 12), 
+        legend.text  = element_text(size = 9),
         legend.key.size = unit(.8, "lines"))+
   scale_y_continuous(labels=scales::percent,expand=c(0,0),limits=c(-0.05,0.25))+
   guides(color = guide_legend(title.position="top", title.hjust = 0.5, override.aes = list(size=0.1)))
@@ -1056,14 +1272,14 @@ d<-ggplot(data=ins_theta)+
   geom_vline(xintercept = 0,color="grey")+
   geom_hline(yintercept = 0,color="grey")+
   geom_line(aes(x=bk,y=x,color=as.factor(sigmat)),size=2)+
-  labs(x="Risk Effects",y="Average Percentage\nChange in Input",color=TeX(r'(Variance $\sigma_\theta$)'))+
+  labs(x="Risk Effects",y="Average Percentage\nChange in Input",color=TeX(r'(Variance $\sigma^2_\theta$)'))+
   theme_bw()+
   facet_grid(~contract,labeller=my_labeller_one)+
   scale_color_manual(values=c("#003660","#EF5645","#79A540","#09847A"))+
   theme(text=element_text(family="serif"),
     legend.position = "bottom",
-        legend.title = element_text(size = 10), 
-        legend.text  = element_text(size = 7),
+        legend.title = element_text(size = 12), 
+        legend.text  = element_text(size = 9),
         legend.key.size = unit(.8, "lines"))+
   scale_y_continuous(labels=scales::percent,expand=c(0,0),limits=c(-0.05,0.25))+
   guides(color = guide_legend(title.position="top", title.hjust = 0.5, override.aes = list(size=0.1)))
@@ -1076,11 +1292,13 @@ a+b+c+d+plot_layout(axis_titles = "collect",ncol=2)+plot_annotation(tag_levels =
 
 ##  {#multi-sec data-menu-title="Multiple Inputs" background-color="#047C90"}
 
-:::: page-center
+<div style="display:flex; align-items:center; justify-content:center; height:100%; text-align:center;">
+
 ::: custom-subtitle
-Mutliple Inputs
+Multiple Inputs
 :::
-::::
+
+</div>
 
 ## {#multi data-menu-title="Multiple Inputs"}
 
@@ -1132,11 +1350,13 @@ Consider a risk decreasing input $x_a$. If $x_a$ greatly increases the productiv
 
 ##  {#asche-sec data-menu-title="Norwegian Fisheries" background-color="#047C90"}
 
-:::: page-center
+<div style="display:flex; align-items:center; justify-content:center; height:100%; text-align:center;">
+
 ::: custom-subtitle
 Application to Norwegian Fisheries
 :::
-::::
+
+</div>
 
 ## {#asche-intro data-menu-title="Asche Intro"}
 
@@ -1179,7 +1399,6 @@ $$ {#eq-maxasche}
 
 - Pull 1000 draws of $\omega$ and $\gamma$. Test simulations across combinations of risk aversion, trigger level, and shock variance
 
-<br>
 
 ```{r}
 #| tbl-cap: "Production and Risk elasticities of Norwegian Fisheries from Asche et al., (2020)"
@@ -1346,7 +1565,7 @@ knitr::include_graphics(here::here('presentations','img','asche-omega.png'))
 
 ##  {#asche2 data-menu-title="Asche Results 2"}
 
-[Harvest only increases with $\theta$ contracts]{.slide-title}
+[Harvest increases with $\theta$ contracts]{.slide-title}
 
 <hr>
 
@@ -1365,9 +1584,9 @@ knitr::include_graphics(here::here('presentations','img','asche-theta.png'))
 
 <br>
 
-:::{.callout-note icon="false"}
+:::{.callout-note icon="false" style="font-size: 1.3em;"}
 
-## Intution for Result 2
+## Intution for Result 3
 
 - Risk decreasing inputs have a tradeoff. 
 
@@ -1385,15 +1604,17 @@ knitr::include_graphics(here::here('presentations','img','asche-theta.png'))
 
 ##  {#dis-sec data-menu-title="Discussion Section" background-color="#047C90"}
 
-:::: page-center
+<div style="display:flex; align-items:center; justify-content:center; height:100%; text-align:center;">
+
 ::: custom-subtitle
 Discussion
 :::
-::::
+
+</div>
 
 ##  {#summary data-menu-title="Summary"}
 
-[Application of index insurance in fisheries needs to acknowledge moral hazards]{.slide-title}
+[Index insurance in fisheries needs to acknowledge moral hazards]{.slide-title}
 
 <hr>
 
@@ -1403,15 +1624,12 @@ Discussion
   
   - Fishers internalize risk in complex ways
 
-<br>
 
 - The contract design is important
 
   - Most propsoed indicies suggest biological triggers [@Watson2023;@Hobday2025]
   
   - Contracts built on stock risk $\theta$ will always increase harvest without constraints
-  
-  <br>
 
 
 - Harvest increases more likely to occur and have larger absolute increases than decreases

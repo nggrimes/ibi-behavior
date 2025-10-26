@@ -220,7 +220,7 @@ The first term outside the brackets is negative by the definition of concave uti
 
 When $h_x(x)>0$, the interior sign of the brackets in @eq-simp is negative by @lem-mp. Therefore, index insurance will increase input use for risk increasing inputs.
 
-Direction of input change will exactly match the direction of harvest change by the poroperties of the production function.
+Direction of input change will exactly match the direction of harvest change by the properties of the production function.
 :::
 
 @prp-ind shows contracts specified on extraction risk could have positive or negative effects on conservation depending on the risk effects of the input. Insurance lowers the use of risk decreasing inputs because the need to protect against risk with that input is replaced by the risk mitigating qualities of insurance. Insurance increases risk increasing inputs as it protects against additional risk allowing fishers to expand production without taking on greater risk. The stock effect persists when contracts are specified on extraction risks, but are not influential in the decision. Instead, if we specify a contract on the stock shocks, then the stock risk effects become more prevalent and distinctly changes the harvest outcome.
@@ -389,7 +389,7 @@ ggplot(plot_df)+
 
 Optimal input use changes monotonically with index insurance for both risk increasing and decreasing inputs (@fig-iter). Fishers use more risk increasing inputs for both contract specifications. For risk decreasing inputs, fishers will only use less inputs if the contract is specified on extraction risk. Otherwise, fishers will use more risk decreasing inputs if the contract is triggered on stock risk as shown in the bottom right panel of @fig-iter.
 
-The concavity of utility, as demonstrated by the blue parabolas in all panels of @fig-iter, implies there exists an optimal amount of insurance for fishers to buy. The monotoncity of input use in all cases suggests that the insurance level that maximizes utility will preserve the sign of input changes. Therefore, an endogenous choice of insurance will not affect the direction of input change, but it will affect the magnitude.
+The concavity of utility, as demonstrated by the blue parabolas in all panels of @fig-iter, implies there exists an optimal amount of insurance for fishers to buy. The monotonicity of input use in all cases suggests that the insurance level that maximizes utility will preserve the sign of input changes. Therefore, an endogenous choice of insurance will not affect the direction of input change, but it will affect the magnitude.
 
 For example, contracts protecting against stock risks have peak parabolas further right than contracts on extraction risks in @fig-iter. Fishers would be better off with higher levels of insurance coverage. Allowing fishers to choose insurance coverage ensures that the choice of insurance and input use changes are welfare improving and will not bias input choices with over or under investment of insurance. Simulations moving forward will allow fishers to choose both inputs and insurance coverage.
 
