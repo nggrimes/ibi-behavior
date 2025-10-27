@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -7,21 +8,22 @@
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrartcl}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -39,9 +41,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -67,8 +66,7 @@
 \makeatother
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -93,6 +91,8 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
+
+
 % definitions for citeproc citations
 \NewDocumentCommand\citeproctext{}{}
 \NewDocumentCommand\citeproc{mm}{%
@@ -126,6 +126,18 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 \usepackage{cancel}
 \addtokomafont{disposition}{\rmfamily}
@@ -182,11 +194,9 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={The behavioral effects of index insurance in fisheries},
   pdfauthor={Nathaniel Grimes; Christopher Costello; Andrew J. Plantinga},
@@ -202,8 +212,7 @@
 \title{The behavioral effects of index insurance in fisheries}
 \author{Nathaniel Grimes \and Christopher Costello \and Andrew J.
 Plantinga}
-\date{2025-10-13}
-
+\date{2025-10-26}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -249,31 +258,10 @@ financial tool that has significant potential to bolster community
 welfare in response to disastrous weather events (Maltby \emph{et al.}
 2023; Watson \emph{et al.} 2023; Hobday \emph{et al.} 2025). However,
 insurance possesses moral hazards that may induce behavior change in
-fishers that exacerbate overfishing. In this paper, we provide the first
-examination of whether index insurance will lead to incentives that
-increase or decrease fishery harvest. We apply our theoretical findings
-to an empirical setting in three Norwegian fisheries.
-
-Marine heatwaves provide a clear example of how environmental
-variability impacts biological and economic productivity of fisheries.
-Marine heatwaves increase animal thermal stress diminishing reproductive
-ability (Barbeaux \emph{et al.} 2020), stunting growth (Pandori and
-Sorte 2019), pushing species outside their usual habitats (Cavole
-\emph{et al.} 2016), and may directly increase mortality (Smith \emph{et
-al.} 2023). Expanding fish habitat ranges increase costs when fish move
-beyond the fishing grounds of established ports (Rogers \emph{et al.}
-2019). The variability from marine heatwaves impacts 77\% of species
-within economic exclusion zones and reduces maximum catch potential by
-6\% (Cheung \emph{et al.} 2021). Marine heatwaves are often accompanied
-by harmful algal blooms and diseases leading to additional fishery
-collapses (Oken \emph{et al.} 2021).
-
-Whereas some sources of environmental variability affect fish stocks,
-others affect the direct extraction of fish. Rolling seas and high wind
-speeds make it more difficult to harvest (Alvarez \emph{et al.} 2006) in
-addition to raising the danger to crew and vessel (Heck \emph{et al.}
-2021). Storms threaten coastal infrastructure crucial to fishing
-communities (Sainsbury \emph{et al.} 2019).
+fishers. In this paper, we provide the first examination of whether
+index insurance will lead to incentives that increase or decrease
+fishery harvest. We apply our theoretical findings to an empirical
+setting in three Norwegian fisheries.
 
 Fishers are highly sensitive to risk, especially income risk, and
 demonstrate risk aversion despite working a seemingly risky profession
@@ -287,54 +275,29 @@ hurricanes (Pfeiffer 2020; Pfeiffer \emph{et al.} 2022). However, these
 efforts are unlikely to completely eliminate risk. Additional financial
 tools may be needed to address income risk as a result of environmental
 fluctuations (Sethi 2010; Kasperski and Holland 2013). There is growing
-interest in developing new financial tools to alleviate financial and
-income risk for coastal communities (Wabnitz and Blasiak 2019; Sumaila
-\emph{et al.} 2020).
+interest in developing new financial tools to alleviate income risk for
+coastal communities (Wabnitz and Blasiak 2019; Sumaila \emph{et al.}
+2020).
 
-Insurance may be an ideal financial tool for risk management in
+Index insurance may be an ideal financial tool for risk management in
 fisheries as it is scalable, protects against environmental shocks, and
-smooths income for fishers (Mumford \emph{et al.} 2009; Watson \emph{et
-al.} 2023). Currently, insurance in fisheries is primarily used to
-protect assets such as vessel hulls or fishing gear (FAO 2022).
-Insurance coverage could be expanded to include income variability
-originating from weather and biological productivity shocks. An
-insurance product covering these environmental risks could improve
-fisher welfare and promote community resilience (Maltby \emph{et al.}
-2023).
-
-Policy makers have begun advocating for new fisheries insurance programs
-modeled after agricultural crop insurance programs (Murkowski 2022).
-Index insurance is one such product extolled by practitioners as a prime
-candidate for fisheries productivity insurance (Hobday \emph{et al.}
-2025). Index insurance gained traction in agriculture as an effective
-alternative to indemnity crop insurance in developing countries because
-it had lower administrative cost, minimizes moral hazards, and does not
-require claim verification (Collier \emph{et al.} 2009; Carter \emph{et
-al.} 2017). Whereas indemnity insurance requires an assessment of loss
-to an individual, index insurance uses an independent measure as the
-basis for issuing payouts to all policyholders. The anticipated
-difficulty in establishing individual indemnified loss for individual
-fishers is a key reason for the rise of index insurance in prominence
-over indemnity insurance (Herrmann \emph{et al.} 2004; Watson \emph{et
-al.} 2023).
-
-An example pilot program through the Caribbean Oceans and Aqauculture
-Sustainability Facility (COAST) pays out a set amount to fishers when
-indices of wave height, wind speed, and storm surge indicate a hurricane
-(Sainsbury \emph{et al.} 2019). Triggers are the index values that
-initiate a payout. Offering new insurance programs in diverse fisheries
-will require identifying additional indices and triggers to protect
-against different environmental risks.
+smooths income for fishers (Watson \emph{et al.} 2023; Hobday \emph{et
+al.} 2025). Index insurance uses independent measures of weather as the
+basis for issuing payouts to all policyholders. For example, a pilot
+program through the Caribbean Oceans and Aquaculture Sustainability
+Facility (COAST) pays out a set amount to fishers when indices of wave
+height, wind speed, and storm surge indicate a hurricane (Sainsbury
+\emph{et al.} 2019).
 
 One crucial area that remains under studied is the potential influence
 of insurance on fishers behavior. Moral hazards are decisions by insured
 agents that they would not otherwise take if they were uninsured (Wu
-\emph{et al.} 2020). Although practitioners appear to favor index
-insurance on the belief that it avoids moral hazard (RARE 2021), there
-are two components to insurance moral hazard: ``chasing the trigger''
-and ``risk reduction'' that must be considered. ``Chasing the trigger''
-is the directed behavior of policyholders to increase the likelihood of
-a payout. For example, a fisher might choose to fish less to receive an
+\emph{et al.} 2020). Although practitioners favor index insurance on the
+belief that it avoids moral hazard (RARE 2021), there are two components
+to insurance moral hazards: ``chasing the trigger'' and ``risk
+reduction'' that must be considered. ``Chasing the trigger'' is the
+directed behavior of policyholders to increase the likelihood of a
+payout. For example, a fisher might choose to fish less to receive an
 indemnified harvest insurance payment. Index insurance completely
 eliminates this moral hazard if the index is independent of fisher
 choices, e.g.~fishers cannot affect sea surface temperature. ``Risk
@@ -405,9 +368,9 @@ Asche \emph{et al.} (2020). The Norwegian fisheries show index insurance
 could raise harvest by 20\% or lower harvest by 2\% contingent on the
 fishery input characteristics and contract type. All contracts specified
 to protect biological stock risk showed large increases in harvest
-regardless of the risk effects. Currently, most proposed insurance
-contracts are examining triggers based on stock risk, such as sea
-surface temperature or chlorophyll-a (Watson \emph{et al.} 2023).
+regardless of the extraction risk effects. Currently, most proposed
+insurance contracts are examining triggers based on stock risk, such as
+sea surface temperature or chlorophyll-a (Watson \emph{et al.} 2023).
 Without additional constraints, these types of contracts will
 incentivize greater exploitation of vulnerable fish stocks.
 
@@ -415,17 +378,18 @@ The remainder of the paper is structured as follows.
 Section~\ref{sec-jp} demonstrates how assuming standard fishery
 production models will always bias index insurance towards overfishing.
 We then present a new stochastic production function for fisheries that
-integrates both stock and extraction risk. Section~\ref{sec-common}
-proves that index insurance will change fisher behavior, but the outcome
-depends on the risk effects of inputs and the type of insurance
-contract. Section~\ref{sec-multi} extends the theoretical model to
-account for multiple inputs in fishing that reflects the decisions of
-fishers in the empirical setting. Section~\ref{sec-sim} numerically
-estimates potential harvest changes with an index insurance program.
-Parameters are calibrated with an application to Norwegian fisheries
-through the results of Asche \emph{et al.} (2020).
-Section~\ref{sec-disc} concludes with a discussion on the suitability of
-fishery index insurance.
+integrates both stock and extraction risk in Section~\ref{sec-common}.
+Fishers now face multiple risks where contracts could be specified to
+protect either risk. In this new setting, we prove how index insurance
+will change fisher behavior, but the outcome depends on the risk effects
+of inputs and the type of insurance contract. Section~\ref{sec-multi}
+extends the theoretical model to account for multiple inputs in fishing
+that reflects the decisions of fishers in the empirical setting.
+Section~\ref{sec-sim} numerically estimates potential harvest changes
+with an index insurance program. Parameters are calibrated with an
+application to Norwegian fisheries through the results of Asche \emph{et
+al.} (2020). Section~\ref{sec-disc} concludes with a discussion on the
+suitability of fishery index insurance.
 
 \section{Risky Production in Fisheries}\label{sec-jp}
 
@@ -433,8 +397,7 @@ Here we develop a model of fishery production under risk. We are
 primarily interested in within-season input decisions and risk, so we
 omit time subscripts, but will be explicit about when random variables
 are known, or unknown, to fishers. We begin with a canonical model of
-fishery production, and then extend it to accommodate more realistic
-dimensions of risk.
+fishery production.
 
 Fishers choose an input \(x\) that interact through an increasing
 concave production technology \(f(x)\)\footnote{Common specifications of
@@ -459,29 +422,146 @@ equation 1 can be rewritten:
 
 This approach combines a standard model of fishery production
 (Equation~\ref{eq-trad}) with the simple observation that biomass, which
-affects payoffs, is unknown prior to the choice of inputs. With this
+affects harvest, is unknown prior to the choice of inputs. With this
 model, we can examine how index insurance affects incentives around
 input choice. Under standard assumptions, fishers are price takers,
-incur convex costs, and are risk averse over profits. While more general
-than fisheries, Mahul (2001) studies that problem and shows that index
-insurance will always lead to an increase in input use.\footnote{We
-  verify Mahul's result in our formal setup in Section~\ref{sec-common}.}
-In our setting, this implies that under the standard fishery production
-model of Equation~\ref{eq-trad2}, index insurance will always increase
-harvest.
+incur convex costs, and are risk averse over profits.
 
-This result immediately challenges the long term sustainability of index
-insurance in fisheries. However, fishers are exposed to many margins of
-risk. Anecdotally and empirically, fishers make informed decisions to
-mitigate risk beyond just exposure to stock risk (Kirkley and Strand
-1998; Eggert and Tveteras 2004; Kompas \emph{et al.} 2004; Smith and
-Wilen 2005; Holland 2008; Sethi 2010; Pfeiffer 2020; Pfeiffer \emph{et
-al.} 2022). Stock risk \(\theta\) remain an inevitable source of risk
-that we must maintain in any fishery model, but we expand the standard
-fishery model in Equation~\ref{eq-trad2} to Equation~\ref{eq-jpfish} by
-adding a second source of risk called extraction risk, \(\omega\), and
-new means of input risk reduction, \(h(x)\) to allow fishers more
-margins to adjust risk exposure.
+We can define a simple profit function where prices are set to one in
+Equation~\ref{eq-pi}
+
+\begin{equation}\phantomsection\label{eq-pi}{
+\pi=\hat{B}f(x)+\theta f(x)-c(x)
+}\end{equation}
+
+We create an insurance lottery through a contract that uses \(\theta\)
+as the index. The trigger \(\bar{\theta}\) initiates a constant payout
+\(\gamma\) when the index falls below the trigger,
+\(\theta<\bar{\theta}\).
+
+Actuarially fair insurance implies the premium, \(\rho\), paid in both
+lottery outcomes to be the probability of receiving a payout times the
+payout amount, \(\rho=J(\bar \theta)\gamma\), where \(J(\theta)\) is the
+cumulative distribution of the representative shock. Additionally, if we
+set the trigger in either contract to zero, profits will enter
+corresponding bad and good states when \(\theta\) is positive and
+negative respectively.
+
+Fishers are expected utility maximizers. To do so, they need to make
+decisions on the marginal profitability in the good and bad states. We
+introduce the following lemma to help us understand how marginal profit
+in both states is affected by input risk effects for each type of
+contract:
+
+\begin{lemma}[]\protect\hypertarget{lem-theta}{}\label{lem-theta}
+
+Contracts built on \(\theta\) will always lead to higher expected
+marginal profits in the good state
+
+\(\frac{\mathbb{E}[\partial \pi|\theta<\bar \theta]}{\partial x}-\frac{\mathbb{E}[\partial \pi|\theta>\bar \theta]}{\partial x}<0\)
+
+\end{lemma}
+
+The proof of Lemma~\ref{lem-theta} is included in the appendix.
+
+Risk aversion is a necessary condition for insurance to be desirable
+(Outreville 2014). Therefore, we assume fishers are risk averse to
+income shocks through a concave utility function. Fishers will maximize
+their own expected utility across lotteries by selecting inputs with an
+exogenous insurance contract (Equation~\ref{eq-max}).
+
+\begin{equation}\phantomsection\label{eq-max}{
+\begin{aligned}
+U\equiv\max_{x}\mathbb{E}[U]=& \int^{\bar \theta}_{-\infty}j(\theta)u(\pi(x,\hat{B},\theta)+(1-J(\bar \theta))\gamma)d\theta\\
+&+\int^{\infty}_{\bar{\theta}}j(\theta) u(\pi(x,\hat{B},
+\theta)-J(\bar \theta)\gamma)d \theta
+\end{aligned}
+}\end{equation}
+
+The first order condition that solves Equation~\ref{eq-max} is then:
+
+\begin{equation}\phantomsection\label{eq-foc1}{
+\begin{aligned}
+\frac{\partial U}{\partial x}=&\int^{\bar \theta}_{-\infty}j(\theta)u_{x}(\pi(x,\hat{B},\theta)+(1-J(\bar \theta))\gamma)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta)d\omega\\
+&+\int^{\infty}_{\bar{\theta}}j(\theta) u_{x}(\pi(x,\hat{B},\theta)-J(\bar \theta)\gamma)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta) d\theta\\
+&=0
+\end{aligned}
+}\end{equation}
+
+To find the effect of insurance on optimal input, we use the implicit
+function theorem to examine how input choice varies with the insurance
+payout \(\gamma\):
+
+\begin{equation}\phantomsection\label{eq-ivt}{
+\frac{\partial x^{*}}{\partial \gamma}=-\frac{\frac{\partial U}{\partial x \partial \gamma}}{\frac{\partial^2 U}{\partial x^{2}}}
+}\end{equation}
+
+We use \(\gamma\) to test insurance effects, because a marginal change
+in the payout increases the value of insurance\footnote{As shown in
+  Section~\ref{sec-sim}, marginal utility reaches a maximum value before
+  decreasing at high \(\gamma\). Therefore we assume the change in
+  \(\gamma\) occurs at values less than the optimal insurance coverage.}.
+Receiving more compensation in the bad states provides greater boosts to
+utility for risk averse fishers. We define a feasible contract to be
+levels of \(\gamma\) that improve expected utility relative to no
+insurance.
+
+By the sufficient condition of a maximization problem,
+\(\frac{\partial^2 U}{\partial x^{2}}\) is negative so we can focus
+solely on the numerator to sign the effect. The numerator of
+Equation~\ref{eq-ivt} is given by:
+
+\begin{equation}\phantomsection\label{eq-xgam}{
+\begin{aligned}
+\frac{\partial U}{\partial x \partial \gamma}=\int^{\bar \omega}_{-\infty}j(\theta)u''(\pi(x,\hat{B},\theta)+(1-J(\bar \theta))\gamma)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta)(1-J(\bar \theta))d\theta\\
++\int^{\infty}_{\bar{\omega}}j(\theta) u''(\pi(x,\hat{B},\theta)-J(\bar \theta)\gamma)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta)(-J(\bar \theta)) d\theta
+\end{aligned}
+}\end{equation}
+
+\begin{proposition}[]\protect\hypertarget{prp-std}{}\label{prp-std}
+
+For feasible insurance contracts specified at trigger \(\bar\theta=0\)
+with production function \(y=Bf(x)+\theta f(x)\), optimal harvest will
+always increase with an increase in \(\gamma\).
+
+\end{proposition}
+
+\begin{proof}
+Suppose insurance fully covers the loss between states, then utility in
+the good state and bad state are equal to each other so that we can
+factor out like terms in (\textbf{eg-xgam?}). For brevity, all like
+terms including \(\gamma\) are indicated by \(u(\cdot)\).
+
+\begin{equation}\phantomsection\label{eq-ps}{
+\begin{aligned}
+\frac{U}{\partial x \partial \gamma}&=J(\bar\theta)(1-J(\bar\theta))u''(\cdot)\\
+&\times\left[\int^{\bar\theta}_{-\infty}j_{\theta}(\theta)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta)d\theta-\int^{\infty}_{\bar{\theta}}j_{\theta}(\theta)\frac{\partial \pi}{\partial x}(x,\hat{B},\theta)d\theta\right ]
+\end{aligned}
+}\end{equation}
+
+Where \(j_\theta(\theta)\) is the marginal distribution of \(\theta\).
+
+The first term of Equation~\ref{eq-ps} is negative by the concavity of
+utility, \(u''(\cdot)<0\). The second term of Equation~\ref{eq-ps} is
+negative by Lemma~\ref{lem-theta}. Therefore, an index insurance
+contract built assuming a standard fishery production model will always
+lead to increased input use, and thus more harvest.
+\end{proof}
+
+Proposition~\ref{prp-std} immediately challenges the sustainability of
+index insurance in fisheries.
+
+However, fishers are exposed to many margins of risk. Anecdotally and
+empirically, fishers make informed decisions to mitigate risk beyond
+just exposure to stock risk (Kirkley and Strand 1998; Eggert and
+Tveteras 2004; Kompas \emph{et al.} 2004; Smith and Wilen 2005; Holland
+2008; Sethi 2010; Pfeiffer 2020; Pfeiffer \emph{et al.} 2022). Stock
+risk \(\theta\) remain an inevitable source of risk that we must
+maintain in any fishery model, but we expand the standard fishery model
+in Equation~\ref{eq-trad2} to Equation~\ref{eq-jpfish} by adding a
+second source of risk called extraction risk, \(\omega\), and new means
+of input risk reduction, \(h(x)\) to allow fishers more margins to
+adjust risk exposure.
 
 \begin{equation}\phantomsection\label{eq-jpfish}{
 y=f(x)\hat{B}+\theta f(x)+\omega h(x)
@@ -1999,13 +2079,6 @@ Babcock, B.A. and Hennessy, D.A. (1996)
 revenue insurance}. \emph{American Journal of Agricultural Economics}
 \textbf{78}, 416--427.
 
-\bibitem[\citeproctext]{ref-Barbeaux2020}
-Barbeaux, S.J., Holsman, K. and Zador, S. (2020)
-\href{https://doi.org/10.3389/fmars.2020.00703}{Marine heatwave stress
-test of ecosystem-based fisheries management in the gulf of alaska
-pacific cod fishery}. \emph{Frontiers in Marine Science} \textbf{7},
-1--21.
-
 \bibitem[\citeproctext]{ref-Bulte2021}
 Bulte, E. and Haagsma, R. (2021)
 \href{https://doi.org/10.1007/s10640-021-00545-1}{The welfare effects of
@@ -2017,35 +2090,11 @@ Cai, J. (2016) \href{https://doi.org/10.1257/pol.20130371}{The impact of
 insurance provision on household production and financial decisions}.
 \emph{American Economic Journal: Economic Policy} \textbf{8}, 44--88.
 
-\bibitem[\citeproctext]{ref-Carter2017}
-Carter, M., Janvry, A.D., Sadoulet, E. and Sarris, A. (2017)
-\href{https://doi.org/10.1146/annurev-resource-100516-053352}{Index
-insurance for developing country agriculture: A reassessment}.
-\emph{Annual Review of Resource Economics} \textbf{9}, 421--438.
-
-\bibitem[\citeproctext]{ref-Cavole2016}
-Cavole, L.M., Demko, A.M., Diner, R.E., et al. (2016)
-\href{https://doi.org/10.5670/oceanog.2016.32}{Biological impacts of the
-2013--2015 warm-water anomaly in the northeast pacific: Winners, losers,
-and the future}. \emph{Oceanography} \textbf{29}, 273--285.
-
-\bibitem[\citeproctext]{ref-Cheung2021}
-Cheung, W.W.L., Frölicher, T.L., Lam, V.W.Y., et al. (2021)
-\href{https://www.science.org}{Marine high temperature extremes amplify
-the impacts of climate change on fish and fisheries}.
-
 \bibitem[\citeproctext]{ref-Claassen2017}
 Claassen, R., Langpap, C. and Wu, J. (2017)
 \href{https://doi.org/10.1093/AJAE/AAW075}{Impacts of federal crop
 insurance on land use and environmental quality}. \emph{American Journal
 of Agricultural Economics} \textbf{99}, 592--613.
-
-\bibitem[\citeproctext]{ref-Collier2009}
-Collier, B., Skees, J. and Barnett, B. (2009)
-\href{https://doi.org/10.1057/gpp.2009.11}{Weather index insurance and
-climate change: Opportunities and challenges in lower income countries}.
-\emph{Geneva Papers on Risk and Insurance: Issues and Practice}
-\textbf{34}, 401--424.
 
 \bibitem[\citeproctext]{ref-Deryugina2017}
 Deryugina, T. and Konar, M. (2017)
@@ -2073,10 +2122,6 @@ FAO (2020) \href{https://doi.org/10.4060/ca9229en}{The state of world
 fisheries and aquaculture 2020. Sustinability in action}. American Oil
 Chemists Society.
 
-\bibitem[\citeproctext]{ref-fao2022}
-FAO (2022) World review of capture fisheries and aquaculture insurance
-2022. FAO.
-
 \bibitem[\citeproctext]{ref-Fisher2019}
 Fisher, E., Hellin, J., Greatrex, H. and Jensen, N. (2019)
 \href{https://doi.org/10.1111/dpr.12387}{Index insurance and climate
@@ -2094,12 +2139,6 @@ He, J., Zheng, X., Rejesus, R. and Yorobe, J. (2020)
 \href{https://doi.org/10.1111/AGEC.12558}{Input use under
 cost-of-production crop insurance: Theory and evidence}.
 \emph{Agricultural Economics (United Kingdom)} \textbf{51}, 343--357.
-
-\bibitem[\citeproctext]{ref-Heck2021}
-Heck, N., Beck, M.W. and Reguero, B. (2021)
-\href{https://doi.org/10.1016/j.marpol.2021.104698}{Storm risk and
-marine fisheries: A global assessment}. \emph{Marine Policy}
-\textbf{132}, 104698.
 
 \bibitem[\citeproctext]{ref-Herrmann2004}
 Herrmann, M., Greenberg, J., Hamel, C. and Geier, H. (2004)
@@ -2202,31 +2241,9 @@ potential of institutional change: Rain-index insurance and the
 sustainability of rangeland management}. \emph{Ecological Economics}
 \textbf{70}, 2137--2144.
 
-\bibitem[\citeproctext]{ref-Mumford2009}
-Mumford, J.D., Leach, A.W., Levontin, P. and Kell, L.T. (2009)
-\href{https://doi.org/10.1093/icesjms/fsp100}{Insurance mechanisms to
-mediate economic risks in marine fisheries}. \emph{ICES Journal of
-Marine Science} \textbf{66}, 950--959.
-
-\bibitem[\citeproctext]{ref-Murkowski2022}
-Murkowski, L. (2022) Working waterfronts framework: A plan to grow and
-support alaska's coastal and river communities. United States Senate.
-
-\bibitem[\citeproctext]{ref-Oken2021}
-Oken, K.L., Holland, D.S. and Punt, A.E. (2021)
-\href{https://doi.org/10.1002/eap.2307}{The effects of population
-synchrony, life history, and access constraints on benefits from fishing
-portfolios}. \emph{Ecological Applications} \textbf{0}, 1--16.
-
 \bibitem[\citeproctext]{ref-Outreville2014}
 Outreville, J.F. (2014) Risk aversion, risk behavior, and demand for
 insurance: A survey. 158--186 pp.
-
-\bibitem[\citeproctext]{ref-Pandori2019}
-Pandori, L.L.M. and Sorte, C.J.B. (2019)
-\href{https://doi.org/10.1111/oik.05886}{The weakest link: Sensitivity
-to climate extremes across life stages of marine invertebrates}.
-\emph{Oikos} \textbf{128}, 621--629.
 
 \bibitem[\citeproctext]{ref-Pfeiffer2020}
 Pfeiffer, L. (2020) \href{https://doi.org/10.1093/icesjms/fsaa145}{How
@@ -2255,13 +2272,6 @@ RARE (2021)
 \href{https://rare.org/stories-articles/insuring-the-ensurers-rares-fish-forever-program-protects-the-fishers-who-feed-the-world/}{Insuring
 the ensurers: A new insurance project protects the fishers who feed the
 world}.
-
-\bibitem[\citeproctext]{ref-rogers2019}
-Rogers, L.A., Griffin, R., Young, T., Fuller, E., Martin, K.S. and
-Pinsky, M.L. (2019)
-\href{https://doi.org/10.1038/s41558-019-0503-z}{Shifting habitats
-expose fishing communities to risk under climate change}. \emph{Nature
-Climate Change} \textbf{9}, 512--516.
 
 \bibitem[\citeproctext]{ref-Sainsbury2019}
 Sainsbury, N.C., Turner, R.A., Townhill, B.L., Mangi, S.C. and Pinnegar,
@@ -2293,12 +2303,6 @@ Claassen, R.L. (2025)
 extraction incentives in a common pool resource: Evidence from
 groundwater use in the high plains}. \emph{Journal of Environmental
 Economics and Management} \textbf{130}.
-
-\bibitem[\citeproctext]{ref-Smith2023}
-Smith, K.E., Burrows, M.T., Hobday, A.J., et al. (2023)
-\href{https://doi.org/10.1146/annurev-marine-032122-121437}{Biological
-impacts of marine heatwaves}. \emph{Annual Review of Marine Science}
-\textbf{15}, 1--27.
 
 \bibitem[\citeproctext]{ref-Smith2005}
 Smith, M.D. and Wilen, J.E. (2005) Heterogeneous and correlated risk
